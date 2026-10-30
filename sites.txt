@@ -1,0 +1,20 @@
+# Páginas que vigila el bot. Una URL por línea.
+# Para añadir otra página, pégala en una línea nueva. '#' = comentario.
+# Los portales Bonfire van aparte, en bonfire_sites.txt.
+
+# --- Federal ---
+https://publish.gpo.gov/smallPurchase?activeTab=Opportunities
+
+# --- Ciudades y condados ---
+https://columbusvendorservices.powerappsportals.com/OpenRFQs/
+https://www.phlcontracts.phila.gov/bso/view/search/external/advancedSearchBid.xhtml
+https://www.clevelandohio.gov/city-hall/departments/finance/invitations-bid
+https://www.clevelandohio.gov/city-hall/departments/finance/request-qualificationsproposal
+https://www.gwinnettcounty.com/government/departments/financial-services/purchasing/solicitations
+
+# --- Estados y territorios ---
+https://www.bidbuy.illinois.gov/bso/view/search/external/advancedSearchBid.xhtml?openBids=true
+https://www.njstart.gov/bso/view/search/external/advancedSearchBid.xhtml?openBids=true
+https://gvibuy.buyspeed.com/bso/view/search/external/advancedSearchBid.xhtml?openBids=true
+https://wwwcfprd.doa.louisiana.gov/osp/lapac/catbids.cfm
+https://scbo.sc.gov/online-edition

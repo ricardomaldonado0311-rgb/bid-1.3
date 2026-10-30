@@ -1,0 +1,194 @@
+# Palabras clave del bot. Una por línea.
+# Las líneas que empiezan con # son comentarios (títulos de categoría).
+# No importan mayúsculas/minúsculas ni guiones ("t-shirts" = "t shirts").
+# Para añadir una palabra nueva: escríbela en una línea nueva y guarda.
+
+# Promotional products & branded merchandise
+promotional products
+promotional items
+branded merchandise
+imprinted products
+custom imprinted
+advertising specialties
+swag
+giveaways
+incentive items
+recognition items
+outreach materials
+recruitment materials
+health fair supplies
+event supplies
+trade show items
+custom logo
+employee recognition
+appreciation gifts
+challenge coins
+awards program
+
+# Decoration & printing
+screen printing
+screen printed
+embroidery
+embroidered
+decorated apparel
+direct to garment
+sublimation
+laser engraving
+pad printing
+heat transfer
+full color imprint
+one color imprint
+
+# Apparel & wearables
+t-shirts
+tee shirts
+polo shirts
+button down shirts
+dress shirts
+hoodies
+sweatshirts
+jackets
+vests
+uniforms
+workwear
+caps
+hats
+beanies
+headwear
+shorts
+pants
+socks
+face masks
+wearables
+athletic wear
+graduation stole
+safety vests
+high visibility
+reflective gear
+
+# Bags & accessories
+tote bags
+bags
+gym bags
+backpacks
+duffel bags
+drawstring bags
+lunch bags
+foldaway bags
+lanyards
+badge holders
+keychains
+umbrellas
+
+# Drinkware & food
+water bottles
+tumblers
+mugs
+coffee cups
+koozies
+drinkware
+bottle opener
+can opener
+
+# Office & writing supplies
+pens
+stylus pens
+highlighters
+markers
+notebooks
+journals
+notepads
+sticky notes
+folders
+portfolios
+office supplies
+stationery
+spiral notebook
+
+# Tech & electronics
+USB drives
+phone chargers
+power banks
+earbuds
+tech accessories
+wireless charger
+charging station
+laptop backpack
+tactical backpack
+
+# Health, wellness & safety
+first aid kits
+hand sanitizer
+sunscreen
+lip balm
+stress balls
+manicure set
+grip strength meter
+cooling towel
+poncho
+hard hats
+safety glasses
+goggles
+face shields
+ear plugs
+hearing protection
+shoe covers
+coveralls
+gowns
+aprons
+
+# PPE & gloves
+PPE
+personal protective equipment
+nitrile gloves
+latex gloves
+vinyl gloves
+disposable gloves
+exam gloves
+surgical gloves
+work gloves
+cut resistant gloves
+chemical resistant gloves
+N95 masks
+KN95 masks
+surgical masks
+disposable masks
+respirators
+
+# Furniture & outdoor
+folding tables
+folding chairs
+banquet tables
+picnic tables
+benches
+park benches
+park furniture
+bleachers
+office furniture
+filing cabinets
+shelving
+storage cabinets
+
+# Signage, awards & recognition
+flags
+banners
+retractable banners
+signage
+tablecloths
+tents
+plaques
+trophies
+awards
+medals
+magnets
+telephone magnet
+
+# Janitorial & general supplies
+janitorial supplies
+cleaning supplies
+trash cans
+recycling bins
+general merchandise
+miscellaneous supplies
+R&R promotional items
+outreach items
