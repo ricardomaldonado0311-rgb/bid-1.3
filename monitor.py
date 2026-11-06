@@ -1,17 +1,17 @@
 """
-Bot de monitoreo de oportunidades por palabras clave.
+Bid Searcher — solo GPO Small Purchase (publish.gpo.gov).
 
-Fuentes:
-  * sites.txt: una URL por línea. Cada sitio conocido tiene su lector
-    (GPO, Columbus, Philadelphia, BuySpeed, Cleveland, Gwinnett, Louisiana,
-    Carolina del Sur). Cualquier otra URL se abre con un navegador real
-    (Playwright) y se leen las filas/tarjetas que muestra.
-  * bonfire_sites.txt: portales Bonfire (uno por línea), leídos con su API
-    pública.
-Busca las palabras de keywords.txt y manda un correo SOLO con lo nuevo que
-coincida. Lo ya revisado se guarda en state/seen.json.
+Cada corrida:
+  1. Lee la lista oficial de oportunidades abiertas de GPO.
+  2. Avisa de TODOS los bids nuevos (con o sin palabras clave; las que
+     coinciden con keywords.txt salen marcadas con ★ y van primero).
+  3. Vigila los bids de mis_bids.txt y avisa de cualquier cambio:
+     nueva revisión, fecha de cotización, cantidad, entrega, el documento
+     RFQ, o si desaparecen de la lista de abiertos.
+  4. Guarda todo en state/gpo.json y escribe mis_bids_estado.md
+     (tabla con el estado de tus bids, para verlo en GitHub).
 """
-
+import difflib
 import hashlib
 import io
 import json
@@ -20,38 +20,76 @@ import re
 import smtplib
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from html import escape
 from pathlib import Path
-from urllib.parse import urlparse, parse_qs
 from zoneinfo import ZoneInfo
 
 import requests
 
 ROOT = Path(__file__).parent
-STATE_FILE = ROOT / "state" / "seen.json"
-DEBUG_DIR = ROOT / "debug"
+STATE_FILE = ROOT / "state" / "gpo.json"
+MY_BIDS_FILE = ROOT / "mis_bids.txt"
+STATUS_FILE = ROOT / "mis_bids_estado.md"
+KEYWORDS_FILE = ROOT / "keywords.txt"
+
 ET = ZoneInfo("America/New_York")
 UA = {"User-Agent": "Mozilla/5.0 (oportunidades-bot)"}
-BONFIRE_FILE = ROOT / "bonfire_sites.txt"
-BONFIRE_PAUSE = 1.5   # segundos entre portales Bonfire (para no saturar)
-MAX_PDF_PAGES = 30    # solo se leen las primeras páginas de cada PDF
+GPO_API = "https://publish.gpo.gov/api"
+GPO_LIST = "https://publish.gpo.gov/smallPurchase?activeTab=Opportunities"
+MAX_PDF_PAGES = 40
+KEEP_CLOSED_DAYS = 90   # los bids cerrados que no son tuyos se borran del estado
 
-# Horas de revisión (hora del Este) y días (0=lunes ... 4=viernes)
+# Horas de revisión (hora del Este) y días (0=lunes ... 4=viernes).
+# Deben coincidir con el cron de .github/workflows/monitor.yml.
 RUN_HOURS_ET = {0, 16}
 RUN_DAYS_ET = {0, 1, 2, 3, 4}
 
+# Nombres en español de los campos de GPO que se comparan.
+FIELD_LABELS = {
+    "title": "Título",
+    "fRevised": "Revisión",
+    "quoteDueDate": "Cotizar antes de",
+    "totalQuantity": "Cantidad",
+    "shipDeliveryDate": "Entrega",
+    "productType": "Tipo de producto",
+    "datePosted": "Publicado",
+}
+# Campos que cambian sin que el bid cambie (no se avisan).
+IGNORE_FIELDS = {"jobId"}
+
 
 # ---------------------------------------------------------------- utilidades
+def now_et():
+    return datetime.now(ET)
+
+
+def stamp():
+    return now_et().strftime("%m/%d/%Y %I:%M %p ET")
+
+
 def read_list(path):
+    if not Path(path).exists():
+        return []
     out = []
     for raw in Path(path).read_text(encoding="utf-8").splitlines():
         line = raw.strip()
         if line and not line.startswith("#"):
             out.append(line)
     return out
+
+
+def read_my_bids():
+    """mis_bids.txt -> {jacket: nota}"""
+    bids = {}
+    for line in read_list(MY_BIDS_FILE):
+        num, _, note = line.partition("|")
+        m = re.search(r"\d{4,8}", num)
+        if m:
+            bids[m.group(0)] = note.strip()
+    return bids
 
 
 def normalize(text):
@@ -61,7 +99,6 @@ def normalize(text):
 
 
 def _word(w, flex):
-    """flex=True acepta singular o plural (bags/bag, boxes/box)."""
     if flex and len(w) > 3 and w.endswith("s") and not w.endswith("ss"):
         base = w[:-2] if w.endswith("es") and len(w) > 4 else w[:-1]
         return re.escape(base) + r"(?:es|s)?"
@@ -69,28 +106,47 @@ def _word(w, flex):
 
 
 def build_patterns(keywords):
+    """"=palabra" se busca exacta (sin singular/plural)."""
     pats = []
     for kw in keywords:
+        exact = kw.startswith("=")
+        kw = kw.lstrip("=").strip()
         words = normalize(kw).split()
-        mk = lambda flex: re.compile(
-            r"(?<![a-z0-9])" + r"\s+".join(_word(w, flex) for w in words)
+        mk = lambda flex, exact=exact, words=words: re.compile(
+            r"(?<![a-z0-9])" + r"\s+".join(_word(w, flex and not exact) for w in words)
             + r"(?![a-z0-9])")
         pats.append((kw, mk(True), mk(False)))
     return pats
 
 
-def find_matches(text, patterns, flex=True):
+def find_matches(text, patterns, flex=True, ignore=()):
     norm = normalize(text or "")
     idx = 1 if flex else 2
     found = {p[0] for p in patterns if p[idx].search(norm)}
-    # si coincide "tote bags", no repetir también "bags"
+    found = {k for k in found if not normalize(k).startswith(ignore)} if ignore else found
     keys = {k: " " + normalize(k) + " " for k in found}
     return sorted(k for k in found
                   if not any(o != k and keys[k] in keys[o] for o in found))
 
 
-def short_hash(*parts):
-    return hashlib.sha1("|".join(parts).encode()).hexdigest()[:16]
+def fmt_date(s):
+    try:
+        return datetime.fromisoformat(str(s)).strftime("%m/%d/%Y %I:%M %p")
+    except Exception:
+        return "" if s is None else str(s)
+
+
+def fmt_field(key, value):
+    if value in (None, ""):
+        return "original" if key == "fRevised" else "(vacío)"
+    if "date" in key.lower():
+        return fmt_date(value)
+    return str(value)
+
+
+def rev_number(rev):
+    m = re.search(r"\d+", str(rev or ""))
+    return int(m.group(0)) if m else 0
 
 
 # ------------------------------------------------------------- ¿toca correr?
@@ -103,574 +159,191 @@ def should_run():
         cron_hour_utc = int(os.getenv("CRON_SCHEDULE", "").split()[1])
     except (IndexError, ValueError):
         return True
-    now_et = datetime.now(ET)
-    offset_h = int(-now_et.utcoffset().total_seconds() // 3600)  # 4 o 5
+    et = now_et()
+    offset_h = int(-et.utcoffset().total_seconds() // 3600)  # 4 o 5
     wanted = {(h + offset_h) % 24 for h in RUN_HOURS_ET}
-    return cron_hour_utc in wanted and now_et.weekday() in RUN_DAYS_ET
+    return cron_hour_utc in wanted and et.weekday() in RUN_DAYS_ET
 
 
-# ------------------------------------------------------------------ PDF text
-def pdf_text(data, max_pages=MAX_PDF_PAGES):
-    from pypdf import PdfReader
-    reader = PdfReader(io.BytesIO(data))
-    return "\n".join((p.extract_text() or "") for p in reader.pages[:max_pages])
-
-
+# ----------------------------------------------------------------- GPO: datos
 def http_get(url, tries=3, **kw):
-    """GET con reintentos suaves (espera más en cada intento)."""
     kw.setdefault("headers", UA)
     kw.setdefault("timeout", 60)
     for n in range(tries):
         try:
             r = requests.get(url, **kw)
             if r.status_code in (429, 500, 502, 503, 504) and n < tries - 1:
-                time.sleep(5 * (n + 1))
+                time.sleep(10 * (n + 1))
                 continue
             return r
         except requests.RequestException:
             if n == tries - 1:
                 raise
-            time.sleep(5 * (n + 1))
+            time.sleep(10 * (n + 1))
 
 
-def pdf_from_url(url):
-    r = http_get(url, timeout=90)
+def fetch_open_jobs():
+    """{jacket: job} con la revisión más reciente de cada jacket."""
+    r = http_get(f"{GPO_API}/ContractorConnection/GetOpenJobs")
     r.raise_for_status()
-    if len(r.content) > 25_000_000:
-        return ""
-    return pdf_text(r.content)
-
-
-def to_et(dt_utc_str, fmt="%Y-%m-%d %H:%M:%S"):
-    """'2026-11-06 19:00:00' (UTC) -> '11/06/2026 02:00 PM ET'."""
-    try:
-        d = datetime.strptime(dt_utc_str, fmt).replace(tzinfo=timezone.utc)
-        return d.astimezone(ET).strftime("%m/%d/%Y %I:%M %p ET")
-    except Exception:
-        return dt_utc_str or ""
-
-
-# ------------------------------------------------------------ fuente: GPO
-GPO_API = "https://publish.gpo.gov/api"
-
-
-def fmt_date(s):
-    try:
-        return datetime.fromisoformat(s).strftime("%m/%d/%Y %I:%M %p")
-    except Exception:
-        return s or ""
-
-
-def gpo_small_purchase(site, seen_ids, patterns):
-    r = requests.get(f"{GPO_API}/ContractorConnection/GetOpenJobs",
-                     headers=UA, timeout=60)
-    r.raise_for_status()
-    jobs = r.json().get("value") or []
-    items = []
+    jobs = r.json().get("value")
+    if jobs is None:
+        raise RuntimeError("GPO respondió sin la lista de oportunidades")
+    out = {}
     for j in jobs:
         jacket = str(j.get("jacketNumber", "")).strip()
-        rev = str(j.get("fRevised", "")).strip()
-        job_id = str(j.get("jobId", ""))
-        item = {
-            "id": short_hash("gpo", jacket, rev),
-            "ident": f"Jacket {jacket} {rev}".strip(),
-            "title": (j.get("title") or "").strip(),
-            "details": [
-                ("Tipo", j.get("productType", "")),
-                ("Cantidad", j.get("totalQuantity", "")),
-                ("Cotizar antes de", fmt_date(j.get("quoteDueDate")) + " ET"),
-                ("Publicado", fmt_date(j.get("datePosted"))),
-                ("Entrega", fmt_date(j.get("shipDeliveryDate"))[:10]),
-            ],
-            "link": f"https://publish.gpo.gov/attachments/rfq/{job_id}/{jacket}",
-            "body": "",
-            # en GPO "jacket" es el número de trabajo, no una chaqueta
-            "body_ignore": ("jacket",),
-        }
-        # El PDF del RFQ solo se descarga para oportunidades nuevas
-        if item["id"] not in seen_ids:
-            try:
-                blob = f"{job_id}/{job_id}_{jacket}.pdf"
-                s = requests.get(
-                    f"{GPO_API}/Files/GetRfqContainerSettings",
-                    params={"containerName": "opportunities-and-pricing",
-                            "blobName": blob},
-                    headers=UA, timeout=60).json()["value"]
-                pdf = requests.get(s["blobSasUrl"], headers=UA, timeout=90)
-                pdf.raise_for_status()
-                item["body"] = pdf_text(pdf.content)
-            except Exception as e:
-                print(f"  (no se pudo leer el RFQ de {jacket}: {e})")
-        items.append(item)
-    return items
+        if not jacket:
+            continue
+        key = (rev_number(j.get("fRevised")), str(j.get("datePosted") or ""))
+        old = out.get(jacket)
+        if old is None or key > (rev_number(old.get("fRevised")),
+                                 str(old.get("datePosted") or "")):
+            out[jacket] = j
+    return out
 
 
-# ---------------------------------------------- fuente: cualquier otra página
-ROW_JS = """
-() => {
-  const sel = 'tr, [role=row], mat-row, .card, li, article';
-  const out = [];
-  document.querySelectorAll(sel).forEach(el => {
-    const t = (el.innerText || '').trim();
-    if (t.length > 25 && t.length < 4000) out.push(t);
-  });
-  return out;
-}
-"""
-
-
-def generic_page(site, seen_ids, patterns):
-    from playwright.sync_api import sync_playwright
-    with sync_playwright() as p:
-        browser = p.chromium.launch()
-        page = browser.new_page()
-        page.goto(site, wait_until="networkidle", timeout=90_000)
-        page.wait_for_timeout(4_000)
-        rows = list(dict.fromkeys(page.evaluate(ROW_JS)))
-        rows = [r for r in rows if not any(r != o and o in r for o in rows)]
-        if not rows:  # sin filas: usar el texto completo por párrafos
-            rows = [b.strip() for b in page.inner_text("body").split("\n\n")
-                    if len(b.strip()) > 25]
-        DEBUG_DIR.mkdir(exist_ok=True)
-        slug = re.sub(r"[^a-z0-9]+", "_", site.lower())[:60]
-        page.screenshot(path=str(DEBUG_DIR / f"{slug}.png"), full_page=True)
-        browser.close()
-    return [{
-        "id": short_hash(site, normalize(r)),
-        "ident": "",
-        "title": r.splitlines()[0][:200],
-        "details": [],
-        "link": site,
-        "body": r,
-    } for r in rows]
-
-
-# ------------------------------------------- fuente: City of Columbus (Ohio)
-def columbus_vendor_services(site, seen_ids, patterns):
-    base = "https://columbusvendorservices.powerappsportals.com"
-    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    lines_rel = "cr820_RFQLine_RFQHeader_cr820_RFQHeader"
-    params = {
-        "$select": ("cr820_rfqcaseid,cr820_documenttitle,cr820_requestingdepartment,"
-                    "cr820_solicitationname,cr820_expirydateandtime,"
-                    "cr820_psnrfqdescription"),
-        "$expand": f"{lines_rel}($select=cr820_productname,cr820_procurementcategory)",
-        "$filter": f"(cr820_expirydateandtime ge {now})",
-    }
-    r = requests.get(f"{base}/_api/cr820_rfqheaders", params=params,
-                     headers={**UA, "Accept": "application/json"}, timeout=60)
-    r.raise_for_status()
-    items = []
-    for v in r.json().get("value", []):
-        case = v.get("cr820_rfqcaseid", "")
-        lines = [f"{l.get('cr820_productname') or ''} ({l.get('cr820_procurementcategory') or ''})"
-                 for l in v.get(lines_rel) or []]
-        due = v.get("cr820_expirydateandtime") or ""
-        try:
-            due = datetime.fromisoformat(due.replace("Z", "+00:00")) \
-                .astimezone(ET).strftime("%m/%d/%Y %I:%M %p ET")
-        except Exception:
-            pass
-        items.append({
-            "id": short_hash("columbus", case),
-            "ident": case,
-            # el título incluye los productos de cada línea del RFQ
-            "title": (v.get("cr820_documenttitle") or "").strip(),
-            "title_extra": " ; ".join(lines),
-            "details": [
-                ("Departamento", v.get("cr820_requestingdepartment", "")),
-                ("Tipo", v.get("cr820_solicitationname", "")),
-                ("Cierra", due),
-                ("Productos", "; ".join(lines)[:300]),
-            ],
-            "link": f"{base}/OpenRFQs/",
-            "body": v.get("cr820_psnrfqdescription") or "",
-        })
-    return items
-
-
-# --------------------------------------- fuente: Philadelphia (PHLContracts)
-def _html_to_text(h):
-    h = re.sub(r"(?is)<(script|style)\b.*?</\1>", " ", h)
-    h = re.sub(r"(?s)<[^>]+>", " ", h)
-    from html import unescape
-    return re.sub(r"\s+", " ", unescape(h)).strip()
-
-
-def _field(text, label, nxt):
-    m = re.search(re.escape(label) + r"\s*(.*?)\s*" + re.escape(nxt), text)
-    return m.group(1).strip() if m else ""
-
-
-def phl_contracts(site, seen_ids, patterns):
-    from playwright.sync_api import sync_playwright
-    base = "https://www.phlcontracts.phila.gov"
-    ids = []
-    # 1) Lista de licitaciones abiertas (estado "Sent"): requiere navegador
-    with sync_playwright() as p:
-        browser = p.chromium.launch()
-        page = browser.new_page()
-        page.goto(f"{base}/bso/view/search/external/advancedSearchBid.xhtml",
-                  wait_until="networkidle", timeout=90_000)
-        page.select_option('select[name="bidSearchForm:status"]', "2BS")
-        page.get_by_role("button", name="Search", exact=True).click()
-        page.wait_for_selector('a[href*="bidDetail.sda"]', timeout=60_000)
-        for _ in range(60):  # hasta 60 páginas de 25
-            page_ids = page.eval_on_selector_all(
-                'a[href*="bidDetail.sda"]', "els => els.map(e => e.innerText.trim())")
-            ids.extend(i for i in page_ids if i and i not in ids)
-            nxt = page.query_selector("a.ui-paginator-next")
-            if not nxt or "ui-state-disabled" in (nxt.get_attribute("class") or ""):
-                break
-            first = page_ids[0] if page_ids else ""
-            nxt.click()
-            page.wait_for_function(
-                "f => { const a = document.querySelector('a[href*=\"bidDetail.sda\"]');"
-                " return a && a.innerText.trim() !== f; }", arg=first, timeout=30_000)
-        browser.close()
-
-    # 2) Detalle de cada licitación nueva (página pública)
-    items = []
-    for bid in ids:
-        item_id = short_hash("phl", bid)
-        link = f"{base}/bso/external/bidDetail.sda?docId={bid}&external=true&parentUrl=close"
-        item = {"id": item_id, "ident": bid, "title": "", "details": [],
-                "link": link, "body": ""}
-        if item_id not in seen_ids:
-            try:
-                r = requests.get(link, headers=UA, timeout=60)
-                r.raise_for_status()
-                t = _html_to_text(r.text)
-                item["title"] = _field(t, "Description:", "Bid Opening Date:")
-                item["details"] = [
-                    ("Departamento", _field(t, "Department:", "Location:")),
-                    ("Tipo", _field(t, "Type Code:", "Allow Electronic Quote:")),
-                    ("Cierra", _field(t, "Bid Opening Date:", "Purchaser:")),
-                ]
-                k = t.find("Item # 1")
-                body = t[k:].split("Copyright")[0] if k >= 0 else ""
-                # quitar textos de categoría NIGP (generan falsos avisos)
-                item["body"] = re.sub(r"NIGP Code:.*?(?=Qty Unit Cost)", " ", body)
-            except Exception as e:
-                item["error"] = True  # se reintenta en la próxima revisión
-                print(f"  (no se pudo leer el detalle de {bid}: {e})")
-        items.append(item)
-    return items
-
-
-# ----------------------------------------- fuente: portales Bonfire (Euna)
-def bonfire_portal(site, seen_ids, patterns, first=False):
-    """API pública de cada portal: lista de oportunidades abiertas."""
-    host = urlparse(site if "://" in site else "https://" + site).netloc
-    r = http_get(f"https://{host}/PublicPortal/getOpenPublicOpportunitiesSectionData",
-                 headers={**UA, "Accept": "application/json",
-                          "X-Requested-With": "XMLHttpRequest"})
-    if r.status_code in (403, 429, 503):
-        raise RuntimeError(f"bloqueado (HTTP {r.status_code})")
-    r.raise_for_status()
+def fetch_rfq_text(job):
+    """Texto del PDF del RFQ (o None si no se pudo leer)."""
+    jacket = str(job.get("jacketNumber", "")).strip()
+    job_id = str(job.get("jobId", ""))
     try:
-        data = r.json()
-    except ValueError:
-        # el portal existe pero no publica nada en público (p. ej. Tomball)
-        print(f"  ({host}: sin portal público)")
-        return []
-    payload = data.get("payload") or {}
-    projects = payload.get("projects") or {}
-    if isinstance(projects, dict):
-        projects = list(projects.values())
-    depts = payload.get("departments") or {}
-    name = host.split(".")[0]
-    items = []
-    for pj in projects:
-        pid = str(pj.get("ProjectID", ""))
-        dep = depts.get(str(pj.get("DepartmentID"))) if isinstance(depts, dict) else None
-        dep_name = dep.get("DepartmentName", "") if isinstance(dep, dict) else ""
-        items.append({
-            "id": short_hash("bonfire", host, pid),
-            "ident": pj.get("ReferenceID") or "",
-            "title": (pj.get("ProjectName") or "").strip(),
-            "details": [("Portal", name), ("Departamento", dep_name),
-                        ("Cierra", to_et(pj.get("DateClose", "")))],
-            "link": f"https://{host}/opportunities/{pid}",
-            "body": "",
-        })
-    return items
+        s = http_get(f"{GPO_API}/Files/GetRfqContainerSettings",
+                     params={"containerName": "opportunities-and-pricing",
+                             "blobName": f"{job_id}/{job_id}_{jacket}.pdf"}).json()
+        pdf = http_get(s["value"]["blobSasUrl"], timeout=90)
+        pdf.raise_for_status()
+        from pypdf import PdfReader
+        reader = PdfReader(io.BytesIO(pdf.content))
+        return "\n".join((p.extract_text() or "")
+                         for p in reader.pages[:MAX_PDF_PAGES])
+    except Exception as e:
+        print(f"  (no se pudo leer el RFQ de {jacket}: {e})")
+        return None
 
 
-# ------------------- fuente: sitios BuySpeed (Illinois, Islas Vírgenes, NJ)
-ROWS_JS = """
-rows => rows.map(r => {
-  const a = r.querySelector('a[href*="bidDetail.sda"]');
-  const cells = [...r.querySelectorAll('td')]
-      .map(td => td.textContent.replace(/\\s+/g, ' ').trim());
-  const get = l => { const c = cells.find(x => x.startsWith(l));
-                     return c ? c.slice(l.length).trim() : ''; };
-  return {href: a ? a.getAttribute('href') : '', desc: get('Description'),
-          status: get('Status'), org: get('Organization Name'),
-          date: get('Bid Opening Date')};
-})
-"""
+def pdf_lines(text):
+    lines = (re.sub(r"\s+", " ", ln).strip() for ln in (text or "").splitlines())
+    return [ln for ln in lines if ln]
 
 
-def buyspeed(site, seen_ids, patterns, first=False):
-    from playwright.sync_api import sync_playwright
-    u = urlparse(site)
-    base = f"{u.scheme}://{u.netloc}"
-    rows = []
-    with sync_playwright() as p:
-        browser = p.chromium.launch()
-        page = browser.new_page()
-        page.goto(f"{base}/bso/view/search/external/advancedSearchBid.xhtml?openBids=true",
-                  wait_until="networkidle", timeout=90_000)
-        page.wait_for_selector('a[href*="bidDetail.sda"]', timeout=60_000)
-        for _ in range(60):  # hasta 60 páginas de 25
-            page_rows = page.eval_on_selector_all("tr[data-ri]", ROWS_JS)
-            rows.extend(x for x in page_rows if x["href"])
-            nxt = page.query_selector("a.ui-paginator-next")
-            if not nxt or "ui-state-disabled" in (nxt.get_attribute("class") or ""):
-                break
-            first_href = page_rows[0]["href"] if page_rows else ""
-            nxt.click()
-            page.wait_for_function(
-                "f => { const a = document.querySelector('a[href*=\"bidDetail.sda\"]');"
-                " return a && a.getAttribute('href') !== f; }",
-                arg=first_href, timeout=30_000)
-        browser.close()
+def text_hash(lines):
+    return hashlib.sha1("\n".join(lines).encode()).hexdigest()[:16]
 
-    items, done = [], set()
-    for row in rows:
-        # solo las abiertas ("Sent"); Illinois también lista adjudicadas
-        if row["status"] and "sent" not in row["status"].lower():
+
+def scalar_fields(job):
+    return {k: v for k, v in job.items()
+            if isinstance(v, (str, int, float, bool)) or v is None}
+
+
+def job_link(job):
+    return (f"https://publish.gpo.gov/attachments/rfq/"
+            f"{job.get('jobId', '')}/{job.get('jacketNumber', '')}")
+
+
+def job_summary(job):
+    return [
+        ("Revisión", job.get("fRevised") or "original"),
+        ("Tipo", job.get("productType", "")),
+        ("Cantidad", job.get("totalQuantity", "")),
+        ("Cotizar antes de", (fmt_date(job.get("quoteDueDate")) + " ET")
+         if job.get("quoteDueDate") else ""),
+        ("Entrega", fmt_date(job.get("shipDeliveryDate"))[:10]),
+        ("Publicado", fmt_date(job.get("datePosted"))),
+    ]
+
+
+# ------------------------------------------------------------ comparar cambios
+def field_changes(old_fields, new_fields):
+    out = []
+    for k in sorted(set(old_fields) | set(new_fields)):
+        if k in IGNORE_FIELDS:
             continue
-        bid = (parse_qs(urlparse(row["href"]).query).get("docId") or [""])[0]
-        if not bid or bid in done:
-            continue
-        done.add(bid)
-        item_id = short_hash("buyspeed", u.netloc, bid)
-        link = f"{base}/bso/external/bidDetail.sda?docId={bid}&external=true&parentUrl=close"
-        item = {"id": item_id, "ident": bid, "title": row["desc"],
-                "details": [("Organización", row["org"]), ("Cierra", row["date"])],
-                "link": link, "body": ""}
-        # el detalle (artículos) solo para las nuevas, y no en la 1.ª revisión
-        if item_id not in seen_ids and not first:
-            try:
-                r = http_get(link)
-                r.raise_for_status()
-                t = _html_to_text(r.text)
-                item["title"] = _field(t, "Description:", "Bid Opening Date:") or row["desc"]
-                dep = _field(t, "Department:", "Location:")
-                if dep:
-                    item["details"].insert(0, ("Departamento", dep))
-                k = t.find("Item # 1")
-                body = t[k:].split("Copyright")[0] if k >= 0 else ""
-                item["body"] = re.sub(r"NIGP Code:.*?(?=Qty Unit Cost)", " ", body)
-                time.sleep(0.5)
-            except Exception as e:
-                item["error"] = True  # se reintenta en la próxima revisión
-                print(f"  (no se pudo leer el detalle de {bid}: {e})")
-        items.append(item)
-    return items
+        a, b = old_fields.get(k), new_fields.get(k)
+        if str(a) != str(b):
+            label = FIELD_LABELS.get(k, k)
+            out.append(f"{label}: {fmt_field(k, a)} → {fmt_field(k, b)}")
+    # la revisión primero, luego la fecha de cotización
+    order = {"Revisión": 0, "Cotizar antes de": 1}
+    return sorted(out, key=lambda x: order.get(x.split(":")[0], 9))
 
 
-# ------------------------------------------- fuente: City of Cleveland (Ohio)
-def cleveland(site, seen_ids, patterns, first=False):
-    from bs4 import BeautifulSoup
-    base = "https://www.clevelandohio.gov"
-    r = http_get(site)
-    r.raise_for_status()
-    soup = BeautifulSoup(r.text, "html.parser")
-    items = []
-    for div in soup.select("div.accordion-item"):
-        head = div.select_one("span.h3")
-        if not head:
-            continue
-        title = head.get_text(" ", strip=True)
-        m = re.match(r"^(\d+(?:-\d+)?)\s+-\s+(.*)$", title)
-        ident, title = (m.group(1), m.group(2)) if m else ("", title)
-        body_el = div.select_one(".accordion-body")
-        text = body_el.get_text(" ", strip=True) if body_el else ""
-        pdf = div.select_one('a[href$=".pdf"]')
-        pdf_url = (base + pdf["href"]) if pdf and pdf["href"].startswith("/") else (
-            pdf["href"] if pdf else "")
-        closing = re.search(r"(?:Closing Date|Sealed Bids will be opened at Noon on):?\s*([^:]*?\d{4}(?:,\s*[\d:]+\s*[AP]M)?)", text)
-        item = {
-            "id": short_hash("cleveland", ident, title),
-            "ident": ident,
-            "title": title,
-            "details": [("Ciudad", "Cleveland, OH"),
-                        ("Cierra", closing.group(1).strip() if closing else "")],
-            "link": pdf_url or site,
-            "body": text,
-        }
-        if pdf_url and item["id"] not in seen_ids and not first:
-            try:
-                item["body"] += "\n" + pdf_from_url(pdf_url)
-            except Exception as e:
-                print(f"  (no se pudo leer el PDF de {title[:40]}: {e})")
-        items.append(item)
-    return items
+def doc_changes(old_lines, new_lines, limit=12):
+    added, removed = [], []
+    for d in difflib.ndiff(old_lines, new_lines):
+        if d.startswith("+ "):
+            added.append(d[2:])
+        elif d.startswith("- "):
+            removed.append(d[2:])
+    return added[:limit], removed[:limit], len(added), len(removed)
 
 
-# --------------------------------------------- fuente: Gwinnett County (GA)
-def gwinnett(site, seen_ids, patterns, first=False):
-    from bs4 import BeautifulSoup
-    base = "https://www.gwinnettcounty.com"
-    r = http_get(site)
-    r.raise_for_status()
-    soup = BeautifulSoup(r.text, "html.parser")
-    items = []
-    for li in soup.select("li.list-group-item"):
-        a = li.select_one('strong a[href*="/static/upload/bid/"]')
-        if not a:
-            continue
-        ps = [p.get_text(" ", strip=True) for p in li.select("p")]
-        title = ps[1] if len(ps) > 1 else ""
-        opening = next((x.split(":", 1)[1].strip() for x in ps
-                        if x.startswith("Opening Date")), "")
-        pdf_url = base + a["href"] if a["href"].startswith("/") else a["href"]
-        ident = a.get_text(strip=True)
-        item = {
-            "id": short_hash("gwinnett", ident),
-            "ident": ident,
-            "title": title,
-            "details": [("Condado", "Gwinnett County, GA"), ("Apertura", opening)],
-            "link": pdf_url,
-            "body": "",
-        }
-        if item["id"] not in seen_ids and not first:
-            try:
-                item["body"] = pdf_from_url(pdf_url)
-            except Exception as e:
-                print(f"  (no se pudo leer el PDF de {ident}: {e})")
-        items.append(item)
-    return items
+# ------------------------------------------------------------------- correo
+CARD = ("border:1px solid #ccc;border-radius:6px;padding:10px;margin:10px 0;"
+        "font-family:Arial,sans-serif")
+H3 = ("font-family:Arial,sans-serif;margin:24px 0 6px;"
+      "border-bottom:2px solid #1a5276;color:#1a5276")
 
 
-# ------------------------------------------------- fuente: Louisiana (LaPAC)
-def louisiana(site, seen_ids, patterns, first=False):
-    from bs4 import BeautifulSoup
-    base = "https://wwwcfprd.doa.louisiana.gov"
-    r = http_get(f"{base}/osp/lapac/catbids.cfm")
-    r.raise_for_status()
-    cats = re.findall(r'href="(?:https?://wwwcfprd\.doa\.louisiana\.gov)?'
-                      r'(/osp/lapac/dspBid\.cfm\?search=segment&(?:amp;)?term=\d+)"', r.text)
-    cats = [c.replace("&amp;", "&") for c in cats]
-    items, done = [], set()
-    for path in dict.fromkeys(cats):
-        rc = http_get(base + path.replace("&amp;", "&"))
-        if rc.status_code != 200:
-            continue
-        soup = BeautifulSoup(rc.text, "html.parser")
-        for tr in soup.select("table.bid tr"):
-            first_td = tr.find("td")
-            if not first_td or not first_td.get("rowspan"):
-                continue  # filas de addendum
-            bid = first_td.get_text(" ", strip=True)
-            if not bid or bid in done:
-                continue
-            done.add(bid)
-            tds = tr.find_all("td")
-            desc_td = tr.select_one("td.txt")
-            title = ""
-            pdf_url = ""
-            if desc_td:
-                title = desc_td.get_text(" ", strip=True).split("Original:")[0].strip()
-                a = desc_td.find("a", href=True)
-                if a:
-                    pdf_url = base + a["href"] if a["href"].startswith("/") else a["href"]
-            opens = tds[3].get_text(" ", strip=True) if len(tds) > 3 else ""
-            item = {
-                "id": short_hash("lapac", bid),
-                "ident": bid,
-                "title": title,
-                "details": [("Estado", "Louisiana"), ("Apertura", opens)],
-                "link": pdf_url or base + path.replace("&amp;", "&"),
-                "body": "",
-            }
-            if pdf_url and item["id"] not in seen_ids and not first:
-                try:
-                    item["body"] = pdf_from_url(pdf_url)
-                except Exception as e:
-                    print(f"  (no se pudo leer el PDF de {bid}: {e})")
-            items.append(item)
-        time.sleep(0.5)
-    return items
+def job_card(job, extra_html="", star=None, note=""):
+    jacket = job.get("jacketNumber", "")
+    head = (f"{'★ ' if star else ''}<b>Jacket {escape(str(jacket))}</b> — "
+            f"<b>{escape((job.get('title') or '').strip())}</b>")
+    det = " · ".join(f"{escape(k)}: {escape(str(v))}"
+                     for k, v in job_summary(job) if v)
+    kw = (f"<br><small><b>Palabras clave:</b> {escape(', '.join(star))}</small>"
+          if star else "")
+    nt = f"<br><small><b>Tu nota:</b> {escape(note)}</small>" if note else ""
+    return (f"<div style='{CARD}'>{head}<br><small style='color:#444'>{det}</small>"
+            f"{kw}{nt}{extra_html}<br><a href='{escape(job_link(job))}'>Ver RFQ</a>"
+            f"</div>")
 
 
-# ------------------------------------- fuente: South Carolina (SCBO diario)
-SCBO_CATS = {2: "Architectural/Engineering", 3: "Construction",
-             4: "Consultant/Professional", 5: "Environmental Remediation",
-             6: "Equipment", 7: "Information Technology", 8: "Maintenance/Repair",
-             9: "Minor Construction", 10: "Printing", 11: "Services",
-             12: "Supplies", 13: "Auditing", 121: "Sole Source and Emergency",
-             15: "Notices/Cooperative Purchasing"}   # 14 = For Sale (se omite)
-SCBO_LABELS = ["Ad Title:", "Purchasing Agent/Entity:", "Ad Publish Date:",
-               "Solicitation #:", "Direct Inquiries To:", "Bid/Submittal Due Date:",
-               "Buyer Phone#:", "Buyer Email:", "Description:",
-               "Pre-Bid Information:", "Full Details / Download:", "PRINT AD"]
+def build_email(updates, new_jobs, started, first_run):
+    out = [f"<p style='font-family:Arial,sans-serif'>GPO Small Purchase · "
+           f"<small>{escape(stamp())}</small></p>"]
+    if updates:
+        out.append(f"<h3 style='{H3}'>🔄 Cambios en tus bids ({len(updates)})</h3>")
+        for u in updates:
+            lis = "".join(f"<li>{escape(c)}</li>" for c in u["changes"])
+            doc = ""
+            if u.get("doc"):
+                added, removed, na, nr = u["doc"]
+                doc = "<br><small><b>El documento RFQ cambió</b>"
+                if added:
+                    doc += (f" — líneas nuevas ({na}):</small><pre style='white-space:"
+                            f"pre-wrap;font-size:12px;background:#eef8ee;padding:6px'>"
+                            + escape("\n".join(added)) + "</pre>")
+                if removed:
+                    doc += (f"<small>Líneas quitadas ({nr}):</small><pre style='white-"
+                            f"space:pre-wrap;font-size:12px;background:#fbeeee;"
+                            f"padding:6px'>" + escape("\n".join(removed)) + "</pre>")
+                if not added and not removed:
+                    doc += "</small>"
+            extra = f"<ul style='margin:6px 0'>{lis}</ul>{doc}" if lis or doc else ""
+            out.append(job_card(u["job"], extra, note=u["note"]))
+    if started:
+        out.append(f"<h3 style='{H3}'>📌 Ahora sigo estos bids ({len(started)})</h3>")
+        for s in started:
+            if s["job"]:
+                out.append(job_card(s["job"], note=s["note"]))
+            else:
+                out.append(f"<div style='{CARD}'><b>Jacket {escape(s['jacket'])}</b>"
+                           f" — no aparece en la lista de abiertos de GPO. Revisa el "
+                           f"número; si lo publican o reabren, te aviso.</div>")
+    if new_jobs:
+        title = ("🆕 Bids abiertos en GPO (primera revisión)" if first_run
+                 else "🆕 Bids nuevos en GPO")
+        out.append(f"<h3 style='{H3}'>{title} ({len(new_jobs)})</h3>")
+        out.append("<p style='font-family:Arial,sans-serif'><small>★ = coincide con "
+                   "tus palabras clave.</small></p>")
+        for n in new_jobs:
+            extra = ("<br><small style='color:#b9770e'><b>Revisión de un bid "
+                     "anterior</b></small>" if n["revision"] else "")
+            out.append(job_card(n["job"], extra, star=n["matches"],
+                                note=n.get("note", "")))
+    return "\n".join(out)
 
 
-def scbo(site, seen_ids, patterns, first=False):
-    today = datetime.now(ET).strftime("%Y-%m-%d")
-    items, done = [], set()
-    for cid, cname in SCBO_CATS.items():
-        url = f"https://scbo.sc.gov/online-edition?c={cid}-{today}"
-        r = http_get(url)
-        if r.status_code != 200:
-            continue
-        t = _html_to_text(r.text)
-        for chunk in t.split("Ad Title:")[1:]:
-            chunk = "Ad Title:" + chunk
-            f = {}
-            for i, lab in enumerate(SCBO_LABELS[:-1]):
-                f[lab] = _field(chunk, lab, SCBO_LABELS[i + 1])
-            title = f["Ad Title:"]
-            key = short_hash("scbo", title, f["Purchasing Agent/Entity:"],
-                             f["Solicitation #:"])
-            if not title or key in done:
-                continue
-            done.add(key)
-            more = f["Full Details / Download:"]
-            items.append({
-                "id": key,
-                "ident": f["Solicitation #:"] if f["Solicitation #:"].upper() != "N/A" else "",
-                "title": title,
-                "title_extra": f["Description:"],
-                "details": [("Entidad", f["Purchasing Agent/Entity:"]),
-                            ("Categoría", cname),
-                            ("Cierra", f["Bid/Submittal Due Date:"]),
-                            ("Contacto", f["Buyer Email:"])],
-                "link": more if more.startswith("http") else url,
-                "body": f["Description:"],
-            })
-        time.sleep(0.5)
-    return items
-
-
-def fetch_site(site, seen_ids, patterns, first=False):
-    s = site.lower()
-    if "bonfirehub." in s:
-        return bonfire_portal(site, seen_ids, patterns, first)
-    if "phlcontracts.phila.gov" in s:
-        return phl_contracts(site, seen_ids, patterns)
-    if "/bso/" in s:
-        return buyspeed(site, seen_ids, patterns, first)
-    if "publish.gpo.gov/smallpurchase" in s:
-        return gpo_small_purchase(site, seen_ids, patterns)
-    if "columbusvendorservices.powerappsportals.com" in s:
-        return columbus_vendor_services(site, seen_ids, patterns)
-    if "clevelandohio.gov" in s:
-        return cleveland(site, seen_ids, patterns, first)
-    if "gwinnettcounty.com" in s:
-        return gwinnett(site, seen_ids, patterns, first)
-    if "doa.louisiana.gov/osp/lapac" in s:
-        return louisiana(site, seen_ids, patterns, first)
-    if "scbo.sc.gov" in s:
-        return scbo(site, seen_ids, patterns, first)
-    return generic_page(site, seen_ids, patterns)
-
-
-# --------------------------------------------------------------------- correo
 def send_email(subject, html):
     host = os.environ.get("SMTP_HOST") or "smtp.gmail.com"
     port = int(os.environ.get("SMTP_PORT") or "587")
@@ -685,148 +358,174 @@ def send_email(subject, html):
         s.sendmail(user, to, msg.as_string())
 
 
-def source_label(site):
-    u = urlparse(site)
-    host = u.netloc.replace("www.", "")
-    if "bonfirehub." in host:
-        return "Bonfire · " + host.split(".")[0]
-    return {
-        "publish.gpo.gov": "GPO Small Purchase",
-        "columbusvendorservices.powerappsportals.com": "City of Columbus, OH",
-        "phlcontracts.phila.gov": "Philadelphia (PHLContracts)",
-        "bidbuy.illinois.gov": "Illinois BidBuy",
-        "gvibuy.buyspeed.com": "Islas Vírgenes (GVIBUY)",
-        "njstart.gov": "New Jersey (NJSTART)",
-        "clevelandohio.gov": "City of Cleveland, OH",
-        "gwinnettcounty.com": "Gwinnett County, GA",
-        "wwwcfprd.doa.louisiana.gov": "Louisiana (LaPAC)",
-        "scbo.sc.gov": "South Carolina (SCBO)",
-    }.get(host, host)
-
-
-def build_email(hits, first_run):
-    now = datetime.now(ET).strftime("%m/%d/%Y %I:%M %p ET")
-    intro = ("Primera revisión: oportunidades abiertas que coinciden con tus "
-             "palabras clave." if first_run else
-             "Nuevas oportunidades que coinciden con tus palabras clave.")
-    out = [f"<p style='font-family:Arial,sans-serif'>{escape(intro)}<br>"
-           f"<small>{escape(now)}</small></p>"]
-    current = None
-    for h in hits:
-        if h["source"] != current:
-            current = h["source"]
-            note = (" <small style='color:#888'>(primera revisión de este sitio: "
-                    "incluye lo que ya estaba abierto)</small>"
-                    if h.get("first_source") and not first_run else "")
-            out.append(f"<h3 style='font-family:Arial,sans-serif;margin:22px 0 4px;"
-                       f"border-bottom:2px solid #1a5276'>{escape(current)}{note}</h3>")
-        head = (f"<b>{escape(h['ident'])}</b> — " if h["ident"] else "") \
-            + f"<b>{escape(h['title'])}</b>"
-        det = "<br>".join(f"{escape(k)}: {escape(str(v))}"
-                          for k, v in h["details"] if v)
-        kw = []
-        if h["in_title"]:
-            kw.append("<b>En el título / productos:</b> " + escape(", ".join(h["in_title"])))
-        if h["in_body"]:
-            kw.append("<b>En el documento:</b> " + escape(", ".join(h["in_body"])))
-        out.append(
-            "<div style='border:1px solid #ccc;border-radius:6px;padding:10px;"
-            "margin:12px 0;font-family:Arial,sans-serif'>"
-            f"{head}<br><small style='color:#444'>{det}</small><br>"
-            f"<small>{'<br>'.join(kw)}</small><br>"
-            f"<a href='{escape(h['link'])}'>Ver oportunidad</a></div>")
-    return "\n".join(out)
-
-
-def read_bonfire_hosts():
-    if not BONFIRE_FILE.exists():
-        return []
-    hosts = []
-    for line in read_list(BONFIRE_FILE):
-        h = line.split("#")[0].strip().lower()
-        h = urlparse(h if "://" in h else "https://" + h).netloc
-        if h and h not in hosts:
-            hosts.append(h)
-    return [f"https://{h}/portal/?tab=openOpportunities" for h in hosts]
+# ------------------------------------------------------ tabla de mis bids (.md)
+def write_status(state, my_bids):
+    rows = []
+    for jacket, note in my_bids.items():
+        rec = state["jobs"].get(jacket)
+        tr = state["tracked"].get(jacket, {})
+        if rec:
+            f = rec["fields"]
+            status = "Abierto" if rec.get("open") else "Ya no está abierto"
+            rows.append([jacket, (f.get("title") or "").strip(),
+                         f.get("fRevised") or "original",
+                         fmt_date(f.get("quoteDueDate")), status,
+                         tr.get("last_change") or "—", note])
+        else:
+            rows.append([jacket, "—", "—", "—", "No encontrado en GPO", "—", note])
+    lines = ["# Mis bids de GPO — estado",
+             "",
+             f"Actualizado por el bot: {stamp()}. Para añadir o quitar bids, "
+             "edita `mis_bids.txt`.",
+             "",
+             "| Jacket | Título | Revisión | Cotizar antes de (ET) | Estado | "
+             "Último cambio | Nota |",
+             "|---|---|---|---|---|---|---|"]
+    for r in rows:
+        lines.append("| " + " | ".join(str(c).replace("|", "/") for c in r) + " |")
+    if not rows:
+        lines.append("| — | Aún no hay bids en `mis_bids.txt` | | | | | |")
+    STATUS_FILE.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 # ---------------------------------------------------------------------- main
 def main():
+    sys.stdout.reconfigure(line_buffering=True)
     if not should_run():
         print("No toca revisar en esta hora (ajuste de horario de verano). Fin.")
         return 0
 
-    sites = read_list(ROOT / "sites.txt")
-    bonfire = read_bonfire_hosts()
-    patterns = build_patterns(read_list(ROOT / "keywords.txt"))
-    state = json.loads(STATE_FILE.read_text()) if STATE_FILE.exists() else {}
-    first_run = not state
-    print(f"Sitios: {len(sites)} · Portales Bonfire: {len(bonfire)}")
+    state = (json.loads(STATE_FILE.read_text()) if STATE_FILE.exists()
+             else {"jobs": {}, "tracked": {}})
+    first_run = not state["jobs"]
+    my_bids = read_my_bids()
+    patterns = build_patterns(read_list(KEYWORDS_FILE))
+    today = now_et().strftime("%m/%d/%Y")
 
-    hits, failures, bonfire_fail = [], [], []
-    for site in sites + bonfire:
-        is_bonfire = site in bonfire
-        first = site not in state
-        seen = set(state.get(site, []))
-        t0 = time.time()
-        try:
-            items = fetch_site(site, seen, patterns, first)
-            print(f"{site}: {len(items)} publicaciones ({time.time() - t0:.0f}s)")
-            if not items and not is_bonfire and "gpo.gov" not in site:
-                failures.append(site)
-            for it in items:
-                if it["id"] in seen or it.get("error"):
-                    continue
-                in_title = find_matches(
-                    it["title"] + " ; " + it.get("title_extra", ""), patterns, flex=True)
-                ignore = tuple(normalize(x) for x in it.get("body_ignore", ()))
-                in_body = [k for k in find_matches(it["body"], patterns, flex=False)
-                           if k not in in_title and not normalize(k).startswith(ignore or ("\0",))]
-                if in_title or in_body:
-                    hits.append({**it, "in_title": in_title, "in_body": in_body,
-                                 "source": source_label(site), "first_source": first})
-                seen.add(it["id"])
-            # guardar solo lo que sigue publicado (evita que el archivo crezca)
-            current = {it["id"] for it in items}
-            state[site] = sorted(seen & current) if current else sorted(seen)
-        except Exception as e:
-            print(f"ERROR en {site}: {e}")
-            (bonfire_fail if is_bonfire else failures).append(site)
-        if is_bonfire:
-            time.sleep(BONFIRE_PAUSE)
+    try:
+        open_jobs = fetch_open_jobs()
+    except Exception as e:
+        print(f"ERROR leyendo GPO: {e}")
+        if os.getenv("DRY_RUN") != "1":
+            send_email("⚠️ El bot no pudo leer GPO",
+                       f"<p>No se pudo leer la lista de GPO Small Purchase.</p>"
+                       f"<p><small>{escape(str(e))}</small></p>"
+                       f"<p>Se volverá a intentar en la próxima revisión.</p>")
+        return 0
+    print(f"GPO: {len(open_jobs)} bids abiertos · Mis bids: {len(my_bids)}")
+
+    updates, new_jobs, started = [], [], []
+
+    # 1) Bids abiertos ahora
+    for jacket, job in open_jobs.items():
+        fields = scalar_fields(job)
+        rec = state["jobs"].get(jacket)
+        mine = jacket in my_bids
+        is_new = rec is None
+        revised = (rec is not None and
+                   rev_number(job.get("fRevised")) > rev_number(rec["fields"].get("fRevised")))
+
+        text = None
+        if is_new or revised or mine:
+            text = fetch_rfq_text(job)
+
+        if is_new or (revised and not mine):
+            body = text or ""
+            in_title = find_matches(job.get("title", ""), patterns)
+            in_doc = find_matches(body, patterns, flex=False, ignore=("jacket",))
+            new_jobs.append({"job": job, "revision": not is_new,
+                             "matches": sorted(set(in_title) | set(in_doc)),
+                             "note": my_bids.get(jacket, "")})
+
+        if rec is None:
+            rec = {"first_seen": today, "fields": fields}
+            state["jobs"][jacket] = rec
+
+        if mine and jacket in state["tracked"]:
+            changes = field_changes(rec["fields"], fields)
+            if not rec.get("open", True):
+                changes.insert(0, "Volvió a aparecer en la lista de abiertos")
+            doc = None
+            if text is not None and rec.get("pdf_lines") is not None:
+                new_l = pdf_lines(text)
+                if text_hash(new_l) != rec.get("pdf_hash"):
+                    doc = doc_changes(rec["pdf_lines"], new_l)
+            if changes or doc:
+                updates.append({"job": job, "changes": changes, "doc": doc,
+                                "note": my_bids[jacket]})
+                desc = changes[0] if changes else "Cambió el documento RFQ"
+                state["tracked"][jacket]["last_change"] = f"{today}: {desc}"
+
+        rec["fields"] = fields
+        rec["open"] = True
+        rec["last_seen"] = today
+        if text is not None:
+            lines = pdf_lines(text)
+            rec["pdf_hash"] = text_hash(lines)
+            rec["pdf_lines"] = lines if mine else None
+
+    # 2) Mis bids que ya no están abiertos
+    for jacket, note in my_bids.items():
+        rec = state["jobs"].get(jacket)
+        if jacket in open_jobs or rec is None:
+            continue
+        if rec.get("open") and jacket in state["tracked"]:
+            fake = {**rec["fields"], "jacketNumber": jacket}
+            updates.append({"job": fake, "note": note, "doc": None, "changes": [
+                "Ya no aparece en la lista de abiertos de GPO (cerró o lo retiraron)"]})
+            state["tracked"][jacket]["last_change"] = f"{today}: ya no está abierto"
+        rec["open"] = False
+
+    # 3) Bids que acabas de añadir a mis_bids.txt
+    for jacket, note in my_bids.items():
+        if jacket in state["tracked"]:
+            continue
+        state["tracked"][jacket] = {"since": today, "last_change": ""}
+        started.append({"jacket": jacket, "note": note,
+                        "job": open_jobs.get(jacket)})
+    for jacket in list(state["tracked"]):
+        if jacket not in my_bids:
+            del state["tracked"][jacket]   # lo quitaste de la lista
+
+    # 4) Cerrar los que ya no están y limpiar los viejos
+    cutoff = (now_et() - timedelta(days=KEEP_CLOSED_DAYS)).strftime("%Y%m%d")
+    for jacket, rec in list(state["jobs"].items()):
+        if jacket not in open_jobs:
+            rec["open"] = False
+            if jacket not in my_bids:
+                rec["pdf_lines"] = None
+                seen = datetime.strptime(rec.get("last_seen", today), "%m/%d/%Y")
+                if seen.strftime("%Y%m%d") < cutoff:
+                    del state["jobs"][jacket]
+
+    # Resumen en el registro
+    for u in updates:
+        print(f"CAMBIO {u['job'].get('jacketNumber')}: {u['changes']}"
+              f"{' + documento' if u['doc'] else ''}")
+    for s in started:
+        print(f"SIGUIENDO {s['jacket']}: {'abierto' if s['job'] else 'no encontrado'}")
+    new_jobs.sort(key=lambda n: (not n["matches"], n["job"].get("title", "")))
+    for n in new_jobs:
+        print(f"NUEVO {'★' if n['matches'] else ' '} {n['job'].get('jacketNumber')} "
+              f"{n['job'].get('fRevised') or ''} {n['job'].get('title', '')[:70]}"
+              f" {n['matches'] or ''}")
 
     STATE_FILE.parent.mkdir(exist_ok=True)
-    STATE_FILE.write_text(json.dumps(state, indent=1))
+    STATE_FILE.write_text(json.dumps(state, indent=1, ensure_ascii=False))
+    write_status(state, my_bids)
 
-    # Agrupar por sitio; dentro de cada sitio, primero las del título
-    hits.sort(key=lambda h: (h["source"], not h["in_title"], h["title"]))
-    print(f"Coincidencias nuevas: {len(hits)}")
-    for h in hits:
-        print(f" - [{h['source']}] {h['ident']} {h['title'][:70]} | título: "
-              f"{h['in_title']} | documento: {h['in_body']}")
-    if bonfire_fail:
-        print(f"Portales Bonfire con error: {len(bonfire_fail)} de {len(bonfire)}")
-
-    if os.getenv("DRY_RUN") == "1":
-        return 0
-    if hits:
-        send_email(f"🔔 {len(hits)} oportunidad(es) con tus palabras clave",
-                   build_email(hits, first_run))
-    if failures or bonfire_fail:
-        html = ""
-        if failures:
-            html += ("<p>No se pudo leer:</p><ul>"
-                     + "".join(f"<li>{escape(f)}</li>" for f in failures) + "</ul>")
-        if bonfire_fail:
-            if len(bonfire_fail) <= 15:
-                html += ("<p>Portales Bonfire con error:</p><ul>"
-                         + "".join(f"<li>{escape(urlparse(f).netloc)}</li>"
-                                   for f in bonfire_fail) + "</ul>")
-            else:
-                html += (f"<p>{len(bonfire_fail)} de {len(bonfire)} portales Bonfire "
-                         "dieron error (posible bloqueo temporal de Bonfire).</p>")
-        html += "<p>Puede que la página haya cambiado o esté caída.</p>"
-        send_email("⚠️ El bot no pudo leer una página", html)
+    if (updates or new_jobs or started) and os.getenv("DRY_RUN") != "1":
+        parts = []
+        if updates:
+            parts.append(f"{len(updates)} cambio(s) en tus bids")
+        if new_jobs:
+            parts.append(f"{len(new_jobs)} bid(s) nuevo(s)")
+        if started:
+            parts.append(f"siguiendo {len(started)} bid(s)")
+        icon = "🔄" if updates else "🆕" if new_jobs else "📌"
+        send_email(f"{icon} GPO: " + " · ".join(parts),
+                   build_email(updates, new_jobs, started, first_run))
+    print("Correo:", "sí" if (updates or new_jobs or started) else "nada nuevo")
     return 0
 
 

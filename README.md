@@ -1,55 +1,40 @@
-# Bid Searcher — bot de oportunidades por palabras clave (v1.3)
+# Bid Searcher — GPO Small Purchase
 
-Revisa sitios de compras de gobierno de lunes a viernes a las **12:00 a. m. y 4:00 p. m. (hora del Este)** y manda un correo **solo** con las oportunidades nuevas que contengan alguna palabra de `keywords.txt`. Si una página deja de leerse, también avisa.
+Vigila **solo GPO Small Purchase** (publish.gpo.gov) de lunes a viernes a las
+**12:00 a. m. y 4:00 p. m. (hora del Este)** y manda un correo con:
 
-Corre gratis en GitHub Actions. No necesitas la computadora encendida.
+1. **🔄 Cambios en tus bids**: los de `mis_bids.txt`. Avisa de una nueva revisión
+   (R-1, R-2…), un cambio de fecha de cotización, cantidad o entrega, un cambio en
+   el documento RFQ (con las líneas nuevas y quitadas) o si el bid ya no aparece
+   en la lista de abiertos.
+2. **🆕 Bids nuevos**: **todos** los que publique GPO, sin importar las palabras clave.
+   Los que coinciden con `keywords.txt` salen marcados con ★ y van primero.
+3. **📌 Ahora sigo**: confirmación cuando añades un bid a tu lista.
 
-## Archivos
+Si no hay nada nuevo, no manda correo.
 
-| Archivo | Para qué sirve |
+## Tu mini base de datos
+
+| Archivo | Para qué |
 |---|---|
-| `monitor.py` | El bot (un lector para cada sitio). |
-| `sites.txt` | Sitios que vigila (una URL por línea). |
-| `bonfire_sites.txt` | Portales Bonfire (uno por línea; `#` delante = desactivado). |
-| `keywords.txt` | Palabras clave (una por línea). |
-| `requirements.txt` | Librerías de Python. |
-| `.github/workflows/monitor.yml` | Horario y pasos de la corrida en GitHub. |
-| `state/seen.json` | Lo que el bot ya vio. Lo actualiza solo; **no lo borres**. |
-| `CONTEXTO.md` | Notas técnicas de cada sitio (para seguir trabajando con Claude). |
+| `mis_bids.txt` | **Tú lo editas.** Los jackets que trabajaste, uno por línea, con nota opcional después de `|`. |
+| `mis_bids_estado.md` | **Lo escribe el bot.** Tabla con el estado de tus bids: revisión, fecha de cotización, si sigue abierto y el último cambio. |
+| `state/gpo.json` | Memoria del bot (todo lo que ha visto en GPO). No lo borres. |
 
-## Instalación en un repositorio nuevo (~15 min)
+### Añadir un bid
+1. En GitHub abre `mis_bids.txt` → lápiz ✏️.
+2. Añade una línea, por ejemplo: `500414 | DBT Worksheets Book - cotizado 11/02`.
+3. **Commit changes**. El bot corre solo en ese momento y te manda un correo
+   "📌 Ahora sigo…" para confirmar.
 
-### 1. Contraseña de aplicación de Gmail
-1. En la cuenta de Gmail que enviará los avisos, activa la **verificación en 2 pasos**.
-2. Entra a <https://myaccount.google.com/apppasswords>, crea una llamada `bot` y copia la clave de 16 letras.
+Para dejar de seguir un bid, borra su línea.
 
-### 2. Crear el repositorio y subir los archivos
-1. En GitHub: **New repository** → nombre (por ejemplo `BID-1.3`) → **Private** → **Create repository**.
-2. **Add file → Upload files**, arrastra **todo el contenido** de esta carpeta (incluidas las carpetas `.github` y `state`) y pulsa **Commit changes**.
-3. Revisa que exista `.github/workflows/monitor.yml`. Si la carpeta `.github` no se subió (en Mac/Windows está oculta):
-   **Add file → Create new file**, escribe el nombre `.github/workflows/monitor.yml`, pega el contenido del archivo y guarda.
+## Otros archivos
+- `keywords.txt`: palabras clave para marcar con ★. Pon `=` delante para buscar la palabra exacta (`=caps`).
+- `monitor.py`: el bot. `requirements.txt`: librerías.
+- `.github/workflows/monitor.yml`: horario y pasos.
 
-### 3. Secretos (datos del correo)
-**Settings → Secrets and variables → Actions → New repository secret**:
-
-| Nombre | Valor |
-|---|---|
-| `SMTP_USER` | el Gmail que envía (ej. `tucuenta@gmail.com`) |
-| `SMTP_PASSWORD` | la clave de 16 letras del paso 1 |
-| `EMAIL_TO` | dónde recibir los avisos (varios separados por coma) |
-
-### 4. Permiso para guardar lo ya visto
-**Settings → Actions → General → Workflow permissions** → marca **Read and write permissions** → **Save**.
-(Sin esto, el último paso de la corrida falla y el bot repetiría los mismos avisos.)
-
-### 5. Primera prueba
-**Actions → Monitor de oportunidades → Run workflow**.
-- Tarda unos **15 minutos** (revisa ~300 portales con pausas).
-- El primer correo es **grande**: trae todo lo que ya está abierto y coincide. Desde la siguiente corrida, solo lo nuevo.
-- En la primera vuelta de cada sitio nuevo solo se revisan títulos; desde la segunda también se leen los PDF y detalles.
-
-## Uso diario
-- **Añadir palabras clave:** en GitHub abre `keywords.txt`, lápiz ✏️, una palabra por línea, **Commit changes**.
-- **Añadir un sitio:** en `sites.txt` (o en `bonfire_sites.txt` si es Bonfire), una URL por línea. Un sitio sin lector propio se lee de forma genérica.
-- **Desactivar un portal Bonfire:** pon `#` al inicio de su línea.
-- **Ver qué pasó:** pestaña **Actions** → la corrida → paso **Revisar páginas** (cuántas publicaciones leyó de cada sitio y las coincidencias).
+## Instalación (si es un repositorio nuevo)
+1. **Settings → Secrets and variables → Actions**: `SMTP_USER`, `SMTP_PASSWORD` (contraseña de aplicación de Gmail), `EMAIL_TO`.
+2. **Settings → Actions → General → Workflow permissions → Read and write permissions**.
+3. **Actions → Bid Searcher GPO → Run workflow**.

@@ -1,0 +1,11 @@
+# MIS BIDS DE GPO — los que ya trabajé o cotizé.
+# El bot los vigila y avisa si GPO los cambia: nueva revisión (R-1, R-2...),
+# fecha de cotización, cantidad, fecha de entrega, el documento RFQ,
+# o si desaparecen de la lista de abiertos (cerraron).
+#
+# Una línea por bid: el número de jacket y, si quieres, una nota después de "|".
+# Las líneas con # son comentarios. Ejemplo:
+# 500414 | DBT Worksheets Book - cotizado el 11/02
+#
+# Para quitar un bid, borra su línea (o ponle # delante).
+

@@ -1,6 +1,8 @@
 # Palabras clave del bot. Una por línea.
 # Las líneas que empiezan con # son comentarios (títulos de categoría).
 # No importan mayúsculas/minúsculas ni guiones ("t-shirts" = "t shirts").
+# Acepta singular y plural ("bags" = "bag"). Pon "=" delante para buscar
+# la palabra exacta: "=shorts" ya no coincide con "short-term".
 # Para añadir una palabra nueva: escríbela en una línea nueva y guarda.
 
 # Promotional products & branded merchandise
@@ -51,11 +53,11 @@ jackets
 vests
 uniforms
 workwear
-caps
+=caps
 hats
 beanies
 headwear
-shorts
+=shorts
 pants
 socks
 face masks
@@ -178,7 +180,7 @@ tablecloths
 tents
 plaques
 trophies
-awards
+=awards
 medals
 magnets
 telephone magnet
