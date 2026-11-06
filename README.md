@@ -1,7 +1,7 @@
 # Bid Searcher — GPO Small Purchase
 
 Vigila **solo GPO Small Purchase** (publish.gpo.gov) de lunes a viernes a las
-**12:00 a. m. y 4:00 p. m. (hora del Este)** y manda un correo con:
+**cada hora de 7 a. m. a 7 p. m. (hora del Este)** y manda un correo con:
 
 1. **🔄 Cambios en tus bids**: los de `mis_bids.txt`. Avisa de una nueva revisión
    (R-1, R-2…), un cambio de fecha de cotización, cantidad o entrega, un cambio en

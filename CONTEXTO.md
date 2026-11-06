@@ -21,4 +21,9 @@ Bot en Python que corre en GitHub Actions (repositorio privado `bid-1.3`). Desde
 ## Pendiente / ideas
 - Si GPO devuelve campos que cambian solos y causan falsos avisos, añadirlos a `IGNORE_FIELDS`.
 - Posible: avisar también de adjudicaciones (awards) si GPO las publica.
-- Posible: revisar con más frecuencia (cambiar el cron y `RUN_HOURS_ET`).
+- Horario (06-nov-2026): cada hora de 7 a. m. a 7 p. m. ET, lunes a viernes (cron `17 11-23 * * 1-5`).
+  Motivo: los 23 bids abiertos el 06-nov se publicaron entre 7:25 a. m. y 4:35 p. m. ET, repartidos a lo
+  largo del día, y casi todos cierran 2 o 3 días hábiles después (muchos el lunes a las 10 a. m.).
+  Antes (12 a. m. y 4 p. m.), un bid publicado el viernes por la tarde se avisaba hasta el lunes a las 12 a. m.
+  Nota: `should_run()` antes leía la hora del texto del cron y siempre devolvía True (corría 4 veces al día).
+  Para reevaluar: `first_seen` y `datePosted` de cada bid en `state/gpo.json`.

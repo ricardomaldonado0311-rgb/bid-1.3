@@ -2,10 +2,10 @@ name: Bid Searcher GPO
 
 on:
   schedule:
-    # Lunes a viernes, 12:00 a. m. y 4:00 p. m. hora del Este.
-    # Se programan las dos variantes UTC (verano/invierno); el script
-    # decide cuál corresponde y la otra termina sin hacer nada.
-    - cron: "0 4,5,20,21 * * 1-5"
+    # Lunes a viernes, cada hora de 7 a. m. a 7 p. m. hora del Este
+    # (11-23 UTC cubre verano e invierno; el script descarta lo que sobre).
+    # Minuto 17 en vez de 0 porque GitHub retrasa más las corridas en punto.
+    - cron: "17 11-23 * * 1-5"
   workflow_dispatch: {}   # botón "Run workflow" para probar a mano
   push:
     paths: [mis_bids.txt] # al editar mis_bids.txt, corre y confirma por correo

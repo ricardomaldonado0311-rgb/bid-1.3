@@ -44,7 +44,9 @@ KEEP_CLOSED_DAYS = 90   # los bids cerrados que no son tuyos se borran del estad
 
 # Horas de revisión (hora del Este) y días (0=lunes ... 4=viernes).
 # Deben coincidir con el cron de .github/workflows/monitor.yml.
-RUN_HOURS_ET = {0, 16}
+# Horario de revisión (hora del Este): cada hora de 7 a. m. a 7 p. m.,
+# que es cuando GPO publica (ver CONTEXTO.md).
+RUN_HOURS_ET = range(7, 20)
 RUN_DAYS_ET = {0, 1, 2, 3, 4}
 
 # Nombres en español de los campos de GPO que se comparan.
@@ -151,18 +153,14 @@ def rev_number(rev):
 
 # ------------------------------------------------------------- ¿toca correr?
 def should_run():
-    """El cron programa horas UTC de verano e invierno; aquí se decide cuál
-    corresponde según la hora real del Este."""
+    """El cron programa horas UTC que cubren el horario de verano y el de
+    invierno; aquí se descartan las que caen fuera del horario del Este.
+    Se da 1 hora de margen porque GitHub a veces retrasa las corridas."""
     if os.getenv("GITHUB_EVENT_NAME") != "schedule":
-        return True  # corrida manual
-    try:
-        cron_hour_utc = int(os.getenv("CRON_SCHEDULE", "").split()[1])
-    except (IndexError, ValueError):
-        return True
+        return True  # corrida manual o por cambio en mis_bids.txt
     et = now_et()
-    offset_h = int(-et.utcoffset().total_seconds() // 3600)  # 4 o 5
-    wanted = {(h + offset_h) % 24 for h in RUN_HOURS_ET}
-    return cron_hour_utc in wanted and et.weekday() in RUN_DAYS_ET
+    return (et.weekday() in RUN_DAYS_ET
+            and min(RUN_HOURS_ET) <= et.hour <= max(RUN_HOURS_ET) + 1)
 
 
 # ----------------------------------------------------------------- GPO: datos
