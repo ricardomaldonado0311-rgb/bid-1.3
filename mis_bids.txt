@@ -9,3 +9,30 @@
 #
 # Para quitar un bid, borra su línea (o ponle # delante).
 
+461994
+472111
+441359
+472158
+500031
+441411
+452127
+500076 | trabajado en R-1
+500034
+500273
+500284
+623922
+500317
+500253 | trabajado en R-1
+500252 | trabajado en R-1
+500254
+441337 | junto con 441338
+441338 | junto con 441337
+441335 | junto con 441336
+441336 | junto con 441335
+500336
+500361
+441334 | junto con 441339
+441339 | junto con 441334
+441429 | trabajado en R-1
+500504
+500566

@@ -88,6 +88,7 @@ def read_my_bids():
     bids = {}
     for line in read_list(MY_BIDS_FILE):
         num, _, note = line.partition("|")
+        num = re.sub(r"(?<=\d)[-\s.](?=\d)", "", num)  # 461-994 -> 461994
         m = re.search(r"\d{4,8}", num)
         if m:
             bids[m.group(0)] = note.strip()
