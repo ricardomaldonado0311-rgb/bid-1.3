@@ -42,12 +42,13 @@ GPO_LIST = "https://publish.gpo.gov/smallPurchase?activeTab=Opportunities"
 MAX_PDF_PAGES = 40
 KEEP_CLOSED_DAYS = 90   # los bids cerrados que no son tuyos se borran del estado
 
-# Horas de revisión (hora del Este) y días (0=lunes ... 4=viernes).
+# Horas de revisión (hora del Este) y días (0=lunes ... 6=domingo).
 # Deben coincidir con el cron de .github/workflows/monitor.yml.
 # Horario de revisión (hora del Este): cada hora de 7 a. m. a 7 p. m.,
 # que es cuando GPO publica (ver CONTEXTO.md).
 RUN_HOURS_ET = range(7, 20)
-RUN_DAYS_ET = {0, 1, 2, 3, 4}
+# Fines de semana incluidos a prueba hasta el 07-dic-2026 (ver CONTEXTO.md).
+RUN_DAYS_ET = {0, 1, 2, 3, 4, 5, 6}
 
 # Nombres en español de los campos de GPO que se comparan.
 FIELD_LABELS = {

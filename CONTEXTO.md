@@ -27,3 +27,6 @@ Bot en Python que corre en GitHub Actions (repositorio privado `bid-1.3`). Desde
   Antes (12 a. m. y 4 p. m.), un bid publicado el viernes por la tarde se avisaba hasta el lunes a las 12 a. m.
   Nota: `should_run()` antes leía la hora del texto del cron y siempre devolvía True (corría 4 veces al día).
   Para reevaluar: `first_seen` y `datePosted` de cada bid en `state/gpo.json`.
+- Fines de semana (06-nov-2026): JC pidió revisar también sábado y domingo durante un mes. El 07-dic-2026
+  se revisa `datePosted`: si ningún bid se publicó en fin de semana, se vuelve a lunes a viernes
+  (cron `17 11-23 * * 1-5` y `RUN_DAYS_ET = {0, 1, 2, 3, 4}`).
