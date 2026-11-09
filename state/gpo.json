@@ -432,7 +432,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/09/2026",
    "pdf_hash": "464156953bac39a2",
    "pdf_lines": null
@@ -440,7 +440,7 @@
   "500351": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 2,
+    "id": 1,
     "jobId": 655221,
     "rfqFile": null,
     "jacketNumber": "500351",
@@ -463,7 +463,7 @@
   "500524": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 4,
+    "id": 3,
     "jobId": 655405,
     "rfqFile": null,
     "jacketNumber": "500524",
@@ -486,7 +486,7 @@
   "500549": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 6,
+    "id": 5,
     "jobId": 655430,
     "rfqFile": null,
     "jacketNumber": "500549",
@@ -509,7 +509,7 @@
   "500566": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 7,
+    "id": 6,
     "jobId": 655452,
     "rfqFile": null,
     "jacketNumber": "500566",
@@ -707,7 +707,7 @@
   "500520": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 3,
+    "id": 2,
     "jobId": 655400,
     "rfqFile": null,
     "jacketNumber": "500520",
@@ -730,7 +730,7 @@
   "500562": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 5,
+    "id": 4,
     "jobId": 655447,
     "rfqFile": null,
     "jacketNumber": "500562",
@@ -753,7 +753,7 @@
   "500582": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 1,
+    "id": 0,
     "jobId": 655472,
     "rfqFile": null,
     "jacketNumber": "500582",
@@ -776,7 +776,7 @@
   "500567": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 8,
+    "id": 7,
     "jobId": 655480,
     "rfqFile": null,
     "jacketNumber": "500567",
@@ -799,7 +799,7 @@
   "500599": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 9,
+    "id": 8,
     "jobId": 655490,
     "rfqFile": null,
     "jacketNumber": "500599",
@@ -927,7 +927,7 @@
   },
   "500566": {
    "since": "11/06/2026",
-   "last_change": "11/09/2026: id: 14 → 7"
+   "last_change": "11/09/2026: id: 7 → 6"
   }
  }
 }
