@@ -271,7 +271,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/09/2026",
    "pdf_hash": "05d5e952db756140",
    "pdf_lines": null
@@ -294,7 +294,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/09/2026",
    "pdf_hash": "093907581e29afe0",
    "pdf_lines": null
@@ -317,7 +317,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/09/2026",
    "pdf_hash": "906cb8001ba76d26",
    "pdf_lines": null
@@ -340,7 +340,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/09/2026",
    "pdf_hash": "d3e3657fa24e0f94",
    "pdf_lines": null
@@ -363,7 +363,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/09/2026",
    "pdf_hash": "5d4013b84b8d530d",
    "pdf_lines": null
@@ -386,7 +386,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/09/2026",
    "pdf_hash": "29ec1c8f96acf560",
    "pdf_lines": null
@@ -409,7 +409,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/09/2026",
    "pdf_hash": "aa9ffc1b4f7599dc",
    "pdf_lines": null
@@ -417,7 +417,7 @@
   "500570": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 7,
+    "id": 0,
     "jobId": 655455,
     "rfqFile": null,
     "jacketNumber": "500570",
@@ -440,7 +440,7 @@
   "500351": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 9,
+    "id": 2,
     "jobId": 655221,
     "rfqFile": null,
     "jacketNumber": "500351",
@@ -463,7 +463,7 @@
   "500524": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 11,
+    "id": 4,
     "jobId": 655405,
     "rfqFile": null,
     "jacketNumber": "500524",
@@ -486,7 +486,7 @@
   "500549": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 13,
+    "id": 6,
     "jobId": 655430,
     "rfqFile": null,
     "jacketNumber": "500549",
@@ -509,7 +509,7 @@
   "500566": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 14,
+    "id": 7,
     "jobId": 655452,
     "rfqFile": null,
     "jacketNumber": "500566",
@@ -707,7 +707,7 @@
   "500520": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 10,
+    "id": 3,
     "jobId": 655400,
     "rfqFile": null,
     "jacketNumber": "500520",
@@ -730,7 +730,7 @@
   "500562": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 12,
+    "id": 5,
     "jobId": 655447,
     "rfqFile": null,
     "jacketNumber": "500562",
@@ -753,7 +753,7 @@
   "500582": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 8,
+    "id": 1,
     "jobId": 655472,
     "rfqFile": null,
     "jacketNumber": "500582",
@@ -771,6 +771,52 @@
    "open": true,
    "last_seen": "11/09/2026",
    "pdf_hash": "06ac1da77f095313",
+   "pdf_lines": null
+  },
+  "500567": {
+   "first_seen": "11/09/2026",
+   "fields": {
+    "id": 8,
+    "jobId": 655480,
+    "rfqFile": null,
+    "jacketNumber": "500567",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-12T10:00:00",
+    "datePosted": "2026-11-09T13:01:19",
+    "productType": "Envelopes",
+    "title": "ORNL-955 PLANT MAIL ENVELOPE (10-185-5431) ",
+    "totalQuantity": "500",
+    "shipDeliveryDate": "2026-12-10T00:00:00",
+    "enterQuote": "500567",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/09/2026",
+   "pdf_hash": "64014b690ca35db3",
+   "pdf_lines": null
+  },
+  "500599": {
+   "first_seen": "11/09/2026",
+   "fields": {
+    "id": 9,
+    "jobId": 655490,
+    "rfqFile": null,
+    "jacketNumber": "500599",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-12T10:00:00",
+    "datePosted": "2026-11-09T12:44:41",
+    "productType": "Labels/Stickers",
+    "title": "USSS Logo Stickers ",
+    "totalQuantity": "505",
+    "shipDeliveryDate": "2026-12-03T00:00:00",
+    "enterQuote": "500599",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/09/2026",
+   "pdf_hash": "9524d38d991c6130",
    "pdf_lines": null
   }
  },
@@ -881,7 +927,7 @@
   },
   "500566": {
    "since": "11/06/2026",
-   "last_change": "11/09/2026: id: 17 → 14"
+   "last_change": "11/09/2026: id: 14 → 7"
   }
  }
 }
