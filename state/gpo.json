@@ -3,24 +3,24 @@
   "500471": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 0,
+    "id": 1,
     "jobId": 655344,
     "rfqFile": null,
     "jacketNumber": "500471",
     "officeName": "Government Publishing and Print Procurement",
-    "quoteDueDate": "2026-11-09T10:00:00",
+    "quoteDueDate": "2026-11-10T10:00:00",
     "datePosted": "2026-11-06T09:46:32",
     "productType": "Other",
     "title": "COURIER AUTHORIZATION CARDS ",
-    "totalQuantity": "6000",
+    "totalQuantity": "6250",
     "shipDeliveryDate": "2026-12-30T00:00:00",
     "enterQuote": "500471",
-    "fRevised": "",
+    "fRevised": " R-1",
     "isJacketStrapped": "true"
    },
-   "open": false,
+   "open": true,
    "last_seen": "11/09/2026",
-   "pdf_hash": "08b83de982856f15",
+   "pdf_hash": "26e1c9e4359374be",
    "pdf_lines": null
   },
   "500525": {
@@ -440,7 +440,7 @@
   "500351": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 1,
+    "id": 0,
     "jobId": 655221,
     "rfqFile": null,
     "jacketNumber": "500351",
@@ -768,7 +768,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/09/2026",
    "pdf_hash": "06ac1da77f095313",
    "pdf_lines": null
@@ -817,6 +817,29 @@
    "open": true,
    "last_seen": "11/09/2026",
    "pdf_hash": "9524d38d991c6130",
+   "pdf_lines": null
+  },
+  "441317": {
+   "first_seen": "11/09/2026",
+   "fields": {
+    "id": 9,
+    "jobId": 651342,
+    "rfqFile": null,
+    "jacketNumber": "441317",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-12T11:00:00",
+    "datePosted": "2026-11-09T14:51:57",
+    "productType": "Forms",
+    "title": "LOTO RED TAGS ",
+    "totalQuantity": "5000",
+    "shipDeliveryDate": "2026-12-18T00:00:00",
+    "enterQuote": "441317",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/09/2026",
+   "pdf_hash": "b14ce41f7ce86505",
    "pdf_lines": null
   }
  },
