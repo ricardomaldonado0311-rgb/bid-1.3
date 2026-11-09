@@ -3,7 +3,7 @@
   "500471": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 1,
+    "id": 2,
     "jobId": 655344,
     "rfqFile": null,
     "jacketNumber": "500471",
@@ -440,7 +440,7 @@
   "500351": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 0,
+    "id": 1,
     "jobId": 655221,
     "rfqFile": null,
     "jacketNumber": "500351",
@@ -463,7 +463,7 @@
   "500524": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 3,
+    "id": 4,
     "jobId": 655405,
     "rfqFile": null,
     "jacketNumber": "500524",
@@ -486,7 +486,7 @@
   "500549": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 5,
+    "id": 6,
     "jobId": 655430,
     "rfqFile": null,
     "jacketNumber": "500549",
@@ -509,7 +509,7 @@
   "500566": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 6,
+    "id": 7,
     "jobId": 655452,
     "rfqFile": null,
     "jacketNumber": "500566",
@@ -707,7 +707,7 @@
   "500520": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 2,
+    "id": 3,
     "jobId": 655400,
     "rfqFile": null,
     "jacketNumber": "500520",
@@ -730,7 +730,7 @@
   "500562": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 4,
+    "id": 5,
     "jobId": 655447,
     "rfqFile": null,
     "jacketNumber": "500562",
@@ -776,7 +776,7 @@
   "500567": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 7,
+    "id": 9,
     "jobId": 655480,
     "rfqFile": null,
     "jacketNumber": "500567",
@@ -799,7 +799,7 @@
   "500599": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 8,
+    "id": 10,
     "jobId": 655490,
     "rfqFile": null,
     "jacketNumber": "500599",
@@ -822,7 +822,7 @@
   "441317": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 9,
+    "id": 11,
     "jobId": 651342,
     "rfqFile": null,
     "jacketNumber": "441317",
@@ -840,6 +840,121 @@
    "open": true,
    "last_seen": "11/09/2026",
    "pdf_hash": "b14ce41f7ce86505",
+   "pdf_lines": null
+  },
+  "500241": {
+   "first_seen": "11/09/2026",
+   "fields": {
+    "id": 0,
+    "jobId": 654087,
+    "rfqFile": null,
+    "jacketNumber": "500241",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-10T10:00:00",
+    "datePosted": "2026-11-09T16:19:49",
+    "productType": "Other",
+    "title": "FLDBOP0006 - FOI EXEMPT 3 TAB GRAY FOLDER ",
+    "totalQuantity": "6000",
+    "shipDeliveryDate": "2026-12-04T00:00:00",
+    "enterQuote": "500241",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/09/2026",
+   "pdf_hash": "37720b6d8c043996",
+   "pdf_lines": null
+  },
+  "500579": {
+   "first_seen": "11/09/2026",
+   "fields": {
+    "id": 8,
+    "jobId": 655468,
+    "rfqFile": null,
+    "jacketNumber": "500579",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-10T13:00:00",
+    "datePosted": "2026-11-09T16:33:46",
+    "productType": "Books",
+    "title": "USCGA Printing of Annual Report of Research ",
+    "totalQuantity": "102",
+    "shipDeliveryDate": "2026-11-25T00:00:00",
+    "enterQuote": "500579",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/09/2026",
+   "pdf_hash": "e57e51613112e15f",
+   "pdf_lines": null
+  },
+  "500548": {
+   "first_seen": "11/09/2026",
+   "fields": {
+    "id": 12,
+    "jobId": 655428,
+    "rfqFile": null,
+    "jacketNumber": "500548",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-12T11:00:00",
+    "datePosted": "2026-11-09T16:28:41",
+    "productType": "Envelopes",
+    "title": "Envelopes D/MD 9.5 x 12.5",
+    "totalQuantity": "2000",
+    "shipDeliveryDate": "2026-12-07T00:00:00",
+    "enterQuote": "500548",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/09/2026",
+   "pdf_hash": "c96ea26fd4ce9716",
+   "pdf_lines": null
+  },
+  "500576": {
+   "first_seen": "11/09/2026",
+   "fields": {
+    "id": 13,
+    "jobId": 655462,
+    "rfqFile": null,
+    "jacketNumber": "500576",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-12T11:00:00",
+    "datePosted": "2026-11-09T16:52:07",
+    "productType": "Books",
+    "title": "Transmission 24 month Wall Planner",
+    "totalQuantity": "5000",
+    "shipDeliveryDate": "2026-12-30T00:00:00",
+    "enterQuote": "500576",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/09/2026",
+   "pdf_hash": "c0e9da850342bd38",
+   "pdf_lines": null
+  },
+  "500597": {
+   "first_seen": "11/09/2026",
+   "fields": {
+    "id": 14,
+    "jobId": 655488,
+    "rfqFile": null,
+    "jacketNumber": "500597",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-12T11:00:00",
+    "datePosted": "2026-11-09T16:49:44",
+    "productType": "Other",
+    "title": "ARL ARNG Coasters ",
+    "totalQuantity": "400",
+    "shipDeliveryDate": "2026-12-04T00:00:00",
+    "enterQuote": "500597",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/09/2026",
+   "pdf_hash": "eb55d5bf3d720268",
    "pdf_lines": null
   }
  },
@@ -950,7 +1065,7 @@
   },
   "500566": {
    "since": "11/06/2026",
-   "last_change": "11/09/2026: id: 7 → 6"
+   "last_change": "11/09/2026: id: 6 → 7"
   }
  }
 }
