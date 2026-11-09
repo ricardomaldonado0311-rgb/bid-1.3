@@ -463,7 +463,7 @@
   "500524": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 20,
+    "id": 21,
     "jobId": 655405,
     "rfqFile": null,
     "jacketNumber": "500524",
@@ -486,7 +486,7 @@
   "500549": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 21,
+    "id": 22,
     "jobId": 655430,
     "rfqFile": null,
     "jacketNumber": "500549",
@@ -509,7 +509,7 @@
   "500566": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 22,
+    "id": 23,
     "jobId": 655452,
     "rfqFile": null,
     "jacketNumber": "500566",
@@ -703,6 +703,29 @@
     "JACKET:500566 DEPARTMENT OF THE ARMY 7-90566 BAC: 3711 19",
     "Your Contract Administrator is: Bruce Canzanella Call: (843) 934-5516 Written By: bcanzanella Reviewed By:"
    ]
+  },
+  "500520": {
+   "first_seen": "11/09/2026",
+   "fields": {
+    "id": 20,
+    "jobId": 655400,
+    "rfqFile": null,
+    "jacketNumber": "500520",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-10T10:00:00",
+    "datePosted": "2026-11-09T07:55:36",
+    "productType": "Forms",
+    "title": "Andrew Johnson NHS Rack card ",
+    "totalQuantity": "3002",
+    "shipDeliveryDate": "2026-12-31T00:00:00",
+    "enterQuote": "500520",
+    "fRevised": " R-1",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/09/2026",
+   "pdf_hash": "c4f571f8a66ad736",
+   "pdf_lines": null
   }
  },
  "tracked": {
@@ -812,7 +835,7 @@
   },
   "500566": {
    "since": "11/06/2026",
-   "last_change": ""
+   "last_change": "11/09/2026: id: 22 → 23"
   }
  }
 }

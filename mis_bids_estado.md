@@ -1,6 +1,6 @@
 # Mis bids de GPO — estado
 
-Actualizado por el bot: 11/09/2026 07:11 AM ET. Para añadir o quitar bids, edita `mis_bids.txt`.
+Actualizado por el bot: 11/09/2026 08:31 AM ET. Para añadir o quitar bids, edita `mis_bids.txt`.
 
 | Jacket | Título | Revisión | Cotizar antes de (ET) | Estado | Último cambio | Nota |
 |---|---|---|---|---|---|---|
@@ -30,4 +30,4 @@ Actualizado por el bot: 11/09/2026 07:11 AM ET. Para añadir o quitar bids, edit
 | 441339 | — | — | — | No encontrado en GPO | — | junto con 441334 |
 | 441429 | — | — | — | No encontrado en GPO | — | trabajado en R-1 |
 | 500504 | — | — | — | No encontrado en GPO | — |  |
-| 500566 | 10x10 Branded Canopy Tent | original | 11/10/2026 11:00 AM | Abierto | — |  |
+| 500566 | 10x10 Branded Canopy Tent | original | 11/10/2026 11:00 AM | Abierto | 11/09/2026: id: 22 → 23 |  |
