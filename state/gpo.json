@@ -776,7 +776,7 @@
   "500567": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 2,
+    "id": 3,
     "jobId": 655480,
     "rfqFile": null,
     "jacketNumber": "500567",
@@ -799,7 +799,7 @@
   "500599": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 3,
+    "id": 4,
     "jobId": 655490,
     "rfqFile": null,
     "jacketNumber": "500599",
@@ -822,7 +822,7 @@
   "441317": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 4,
+    "id": 5,
     "jobId": 651342,
     "rfqFile": null,
     "jacketNumber": "441317",
@@ -891,7 +891,7 @@
   "500548": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 7,
+    "id": 8,
     "jobId": 655428,
     "rfqFile": null,
     "jacketNumber": "500548",
@@ -914,7 +914,7 @@
   "500576": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 8,
+    "id": 9,
     "jobId": 655462,
     "rfqFile": null,
     "jacketNumber": "500576",
@@ -937,7 +937,7 @@
   "500597": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 9,
+    "id": 10,
     "jobId": 655488,
     "rfqFile": null,
     "jacketNumber": "500597",
@@ -960,7 +960,7 @@
   "500370": {
    "first_seen": "11/10/2026",
    "fields": {
-    "id": 5,
+    "id": 6,
     "jobId": 655242,
     "rfqFile": null,
     "jacketNumber": "500370",
@@ -983,7 +983,7 @@
   "500450": {
    "first_seen": "11/10/2026",
    "fields": {
-    "id": 6,
+    "id": 7,
     "jobId": 655325,
     "rfqFile": null,
     "jacketNumber": "500450",
@@ -1001,6 +1001,29 @@
    "open": true,
    "last_seen": "11/10/2026",
    "pdf_hash": "b036600c6eaeba9f",
+   "pdf_lines": null
+  },
+  "500513": {
+   "first_seen": "11/10/2026",
+   "fields": {
+    "id": 2,
+    "jobId": 655393,
+    "rfqFile": null,
+    "jacketNumber": "500513",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-11T11:00:00",
+    "datePosted": "2026-11-10T11:26:45",
+    "productType": "Envelopes",
+    "title": "HTOPS 2026 Envelopes",
+    "totalQuantity": "858000",
+    "shipDeliveryDate": "2026-12-18T00:00:00",
+    "enterQuote": "500513",
+    "fRevised": " R-1",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/10/2026",
+   "pdf_hash": "2dc231db13162b2f",
    "pdf_lines": null
   }
  },
