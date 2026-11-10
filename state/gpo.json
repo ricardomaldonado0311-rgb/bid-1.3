@@ -18,7 +18,7 @@
     "fRevised": " R-1",
     "isJacketStrapped": "true"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/10/2026",
    "pdf_hash": "26e1c9e4359374be",
    "pdf_lines": null
@@ -256,24 +256,24 @@
   "462062": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 0,
+    "id": 3,
     "jobId": 651308,
     "rfqFile": null,
     "jacketNumber": "462062",
     "officeName": "Government Publishing and Print Procurement",
-    "quoteDueDate": "2026-11-09T12:00:00",
-    "datePosted": "2026-11-05T14:12:26",
+    "quoteDueDate": "2026-11-11T11:00:00",
+    "datePosted": "2026-11-10T09:01:21",
     "productType": "Other",
     "title": "Official Photo Framing of FMCSA Administrator & Deputy Admin ",
     "totalQuantity": "342",
-    "shipDeliveryDate": "2026-12-04T00:00:00",
+    "shipDeliveryDate": "2026-12-10T00:00:00",
     "enterQuote": "462062",
-    "fRevised": "",
+    "fRevised": " R-1",
     "isJacketStrapped": "false"
    },
-   "open": false,
-   "last_seen": "11/09/2026",
-   "pdf_hash": "05d5e952db756140",
+   "open": true,
+   "last_seen": "11/10/2026",
+   "pdf_hash": "f0805bf661da7656",
    "pdf_lines": null
   },
   "500436": {
@@ -455,7 +455,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/10/2026",
    "pdf_hash": "df61737ade8dc932",
    "pdf_lines": null
@@ -478,7 +478,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/10/2026",
    "pdf_hash": "8236a88d15da91a5",
    "pdf_lines": null
@@ -486,7 +486,7 @@
   "500549": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 6,
+    "id": 0,
     "jobId": 655430,
     "rfqFile": null,
     "jacketNumber": "500549",
@@ -509,7 +509,7 @@
   "500566": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 7,
+    "id": 1,
     "jobId": 655452,
     "rfqFile": null,
     "jacketNumber": "500566",
@@ -722,7 +722,7 @@
     "fRevised": " R-1",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/10/2026",
    "pdf_hash": "c4f571f8a66ad736",
    "pdf_lines": null
@@ -745,7 +745,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/10/2026",
    "pdf_hash": "d6a57d046f000a04",
    "pdf_lines": null
@@ -776,7 +776,7 @@
   "500567": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 9,
+    "id": 4,
     "jobId": 655480,
     "rfqFile": null,
     "jacketNumber": "500567",
@@ -799,7 +799,7 @@
   "500599": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 10,
+    "id": 5,
     "jobId": 655490,
     "rfqFile": null,
     "jacketNumber": "500599",
@@ -822,7 +822,7 @@
   "441317": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 11,
+    "id": 6,
     "jobId": 651342,
     "rfqFile": null,
     "jacketNumber": "441317",
@@ -860,7 +860,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/10/2026",
    "pdf_hash": "37720b6d8c043996",
    "pdf_lines": null
@@ -868,7 +868,7 @@
   "500579": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 8,
+    "id": 2,
     "jobId": 655468,
     "rfqFile": null,
     "jacketNumber": "500579",
@@ -891,7 +891,7 @@
   "500548": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 12,
+    "id": 8,
     "jobId": 655428,
     "rfqFile": null,
     "jacketNumber": "500548",
@@ -914,7 +914,7 @@
   "500576": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 13,
+    "id": 9,
     "jobId": 655462,
     "rfqFile": null,
     "jacketNumber": "500576",
@@ -937,7 +937,7 @@
   "500597": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 14,
+    "id": 10,
     "jobId": 655488,
     "rfqFile": null,
     "jacketNumber": "500597",
@@ -955,6 +955,29 @@
    "open": true,
    "last_seen": "11/10/2026",
    "pdf_hash": "eb55d5bf3d720268",
+   "pdf_lines": null
+  },
+  "500370": {
+   "first_seen": "11/10/2026",
+   "fields": {
+    "id": 7,
+    "jobId": 655242,
+    "rfqFile": null,
+    "jacketNumber": "500370",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-12T11:00:00",
+    "datePosted": "2026-11-10T09:47:00",
+    "productType": "Envelopes",
+    "title": "VA Envelopes ",
+    "totalQuantity": "40000",
+    "shipDeliveryDate": "2026-12-04T00:00:00",
+    "enterQuote": "500370",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/10/2026",
+   "pdf_hash": "941ba299446fcffd",
    "pdf_lines": null
   }
  },
@@ -1065,7 +1088,7 @@
   },
   "500566": {
    "since": "11/06/2026",
-   "last_change": "11/09/2026: id: 6 → 7"
+   "last_change": "11/10/2026: id: 7 → 1"
   }
  }
 }
