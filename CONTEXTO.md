@@ -30,3 +30,16 @@ Bot en Python que corre en GitHub Actions (repositorio privado `bid-1.3`). Desde
 - Fines de semana (06-nov-2026): JC pidió revisar también sábado y domingo durante un mes. El 07-dic-2026
   se revisa `datePosted`: si ningún bid se publicó en fin de semana, se vuelve a lunes a viernes
   (cron `17 11-23 * * 1-5` y `RUN_DAYS_ET = {0, 1, 2, 3, 4}`).
+
+## Uni and Others (11-nov-2026)
+- `uni.py` + `.github/workflows/uni.yml`. Reusa helpers de `monitor.py` (correo, palabras clave, http).
+- API: `https://<host>/PublicPortal/getOpenPublicOpportunitiesSectionData` → `payload.projects`
+  (ProjectID, ReferenceID, ProjectName, DepartmentID, DateClose en UTC) y `payload.departments`.
+- Estado `state/uni.json`: `portals[host] = {ids: {ProjectID: fecha_vista}, fails, checked, reported}`.
+- Cron: 4 líneas (15, 16, 21, 22 UTC); `should_run()` lee la hora de `CRON_SCHEDULE` y elige según horario de verano.
+- 429/403/503 de Bonfire: se reintenta al final tras 60 s. Si falla más de la mitad, no se guarda estado y llega aviso.
+- Lista de JC (11-nov): 296 portales Bonfire únicos. Quitados: vendor.bonfirehub.com (buscador, no portal),
+  dfwairport-sandbox (portal de pruebas). Pendientes de link correcto: Beaufort-Jasper Water & Sewer Authority,
+  Forty Niners Stadium Management Company, Superior Court of California County of Monterey.
+  No Bonfire (pendientes): norta.procureware.com/Bids (ProcureWare), supplier.ionwave.net (IonWave, link genérico).
+- Ambos workflows hacen commit al mismo repo: el push reintenta con `git pull --rebase` hasta 5 veces.

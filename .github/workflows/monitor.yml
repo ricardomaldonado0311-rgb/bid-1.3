@@ -48,5 +48,8 @@ jobs:
           git add state/gpo.json mis_bids_estado.md
           git diff --cached --quiet && exit 0
           git commit -m "Actualizar estado de GPO"
-          git pull --rebase
-          git push
+          for i in 1 2 3 4 5; do
+            git pull --rebase && git push && exit 0
+            sleep $((i * 5))
+          done
+          exit 1

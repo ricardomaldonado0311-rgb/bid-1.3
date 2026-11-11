@@ -1,0 +1,57 @@
+name: Uni and Others
+
+on:
+  schedule:
+    # Lunes a viernes, 11:00 a. m. y 5:00 p. m. hora del Este.
+    # Cada hora va en su propia línea (verano e invierno); uni.py decide
+    # cuál toca hoy y la otra termina sin hacer nada.
+    - cron: "7 15 * * 1-5"
+    - cron: "7 16 * * 1-5"
+    - cron: "7 21 * * 1-5"
+    - cron: "7 22 * * 1-5"
+  workflow_dispatch: {}   # botón "Run workflow" para probar a mano
+
+permissions:
+  contents: write
+
+concurrency:
+  group: uni
+  cancel-in-progress: false
+
+jobs:
+  revisar:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Revisar portales
+        env:
+          CRON_SCHEDULE: ${{ github.event.schedule }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+        run: python uni.py
+
+      - name: Guardar estado
+        run: |
+          git config user.name "bot-monitor"
+          git config user.email "bot-monitor@users.noreply.github.com"
+          [ -f state/uni.json ] || exit 0
+          git add state/uni.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Actualizar estado de Uni and Others"
+          for i in 1 2 3 4 5; do
+            git pull --rebase && git push && exit 0
+            sleep $((i * 5))
+          done
+          exit 1

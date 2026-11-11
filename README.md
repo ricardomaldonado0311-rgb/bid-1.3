@@ -38,3 +38,17 @@ Para dejar de seguir un bid, borra su línea.
 1. **Settings → Secrets and variables → Actions**: `SMTP_USER`, `SMTP_PASSWORD` (contraseña de aplicación de Gmail), `EMAIL_TO`.
 2. **Settings → Actions → General → Workflow permissions → Read and write permissions**.
 3. **Actions → Bid Searcher GPO → Run workflow**.
+
+## Bot "Uni and Others"
+Segundo bot, en este mismo repositorio. Revisa los portales Bonfire de
+`uni_portales.txt` (universidades, distritos escolares y otras agencias)
+**a las 11:00 a. m. y 5:00 p. m. (hora del Este), de lunes a viernes**.
+
+- Avisa por correo de **todas** las oportunidades nuevas; las que coinciden con
+  `keywords.txt` llevan ★ y van primero. Si no hay nada nuevo, no escribe.
+- La primera vez solo manda las abiertas que coinciden con las palabras clave.
+- Si un portal falla 3 revisiones seguidas, avisa una vez para que se corrija el link.
+- Para añadir o quitar portales, edita `uni_portales.txt` (uno por línea).
+- Para probarlo a mano: **Actions → Uni and Others → Run workflow**.
+- Archivos: `uni.py` (el bot), `uni_portales.txt`, `state/uni.json` (memoria),
+  `.github/workflows/uni.yml` (horario).
