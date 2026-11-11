@@ -16,6 +16,7 @@ bot de GPO (monitor.py).
 
 import json
 import os
+import requests
 import sys
 import time
 from datetime import datetime, timezone
@@ -33,6 +34,9 @@ RUN_HOURS_ET = {11, 17}          # 11 a. m. y 5 p. m. hora del Este
 RUN_DAYS_ET = {0, 1, 2, 3, 4}    # lunes a viernes
 PAUSE = 1.0                      # segundos entre portales (para no saturar Bonfire)
 FAIL_ALERT = 3                   # avisar si un portal falla N corridas seguidas
+TIME_BUDGET = 20 * 60            # máximo de segundos por corrida; lo que falte
+                                 # se revisa primero en la siguiente corrida
+SESSION = requests.Session()
 
 
 # ------------------------------------------------------------- ¿toca correr?
@@ -78,9 +82,12 @@ class Blocked(Exception):
 
 def fetch_portal(host):
     """Lista de oportunidades abiertas de un portal Bonfire."""
-    r = http_get(f"https://{host}/PublicPortal/getOpenPublicOpportunitiesSectionData",
-                 headers={**UA, "Accept": "application/json",
-                          "X-Requested-With": "XMLHttpRequest"}, timeout=40)
+    # Un solo intento y espera corta: si Bonfire tarda o pide esperar, el portal
+    # se reintenta al final de la corrida (así una corrida no se queda colgada).
+    r = SESSION.get(f"https://{host}/PublicPortal/getOpenPublicOpportunitiesSectionData",
+                    headers={**UA, "Accept": "application/json",
+                             "X-Requested-With": "XMLHttpRequest"},
+                    timeout=(10, 25))
     if r.status_code in (403, 429, 503):
         raise Blocked(f"HTTP {r.status_code}")
     r.raise_for_status()
@@ -171,30 +178,47 @@ def main():
     t_start = time.time()
 
     def try_portal(host):
+        t0 = time.time()
         try:
             results[host] = fetch_portal(host)
             errors.pop(host, None)
-        except Blocked as e:
-            errors[host] = str(e)
+            print(f"  {host}: {len(results[host])} abiertas ({time.time() - t0:.1f}s)")
+        except (Blocked, requests.Timeout, requests.ConnectionError) as e:
+            errors[host] = str(e)[:120]
+            print(f"  {host}: espera/bloqueo ({time.time() - t0:.1f}s) {errors[host]}")
             return False
         except Exception as e:
             errors[host] = str(e)[:120]
+            print(f"  {host}: error ({time.time() - t0:.1f}s) {errors[host]}")
         return True
 
-    for host in portals:
+    # Primero los que hace más tiempo no se revisan (o nunca).
+    order = sorted(portals, key=lambda h: state["portals"].get(h, {}).get("ts", 0))
+    skipped = []
+    for host in order:
+        if time.time() - t_start > TIME_BUDGET:
+            skipped.append(host)
+            continue
         if not try_portal(host):
             retry.append(host)
         time.sleep(PAUSE)
-    if retry:  # Bonfire pidió esperar: segundo intento al final, más despacio
-        print(f"Reintentando {len(retry)} portales bloqueados temporalmente…")
+    if retry and time.time() - t_start < TIME_BUDGET:
+        print(f"Reintentando {len(retry)} portales que tardaron o pidieron esperar…")
         time.sleep(60)
         for host in retry:
+            if time.time() - t_start > TIME_BUDGET + 5 * 60:
+                break
             try_portal(host)
             time.sleep(PAUSE * 3)
+    if skipped:
+        print(f"Sin tiempo para {len(skipped)} portales; van primero en la próxima corrida.")
 
     new, dead, total_open = [], [], 0
     for host in portals:
+        if host in skipped:
+            continue
         rec = state["portals"].setdefault(host, {"ids": {}, "fails": 0})
+        rec["ts"] = int(time.time())
         portal_first = not rec["ids"] and rec.get("checked") is None
         if host in errors:
             rec["fails"] = rec.get("fails", 0) + 1
@@ -223,8 +247,9 @@ def main():
             del state["portals"][host]  # lo quitaste de la lista
 
     new.sort(key=lambda o: (not o["matches"], o["portal"], o["title"]))
-    ok = len(portals) - len(errors)
-    print(f"Portales leídos: {ok} de {len(portals)} · abiertas: {total_open} · "
+    tried = len(portals) - len(skipped)
+    ok = tried - len(errors)
+    print(f"Portales leídos: {ok} de {tried} · abiertas: {total_open} · "
           f"nuevas: {len(new)} ({sum(1 for o in new if o['matches'])} ★) · "
           f"{time.time() - t_start:.0f}s")
     for o in new:
@@ -232,11 +257,11 @@ def main():
               f"{o['matches'] or ''}")
 
     # Si casi todo falló, es un problema de Bonfire o de la conexión: no tocar el estado.
-    if len(portals) and ok < len(portals) / 2:
+    if tried and ok < tried / 2:
         print("Más de la mitad de los portales falló; no se guarda el estado.")
         if os.getenv("DRY_RUN") != "1":
             send_email(f"⚠️ {BOT_NAME}: no pude leer Bonfire",
-                       f"<p>Solo se pudieron leer {ok} de {len(portals)} portales. "
+                       f"<p>Solo se pudieron leer {ok} de {tried} portales. "
                        "Puede ser un bloqueo temporal de Bonfire; se vuelve a intentar "
                        "en la próxima revisión.</p>")
         return 0
