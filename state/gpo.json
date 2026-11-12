@@ -363,7 +363,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/12/2026",
    "pdf_hash": "5d4013b84b8d530d",
    "pdf_lines": null
@@ -799,7 +799,7 @@
   "500599": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 10,
+    "id": 7,
     "jobId": 655490,
     "rfqFile": null,
     "jacketNumber": "500599",
@@ -960,7 +960,7 @@
   "500370": {
    "first_seen": "11/10/2026",
    "fields": {
-    "id": 7,
+    "id": 4,
     "jobId": 655242,
     "rfqFile": null,
     "jacketNumber": "500370",
@@ -1067,7 +1067,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/12/2026",
    "pdf_hash": "aedcc0f8b50a688c",
    "pdf_lines": null
@@ -1144,7 +1144,7 @@
   "500607": {
    "first_seen": "11/10/2026",
    "fields": {
-    "id": 4,
+    "id": 1,
     "jobId": 655500,
     "rfqFile": null,
     "jacketNumber": "500607",
@@ -1167,7 +1167,7 @@
   "500609": {
    "first_seen": "11/10/2026",
    "fields": {
-    "id": 5,
+    "id": 2,
     "jobId": 655502,
     "rfqFile": null,
     "jacketNumber": "500609",
@@ -1297,7 +1297,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/12/2026",
    "pdf_hash": "302fae943fec2b92",
    "pdf_lines": null
@@ -1305,7 +1305,7 @@
   "500142": {
    "first_seen": "11/12/2026",
    "fields": {
-    "id": 3,
+    "id": 0,
     "jobId": 653970,
     "rfqFile": null,
     "jacketNumber": "500142",
@@ -1328,7 +1328,7 @@
   "500615": {
    "first_seen": "11/12/2026",
    "fields": {
-    "id": 6,
+    "id": 3,
     "jobId": 655509,
     "rfqFile": null,
     "jacketNumber": "500615",
@@ -1351,7 +1351,7 @@
   "500588": {
    "first_seen": "11/12/2026",
    "fields": {
-    "id": 8,
+    "id": 5,
     "jobId": 655477,
     "rfqFile": null,
     "jacketNumber": "500588",
@@ -1374,7 +1374,7 @@
   "500653": {
    "first_seen": "11/12/2026",
    "fields": {
-    "id": 9,
+    "id": 6,
     "jobId": 655551,
     "rfqFile": null,
     "jacketNumber": "500653",
@@ -1397,7 +1397,7 @@
   "500620": {
    "first_seen": "11/12/2026",
    "fields": {
-    "id": 11,
+    "id": 8,
     "jobId": 655513,
     "rfqFile": null,
     "jacketNumber": "500620",
