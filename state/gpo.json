@@ -799,7 +799,7 @@
   "500599": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 7,
+    "id": 8,
     "jobId": 655490,
     "rfqFile": null,
     "jacketNumber": "500599",
@@ -960,7 +960,7 @@
   "500370": {
    "first_seen": "11/10/2026",
    "fields": {
-    "id": 4,
+    "id": 5,
     "jobId": 655242,
     "rfqFile": null,
     "jacketNumber": "500370",
@@ -1144,7 +1144,7 @@
   "500607": {
    "first_seen": "11/10/2026",
    "fields": {
-    "id": 1,
+    "id": 2,
     "jobId": 655500,
     "rfqFile": null,
     "jacketNumber": "500607",
@@ -1167,7 +1167,7 @@
   "500609": {
    "first_seen": "11/10/2026",
    "fields": {
-    "id": 2,
+    "id": 3,
     "jobId": 655502,
     "rfqFile": null,
     "jacketNumber": "500609",
@@ -1328,7 +1328,7 @@
   "500615": {
    "first_seen": "11/12/2026",
    "fields": {
-    "id": 3,
+    "id": 4,
     "jobId": 655509,
     "rfqFile": null,
     "jacketNumber": "500615",
@@ -1351,7 +1351,7 @@
   "500588": {
    "first_seen": "11/12/2026",
    "fields": {
-    "id": 5,
+    "id": 6,
     "jobId": 655477,
     "rfqFile": null,
     "jacketNumber": "500588",
@@ -1374,7 +1374,7 @@
   "500653": {
    "first_seen": "11/12/2026",
    "fields": {
-    "id": 6,
+    "id": 7,
     "jobId": 655551,
     "rfqFile": null,
     "jacketNumber": "500653",
@@ -1397,7 +1397,7 @@
   "500620": {
    "first_seen": "11/12/2026",
    "fields": {
-    "id": 8,
+    "id": 9,
     "jobId": 655513,
     "rfqFile": null,
     "jacketNumber": "500620",
@@ -1415,6 +1415,52 @@
    "open": true,
    "last_seen": "11/12/2026",
    "pdf_hash": "ab068b56973dd6f5",
+   "pdf_lines": null
+  },
+  "500591": {
+   "first_seen": "11/12/2026",
+   "fields": {
+    "id": 1,
+    "jobId": 655482,
+    "rfqFile": null,
+    "jacketNumber": "500591",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-13T10:00:00",
+    "datePosted": "2026-11-12T15:45:39",
+    "productType": "Forms",
+    "title": "WBAMC-7-00002 Mendoza Pediatric Claudia Briano Well Baby Exam TIPS on Soothing A",
+    "totalQuantity": "4000",
+    "shipDeliveryDate": "2026-11-20T00:00:00",
+    "enterQuote": "500591",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/12/2026",
+   "pdf_hash": "2f3f8a826bc5fb90",
+   "pdf_lines": null
+  },
+  "500574": {
+   "first_seen": "11/12/2026",
+   "fields": {
+    "id": 10,
+    "jobId": 655459,
+    "rfqFile": null,
+    "jacketNumber": "500574",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-17T13:00:00",
+    "datePosted": "2026-11-12T15:17:34",
+    "productType": "Forms",
+    "title": "Symbols Cache NGC Stickers ",
+    "totalQuantity": "15000",
+    "shipDeliveryDate": "2027-01-15T00:00:00",
+    "enterQuote": "500574",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/12/2026",
+   "pdf_hash": "1cd9bdd9597d9790",
    "pdf_lines": null
   }
  },
