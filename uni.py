@@ -33,8 +33,10 @@ BOT_NAME = "Uni and Others"
 RUN_HOURS_ET = {11, 17}          # 11 a. m. y 5 p. m. hora del Este
 RUN_DAYS_ET = {0, 1, 2, 3, 4}    # lunes a viernes
 PAUSE = 1.0                      # segundos entre portales (para no saturar Bonfire)
+SLOW_PAUSE = 3.0                 # pausa después de que Bonfire pide esperar (429)
+COOLDOWN = 45                    # segundos de espera cuando Bonfire responde 429
 FAIL_ALERT = 3                   # avisar si un portal falla N corridas seguidas
-TIME_BUDGET = 20 * 60            # máximo de segundos por corrida; lo que falte
+TIME_BUDGET = 25 * 60            # máximo de segundos por corrida; lo que falte
                                  # se revisa primero en la siguiente corrida
 SESSION = requests.Session()
 
@@ -89,7 +91,8 @@ def fetch_portal(host):
                              "X-Requested-With": "XMLHttpRequest"},
                     timeout=(10, 25))
     if r.status_code in (403, 429, 503):
-        raise Blocked(f"HTTP {r.status_code}")
+        wait = r.headers.get("Retry-After", "")
+        raise Blocked(f"HTTP {r.status_code}" + (f" (Retry-After {wait})" if wait else ""))
     r.raise_for_status()
     try:
         data = r.json()
@@ -195,21 +198,35 @@ def main():
     # Primero los que hace más tiempo no se revisan (o nunca).
     order = sorted(portals, key=lambda h: state["portals"].get(h, {}).get("ts", 0))
     skipped = []
+    # Bonfire corta (HTTP 429) después de muchas consultas seguidas. Cuando pasa,
+    # el bot espera, vuelve a intentar ese mismo portal y sigue más despacio.
+    pause = PAUSE
     for host in order:
         if time.time() - t_start > TIME_BUDGET:
             skipped.append(host)
             continue
         if not try_portal(host):
-            retry.append(host)
-        time.sleep(PAUSE)
+            for _ in range(2):
+                if time.time() - t_start > TIME_BUDGET:
+                    break
+                pause = SLOW_PAUSE
+                time.sleep(COOLDOWN)
+                if try_portal(host):
+                    break
+            else:
+                retry.append(host)
+            if host in errors and host not in retry:
+                retry.append(host)
+        time.sleep(pause)
+    retry = [h for h in retry if h in errors]
     if retry and time.time() - t_start < TIME_BUDGET:
         print(f"Reintentando {len(retry)} portales que tardaron o pidieron esperar…")
-        time.sleep(60)
+        time.sleep(COOLDOWN)
         for host in retry:
-            if time.time() - t_start > TIME_BUDGET + 5 * 60:
+            if time.time() - t_start > TIME_BUDGET + 3 * 60:
                 break
             try_portal(host)
-            time.sleep(PAUSE * 3)
+            time.sleep(SLOW_PAUSE)
     if skipped:
         print(f"Sin tiempo para {len(skipped)} portales; van primero en la próxima corrida.")
 

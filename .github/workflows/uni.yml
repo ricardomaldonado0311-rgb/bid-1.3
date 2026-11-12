@@ -21,7 +21,7 @@ concurrency:
 jobs:
   revisar:
     runs-on: ubuntu-24.04
-    timeout-minutes: 35
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v5
 

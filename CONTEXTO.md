@@ -37,7 +37,7 @@ Bot en Python que corre en GitHub Actions (repositorio privado `bid-1.3`). Desde
   (ProjectID, ReferenceID, ProjectName, DepartmentID, DateClose en UTC) y `payload.departments`.
 - Estado `state/uni.json`: `portals[host] = {ids: {ProjectID: fecha_vista}, fails, checked, reported}`.
 - Cron: 4 líneas (15, 16, 21, 22 UTC); `should_run()` lee la hora de `CRON_SCHEDULE` y elige según horario de verano.
-- 429/403/503 de Bonfire: se reintenta al final tras 60 s. Si falla más de la mitad, no se guarda estado y llega aviso.
+- 429/403/503 de Bonfire: espera 45 s, reintenta el mismo portal (2 veces), sigue con pausa de 3 s y reintenta al final. Límite 25 min por corrida. Si falla más de la mitad, no se guarda estado y llega aviso.
 - Lista de JC (11-nov): 296 portales Bonfire únicos. Quitados: vendor.bonfirehub.com (buscador, no portal),
   dfwairport-sandbox (portal de pruebas). Pendientes de link correcto: Beaufort-Jasper Water & Sewer Authority,
   Forty Niners Stadium Management Company, Superior Court of California County of Monterey.
