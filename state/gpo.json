@@ -1144,30 +1144,30 @@
   "500607": {
    "first_seen": "11/10/2026",
    "fields": {
-    "id": 2,
+    "id": 18,
     "jobId": 655500,
     "rfqFile": null,
     "jacketNumber": "500607",
     "officeName": "Government Publishing and Print Procurement",
-    "quoteDueDate": "2026-11-13T10:00:00",
-    "datePosted": "2026-11-10T15:10:49",
+    "quoteDueDate": "2026-11-17T10:00:00",
+    "datePosted": "2026-11-13T16:28:16",
     "productType": "Books",
-    "title": "Catalog Booklet",
-    "totalQuantity": "500",
+    "title": "Catalog Booklet ",
+    "totalQuantity": "1",
     "shipDeliveryDate": "2027-01-04T00:00:00",
     "enterQuote": "500607",
-    "fRevised": "",
+    "fRevised": " R-1",
     "isJacketStrapped": "false"
    },
-   "open": false,
+   "open": true,
    "last_seen": "11/13/2026",
-   "pdf_hash": "3d02dc23337b9fee",
+   "pdf_hash": "b43a4f460262bc9f",
    "pdf_lines": null
   },
   "500609": {
    "first_seen": "11/10/2026",
    "fields": {
-    "id": 18,
+    "id": 19,
     "jobId": 655502,
     "rfqFile": null,
     "jacketNumber": "500609",
@@ -1443,7 +1443,7 @@
   "500574": {
    "first_seen": "11/12/2026",
    "fields": {
-    "id": 23,
+    "id": 24,
     "jobId": 655459,
     "rfqFile": null,
     "jacketNumber": "500574",
@@ -1535,7 +1535,7 @@
   "500679": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 19,
+    "id": 20,
     "jobId": 655579,
     "rfqFile": null,
     "jacketNumber": "500679",
@@ -1558,7 +1558,7 @@
   "500681": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 20,
+    "id": 21,
     "jobId": 655580,
     "rfqFile": null,
     "jacketNumber": "500681",
@@ -1673,7 +1673,7 @@
   "500677": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 25,
+    "id": 26,
     "jobId": 655577,
     "rfqFile": null,
     "jacketNumber": "500677",
@@ -1834,7 +1834,7 @@
   "500672": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 21,
+    "id": 22,
     "jobId": 655571,
     "rfqFile": null,
     "jacketNumber": "500672",
@@ -1903,7 +1903,7 @@
   "462249": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 22,
+    "id": 23,
     "jobId": 655466,
     "rfqFile": null,
     "jacketNumber": "462249",
@@ -1926,7 +1926,7 @@
   "441380": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 24,
+    "id": 25,
     "jobId": 653598,
     "rfqFile": null,
     "jacketNumber": "441380",
@@ -1955,18 +1955,18 @@
     "jacketNumber": "500651",
     "officeName": "Government Publishing and Print Procurement",
     "quoteDueDate": "2026-11-16T11:00:00",
-    "datePosted": "2026-11-13T15:52:51",
+    "datePosted": "2026-11-13T16:34:47",
     "productType": "Books",
     "title": "2026 TRP Patient Program Manual ",
     "totalQuantity": "100",
     "shipDeliveryDate": "2026-12-04T00:00:00",
     "enterQuote": "500651",
-    "fRevised": "",
+    "fRevised": " R-1",
     "isJacketStrapped": "true"
    },
    "open": true,
    "last_seen": "11/13/2026",
-   "pdf_hash": "bae32e1e9ff6761b",
+   "pdf_hash": "e795f373d60f6f83",
    "pdf_lines": null
   }
  },
