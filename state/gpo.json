@@ -868,7 +868,7 @@
   "500579": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 3,
+    "id": 4,
     "jobId": 655468,
     "rfqFile": null,
     "jacketNumber": "500579",
@@ -1167,7 +1167,7 @@
   "500609": {
    "first_seen": "11/10/2026",
    "fields": {
-    "id": 9,
+    "id": 15,
     "jobId": 655502,
     "rfqFile": null,
     "jacketNumber": "500609",
@@ -1443,7 +1443,7 @@
   "500574": {
    "first_seen": "11/12/2026",
    "fields": {
-    "id": 12,
+    "id": 19,
     "jobId": 655459,
     "rfqFile": null,
     "jacketNumber": "500574",
@@ -1466,7 +1466,7 @@
   "500669": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 2,
+    "id": 3,
     "jobId": 655570,
     "rfqFile": null,
     "jacketNumber": "500669",
@@ -1489,7 +1489,7 @@
   "500611": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 4,
+    "id": 5,
     "jobId": 655504,
     "rfqFile": null,
     "jacketNumber": "500611",
@@ -1512,30 +1512,30 @@
   "500606": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 8,
+    "id": 14,
     "jobId": 655499,
     "rfqFile": null,
     "jacketNumber": "500606",
     "officeName": "Government Publishing and Print Procurement",
     "quoteDueDate": "2026-11-17T10:00:00",
-    "datePosted": "2026-11-13T08:34:29",
+    "datePosted": "2026-11-13T13:13:27",
     "productType": "Forms",
     "title": "24x36 2-Sided Wall Calendars (Calendar Year 2027 & 2028) ",
-    "totalQuantity": "1000",
+    "totalQuantity": "1",
     "shipDeliveryDate": "2027-01-15T00:00:00",
     "enterQuote": "500606",
-    "fRevised": "",
+    "fRevised": " R-1",
     "isJacketStrapped": "false"
    },
-   "open": false,
+   "open": true,
    "last_seen": "11/13/2026",
-   "pdf_hash": "f6d6ea0c37fceeed",
+   "pdf_hash": "68e2c73530f1139c",
    "pdf_lines": null
   },
   "500679": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 10,
+    "id": 16,
     "jobId": 655579,
     "rfqFile": null,
     "jacketNumber": "500679",
@@ -1558,7 +1558,7 @@
   "500681": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 11,
+    "id": 17,
     "jobId": 655580,
     "rfqFile": null,
     "jacketNumber": "500681",
@@ -1581,7 +1581,7 @@
   "500654": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 1,
+    "id": 2,
     "jobId": 655553,
     "rfqFile": null,
     "jacketNumber": "500654",
@@ -1604,7 +1604,7 @@
   "500692": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 5,
+    "id": 6,
     "jobId": 655588,
     "rfqFile": null,
     "jacketNumber": "500692",
@@ -1627,7 +1627,7 @@
   "500601": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 6,
+    "id": 7,
     "jobId": 655494,
     "rfqFile": null,
     "jacketNumber": "500601",
@@ -1650,7 +1650,7 @@
   "500675": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 7,
+    "id": 8,
     "jobId": 655575,
     "rfqFile": null,
     "jacketNumber": "500675",
@@ -1673,7 +1673,7 @@
   "500677": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 13,
+    "id": 20,
     "jobId": 655577,
     "rfqFile": null,
     "jacketNumber": "500677",
@@ -1696,7 +1696,7 @@
   "500337": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 8,
+    "id": 10,
     "jobId": 655205,
     "rfqFile": null,
     "jacketNumber": "500337",
@@ -1714,6 +1714,144 @@
    "open": true,
    "last_seen": "11/13/2026",
    "pdf_hash": "514feb815a3156d3",
+   "pdf_lines": null
+  },
+  "500644": {
+   "first_seen": "11/13/2026",
+   "fields": {
+    "id": 1,
+    "jobId": 655542,
+    "rfqFile": null,
+    "jacketNumber": "500644",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-16T10:00:00",
+    "datePosted": "2026-11-13T13:33:33",
+    "productType": "Forms",
+    "title": "2-part Field Revision",
+    "totalQuantity": "150",
+    "shipDeliveryDate": "2026-12-17T00:00:00",
+    "enterQuote": "500644",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/13/2026",
+   "pdf_hash": "7709a230dec24e2f",
+   "pdf_lines": null
+  },
+  "500698": {
+   "first_seen": "11/13/2026",
+   "fields": {
+    "id": 9,
+    "jobId": 655594,
+    "rfqFile": null,
+    "jacketNumber": "500698",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-16T12:30:00",
+    "datePosted": "2026-11-13T13:12:36",
+    "productType": "Books",
+    "title": "USCG BOARDING OFFICER JOB AID KIT (BOJAK EDITION G)  Station Cape May ",
+    "totalQuantity": "10",
+    "shipDeliveryDate": "2026-12-03T00:00:00",
+    "enterQuote": "500698",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/13/2026",
+   "pdf_hash": "2c55c02c52a0d4d0",
+   "pdf_lines": null
+  },
+  "500664": {
+   "first_seen": "11/13/2026",
+   "fields": {
+    "id": 11,
+    "jobId": 655563,
+    "rfqFile": null,
+    "jacketNumber": "500664",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-16T13:00:00",
+    "datePosted": "2026-11-13T13:25:28",
+    "productType": "Forms",
+    "title": "Haleakala Cultural Brochure (Copy) ",
+    "totalQuantity": "30000",
+    "shipDeliveryDate": "2026-12-16T00:00:00",
+    "enterQuote": "500664",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/13/2026",
+   "pdf_hash": "ae09970e0f26dd93",
+   "pdf_lines": null
+  },
+  "500626": {
+   "first_seen": "11/13/2026",
+   "fields": {
+    "id": 12,
+    "jobId": 655519,
+    "rfqFile": null,
+    "jacketNumber": "500626",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-16T14:00:00",
+    "datePosted": "2026-11-13T13:57:29",
+    "productType": "Decals",
+    "title": "Lake Mead 2027 Annual Boat Decal ",
+    "totalQuantity": "21000",
+    "shipDeliveryDate": "2026-12-10T00:00:00",
+    "enterQuote": "500626",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/13/2026",
+   "pdf_hash": "e388dbc0af52509f",
+   "pdf_lines": null
+  },
+  "500694": {
+   "first_seen": "11/13/2026",
+   "fields": {
+    "id": 13,
+    "jobId": 655590,
+    "rfqFile": null,
+    "jacketNumber": "500694",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-16T14:00:00",
+    "datePosted": "2026-11-13T13:53:44",
+    "productType": "Forms",
+    "title": "Volcanoes Are Mighty Mountains ",
+    "totalQuantity": "2177",
+    "shipDeliveryDate": "2026-12-08T00:00:00",
+    "enterQuote": "500694",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/13/2026",
+   "pdf_hash": "a3ed373952854dbb",
+   "pdf_lines": null
+  },
+  "500672": {
+   "first_seen": "11/13/2026",
+   "fields": {
+    "id": 18,
+    "jobId": 655571,
+    "rfqFile": null,
+    "jacketNumber": "500672",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-17T11:00:00",
+    "datePosted": "2026-11-13T13:07:36",
+    "productType": "Pamphlets",
+    "title": "Operations Research and Data Analytics Program Brochure",
+    "totalQuantity": "1",
+    "shipDeliveryDate": "2026-12-15T00:00:00",
+    "enterQuote": "500672",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/13/2026",
+   "pdf_hash": "4c3e92b012d87973",
    "pdf_lines": null
   }
  },
