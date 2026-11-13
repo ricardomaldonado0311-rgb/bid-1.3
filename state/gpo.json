@@ -799,7 +799,7 @@
   "500599": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 3,
+    "id": 0,
     "jobId": 655490,
     "rfqFile": null,
     "jacketNumber": "500599",
@@ -868,7 +868,7 @@
   "500579": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 6,
+    "id": 3,
     "jobId": 655468,
     "rfqFile": null,
     "jacketNumber": "500579",
@@ -975,7 +975,7 @@
     "fRevised": " R-1",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/13/2026",
    "pdf_hash": "63f34ac1077b22af",
    "pdf_lines": null
@@ -1366,7 +1366,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/13/2026",
    "pdf_hash": "48be7af9bb0b7bd1",
    "pdf_lines": null
@@ -1389,7 +1389,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/13/2026",
    "pdf_hash": "55457829a8510fd1",
    "pdf_lines": null
@@ -1397,7 +1397,7 @@
   "500620": {
    "first_seen": "11/12/2026",
    "fields": {
-    "id": 4,
+    "id": 1,
     "jobId": 655513,
     "rfqFile": null,
     "jacketNumber": "500620",
@@ -1443,7 +1443,7 @@
   "500574": {
    "first_seen": "11/12/2026",
    "fields": {
-    "id": 10,
+    "id": 8,
     "jobId": 655459,
     "rfqFile": null,
     "jacketNumber": "500574",
@@ -1466,7 +1466,7 @@
   "500669": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 5,
+    "id": 2,
     "jobId": 655570,
     "rfqFile": null,
     "jacketNumber": "500669",
@@ -1489,7 +1489,7 @@
   "500611": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 7,
+    "id": 4,
     "jobId": 655504,
     "rfqFile": null,
     "jacketNumber": "500611",
@@ -1512,7 +1512,7 @@
   "500606": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 8,
+    "id": 5,
     "jobId": 655499,
     "rfqFile": null,
     "jacketNumber": "500606",
@@ -1535,7 +1535,7 @@
   "500679": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 9,
+    "id": 6,
     "jobId": 655579,
     "rfqFile": null,
     "jacketNumber": "500679",
@@ -1553,6 +1553,29 @@
    "open": true,
    "last_seen": "11/13/2026",
    "pdf_hash": "8d65c9b767d560e7",
+   "pdf_lines": null
+  },
+  "500681": {
+   "first_seen": "11/13/2026",
+   "fields": {
+    "id": 7,
+    "jobId": 655580,
+    "rfqFile": null,
+    "jacketNumber": "500681",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-17T10:00:00",
+    "datePosted": "2026-11-13T10:55:37",
+    "productType": "Pamphlets",
+    "title": "VA PTSD ITEM #PTSD53 \"Comprender el TEPT y el envejecimiento\" ",
+    "totalQuantity": "5000",
+    "shipDeliveryDate": "2026-12-11T00:00:00",
+    "enterQuote": "500681",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/13/2026",
+   "pdf_hash": "acab0aca2de5aa75",
    "pdf_lines": null
   }
  },
