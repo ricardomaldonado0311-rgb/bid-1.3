@@ -1167,7 +1167,7 @@
   "500609": {
    "first_seen": "11/10/2026",
    "fields": {
-    "id": 15,
+    "id": 17,
     "jobId": 655502,
     "rfqFile": null,
     "jacketNumber": "500609",
@@ -1443,7 +1443,7 @@
   "500574": {
    "first_seen": "11/12/2026",
    "fields": {
-    "id": 19,
+    "id": 22,
     "jobId": 655459,
     "rfqFile": null,
     "jacketNumber": "500574",
@@ -1512,7 +1512,7 @@
   "500606": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 14,
+    "id": 16,
     "jobId": 655499,
     "rfqFile": null,
     "jacketNumber": "500606",
@@ -1535,7 +1535,7 @@
   "500679": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 16,
+    "id": 18,
     "jobId": 655579,
     "rfqFile": null,
     "jacketNumber": "500679",
@@ -1558,7 +1558,7 @@
   "500681": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 17,
+    "id": 19,
     "jobId": 655580,
     "rfqFile": null,
     "jacketNumber": "500681",
@@ -1673,7 +1673,7 @@
   "500677": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 20,
+    "id": 24,
     "jobId": 655577,
     "rfqFile": null,
     "jacketNumber": "500677",
@@ -1765,7 +1765,7 @@
   "500664": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 11,
+    "id": 13,
     "jobId": 655563,
     "rfqFile": null,
     "jacketNumber": "500664",
@@ -1788,7 +1788,7 @@
   "500626": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 12,
+    "id": 14,
     "jobId": 655519,
     "rfqFile": null,
     "jacketNumber": "500626",
@@ -1811,7 +1811,7 @@
   "500694": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 13,
+    "id": 15,
     "jobId": 655590,
     "rfqFile": null,
     "jacketNumber": "500694",
@@ -1834,7 +1834,7 @@
   "500672": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 18,
+    "id": 20,
     "jobId": 655571,
     "rfqFile": null,
     "jacketNumber": "500672",
@@ -1852,6 +1852,98 @@
    "open": true,
    "last_seen": "11/13/2026",
    "pdf_hash": "4c3e92b012d87973",
+   "pdf_lines": null
+  },
+  "500627": {
+   "first_seen": "11/13/2026",
+   "fields": {
+    "id": 11,
+    "jobId": 655520,
+    "rfqFile": null,
+    "jacketNumber": "500627",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-16T13:00:00",
+    "datePosted": "2026-11-13T14:45:46",
+    "productType": "Other",
+    "title": "Lake Mead 2027 Annual Pass Card ",
+    "totalQuantity": "25000",
+    "shipDeliveryDate": "2026-12-10T00:00:00",
+    "enterQuote": "500627",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/13/2026",
+   "pdf_hash": "ed856e5a9b6051ba",
+   "pdf_lines": null
+  },
+  "500633": {
+   "first_seen": "11/13/2026",
+   "fields": {
+    "id": 12,
+    "jobId": 655526,
+    "rfqFile": null,
+    "jacketNumber": "500633",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-16T13:00:00",
+    "datePosted": "2026-11-13T14:45:13",
+    "productType": "Forms",
+    "title": "VAPAHCS Step and Repeat Backdrops",
+    "totalQuantity": "7",
+    "shipDeliveryDate": "2026-12-18T00:00:00",
+    "enterQuote": "500633",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/13/2026",
+   "pdf_hash": "b9a2e22d07424e0a",
+   "pdf_lines": null
+  },
+  "462249": {
+   "first_seen": "11/13/2026",
+   "fields": {
+    "id": 21,
+    "jobId": 655466,
+    "rfqFile": null,
+    "jacketNumber": "462249",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-17T13:00:00",
+    "datePosted": "2026-11-13T14:44:41",
+    "productType": "Kit Folders",
+    "title": "PACU Discharge Folders/Packets ",
+    "totalQuantity": "6000",
+    "shipDeliveryDate": "2026-12-30T00:00:00",
+    "enterQuote": "462249",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/13/2026",
+   "pdf_hash": "b30877b2b6afc89f",
+   "pdf_lines": null
+  },
+  "441380": {
+   "first_seen": "11/13/2026",
+   "fields": {
+    "id": 23,
+    "jobId": 653598,
+    "rfqFile": null,
+    "jacketNumber": "441380",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-17T17:00:00",
+    "datePosted": "2026-10-07T10:03:51",
+    "productType": "Other",
+    "title": "BIA APPEALS PACKET INSTRUCTIONS & APPLICATION , BOUND TOGETHER ",
+    "totalQuantity": "1",
+    "shipDeliveryDate": "2027-01-29T00:00:00",
+    "enterQuote": "441380",
+    "fRevised": " R-3",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/13/2026",
+   "pdf_hash": "0f26d4fe56247213",
    "pdf_lines": null
   }
  },
