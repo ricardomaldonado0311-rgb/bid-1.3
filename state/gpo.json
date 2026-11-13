@@ -1443,7 +1443,7 @@
   "500574": {
    "first_seen": "11/12/2026",
    "fields": {
-    "id": 11,
+    "id": 12,
     "jobId": 655459,
     "rfqFile": null,
     "jacketNumber": "500574",
@@ -1461,6 +1461,29 @@
    "open": true,
    "last_seen": "11/13/2026",
    "pdf_hash": "1cd9bdd9597d9790",
+   "pdf_lines": null
+  },
+  "500669": {
+   "first_seen": "11/13/2026",
+   "fields": {
+    "id": 11,
+    "jobId": 655570,
+    "rfqFile": null,
+    "jacketNumber": "500669",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-16T10:00:00",
+    "datePosted": "2026-11-13T07:31:36",
+    "productType": "Other",
+    "title": "USCG BOARDING OFFICER JOB AID KIT (BOJAK EDITION",
+    "totalQuantity": "25",
+    "shipDeliveryDate": "2026-12-03T00:00:00",
+    "enterQuote": "500669",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/13/2026",
+   "pdf_hash": "d1183e7865b73352",
    "pdf_lines": null
   }
  },
