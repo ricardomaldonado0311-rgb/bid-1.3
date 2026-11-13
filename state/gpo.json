@@ -1167,7 +1167,7 @@
   "500609": {
    "first_seen": "11/10/2026",
    "fields": {
-    "id": 17,
+    "id": 18,
     "jobId": 655502,
     "rfqFile": null,
     "jacketNumber": "500609",
@@ -1443,7 +1443,7 @@
   "500574": {
    "first_seen": "11/12/2026",
    "fields": {
-    "id": 22,
+    "id": 23,
     "jobId": 655459,
     "rfqFile": null,
     "jacketNumber": "500574",
@@ -1512,7 +1512,7 @@
   "500606": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 16,
+    "id": 17,
     "jobId": 655499,
     "rfqFile": null,
     "jacketNumber": "500606",
@@ -1535,7 +1535,7 @@
   "500679": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 18,
+    "id": 19,
     "jobId": 655579,
     "rfqFile": null,
     "jacketNumber": "500679",
@@ -1558,7 +1558,7 @@
   "500681": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 19,
+    "id": 20,
     "jobId": 655580,
     "rfqFile": null,
     "jacketNumber": "500681",
@@ -1604,7 +1604,7 @@
   "500692": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 6,
+    "id": 7,
     "jobId": 655588,
     "rfqFile": null,
     "jacketNumber": "500692",
@@ -1627,7 +1627,7 @@
   "500601": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 7,
+    "id": 8,
     "jobId": 655494,
     "rfqFile": null,
     "jacketNumber": "500601",
@@ -1650,7 +1650,7 @@
   "500675": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 8,
+    "id": 9,
     "jobId": 655575,
     "rfqFile": null,
     "jacketNumber": "500675",
@@ -1673,7 +1673,7 @@
   "500677": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 24,
+    "id": 25,
     "jobId": 655577,
     "rfqFile": null,
     "jacketNumber": "500677",
@@ -1696,7 +1696,7 @@
   "500337": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 10,
+    "id": 11,
     "jobId": 655205,
     "rfqFile": null,
     "jacketNumber": "500337",
@@ -1742,7 +1742,7 @@
   "500698": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 9,
+    "id": 10,
     "jobId": 655594,
     "rfqFile": null,
     "jacketNumber": "500698",
@@ -1765,7 +1765,7 @@
   "500664": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 13,
+    "id": 14,
     "jobId": 655563,
     "rfqFile": null,
     "jacketNumber": "500664",
@@ -1788,7 +1788,7 @@
   "500626": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 14,
+    "id": 15,
     "jobId": 655519,
     "rfqFile": null,
     "jacketNumber": "500626",
@@ -1811,7 +1811,7 @@
   "500694": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 15,
+    "id": 16,
     "jobId": 655590,
     "rfqFile": null,
     "jacketNumber": "500694",
@@ -1834,7 +1834,7 @@
   "500672": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 20,
+    "id": 21,
     "jobId": 655571,
     "rfqFile": null,
     "jacketNumber": "500672",
@@ -1857,7 +1857,7 @@
   "500627": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 11,
+    "id": 12,
     "jobId": 655520,
     "rfqFile": null,
     "jacketNumber": "500627",
@@ -1880,7 +1880,7 @@
   "500633": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 12,
+    "id": 13,
     "jobId": 655526,
     "rfqFile": null,
     "jacketNumber": "500633",
@@ -1903,7 +1903,7 @@
   "462249": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 21,
+    "id": 22,
     "jobId": 655466,
     "rfqFile": null,
     "jacketNumber": "462249",
@@ -1926,7 +1926,7 @@
   "441380": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 23,
+    "id": 24,
     "jobId": 653598,
     "rfqFile": null,
     "jacketNumber": "441380",
@@ -1944,6 +1944,29 @@
    "open": true,
    "last_seen": "11/13/2026",
    "pdf_hash": "0f26d4fe56247213",
+   "pdf_lines": null
+  },
+  "500651": {
+   "first_seen": "11/13/2026",
+   "fields": {
+    "id": 6,
+    "jobId": 655549,
+    "rfqFile": null,
+    "jacketNumber": "500651",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-16T11:00:00",
+    "datePosted": "2026-11-13T15:52:51",
+    "productType": "Books",
+    "title": "2026 TRP Patient Program Manual ",
+    "totalQuantity": "100",
+    "shipDeliveryDate": "2026-12-04T00:00:00",
+    "enterQuote": "500651",
+    "fRevised": "",
+    "isJacketStrapped": "true"
+   },
+   "open": true,
+   "last_seen": "11/13/2026",
+   "pdf_hash": "bae32e1e9ff6761b",
    "pdf_lines": null
   }
  },
