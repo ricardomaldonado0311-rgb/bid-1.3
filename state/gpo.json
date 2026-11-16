@@ -884,7 +884,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/15/2026",
+   "last_seen": "11/16/2026",
    "pdf_hash": "be5057b2a6816181",
    "pdf_lines": null
   },
@@ -1144,7 +1144,7 @@
   "500607": {
    "first_seen": "11/10/2026",
    "fields": {
-    "id": 19,
+    "id": 20,
     "jobId": 655500,
     "rfqFile": null,
     "jacketNumber": "500607",
@@ -1160,14 +1160,14 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/15/2026",
+   "last_seen": "11/16/2026",
    "pdf_hash": "b43a4f460262bc9f",
    "pdf_lines": null
   },
   "500609": {
    "first_seen": "11/10/2026",
    "fields": {
-    "id": 20,
+    "id": 21,
     "jobId": 655502,
     "rfqFile": null,
     "jacketNumber": "500609",
@@ -1183,7 +1183,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/15/2026",
+   "last_seen": "11/16/2026",
    "pdf_hash": "eb7bf3b82953b373",
    "pdf_lines": null
   },
@@ -1413,7 +1413,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/15/2026",
+   "last_seen": "11/16/2026",
    "pdf_hash": "ab068b56973dd6f5",
    "pdf_lines": null
   },
@@ -1443,7 +1443,7 @@
   "500574": {
    "first_seen": "11/12/2026",
    "fields": {
-    "id": 25,
+    "id": 26,
     "jobId": 655459,
     "rfqFile": null,
     "jacketNumber": "500574",
@@ -1459,7 +1459,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/15/2026",
+   "last_seen": "11/16/2026",
    "pdf_hash": "1cd9bdd9597d9790",
    "pdf_lines": null
   },
@@ -1482,7 +1482,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/15/2026",
+   "last_seen": "11/16/2026",
    "pdf_hash": "d1183e7865b73352",
    "pdf_lines": null
   },
@@ -1505,14 +1505,14 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/15/2026",
+   "last_seen": "11/16/2026",
    "pdf_hash": "a6378d806be7800d",
    "pdf_lines": null
   },
   "500606": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 18,
+    "id": 19,
     "jobId": 655499,
     "rfqFile": null,
     "jacketNumber": "500606",
@@ -1528,14 +1528,14 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/15/2026",
+   "last_seen": "11/16/2026",
    "pdf_hash": "68e2c73530f1139c",
    "pdf_lines": null
   },
   "500679": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 21,
+    "id": 22,
     "jobId": 655579,
     "rfqFile": null,
     "jacketNumber": "500679",
@@ -1551,14 +1551,14 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/15/2026",
+   "last_seen": "11/16/2026",
    "pdf_hash": "8d65c9b767d560e7",
    "pdf_lines": null
   },
   "500681": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 22,
+    "id": 23,
     "jobId": 655580,
     "rfqFile": null,
     "jacketNumber": "500681",
@@ -1574,7 +1574,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/15/2026",
+   "last_seen": "11/16/2026",
    "pdf_hash": "acab0aca2de5aa75",
    "pdf_lines": null
   },
@@ -1597,7 +1597,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/15/2026",
+   "last_seen": "11/16/2026",
    "pdf_hash": "a385bdf4b49f79fd",
    "pdf_lines": null
   },
@@ -1612,7 +1612,7 @@
     "quoteDueDate": "2026-11-16T11:00:00",
     "datePosted": "2026-11-13T11:47:45",
     "productType": "Forms",
-    "title": "27-518 ICE OPR Bribery Card - 2025 Revised Version ",
+    "title": "27-518 ICE OPR Bribery Card - 2025 Revised Version",
     "totalQuantity": "3000",
     "shipDeliveryDate": "2026-11-30T00:00:00",
     "enterQuote": "500692",
@@ -1620,7 +1620,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/15/2026",
+   "last_seen": "11/16/2026",
    "pdf_hash": "168da9358205e64c",
    "pdf_lines": null
   },
@@ -1643,7 +1643,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/15/2026",
+   "last_seen": "11/16/2026",
    "pdf_hash": "e8dc146a5e7e4b0c",
    "pdf_lines": null
   },
@@ -1666,14 +1666,14 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/15/2026",
+   "last_seen": "11/16/2026",
    "pdf_hash": "cd8ec6e40bbacafa",
    "pdf_lines": null
   },
   "500677": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 27,
+    "id": 28,
     "jobId": 655577,
     "rfqFile": null,
     "jacketNumber": "500677",
@@ -1689,7 +1689,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/15/2026",
+   "last_seen": "11/16/2026",
    "pdf_hash": "483ddf6c0377ebcf",
    "pdf_lines": null
   },
@@ -1712,7 +1712,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/15/2026",
+   "last_seen": "11/16/2026",
    "pdf_hash": "514feb815a3156d3",
    "pdf_lines": null
   },
@@ -1735,7 +1735,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/15/2026",
+   "last_seen": "11/16/2026",
    "pdf_hash": "7709a230dec24e2f",
    "pdf_lines": null
   },
@@ -1750,7 +1750,7 @@
     "quoteDueDate": "2026-11-16T12:30:00",
     "datePosted": "2026-11-13T13:12:36",
     "productType": "Books",
-    "title": "USCG BOARDING OFFICER JOB AID KIT (BOJAK EDITION G)  Station Cape May ",
+    "title": "USCG BOARDING OFFICER JOB AID KIT (BOJAK EDITION G)  Station Cape May",
     "totalQuantity": "10",
     "shipDeliveryDate": "2026-12-03T00:00:00",
     "enterQuote": "500698",
@@ -1758,7 +1758,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/15/2026",
+   "last_seen": "11/16/2026",
    "pdf_hash": "2c55c02c52a0d4d0",
    "pdf_lines": null
   },
@@ -1781,14 +1781,14 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/15/2026",
+   "last_seen": "11/16/2026",
    "pdf_hash": "ae09970e0f26dd93",
    "pdf_lines": null
   },
   "500626": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 16,
+    "id": 17,
     "jobId": 655519,
     "rfqFile": null,
     "jacketNumber": "500626",
@@ -1804,14 +1804,14 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/15/2026",
+   "last_seen": "11/16/2026",
    "pdf_hash": "e388dbc0af52509f",
    "pdf_lines": null
   },
   "500694": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 17,
+    "id": 18,
     "jobId": 655590,
     "rfqFile": null,
     "jacketNumber": "500694",
@@ -1827,14 +1827,14 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/15/2026",
+   "last_seen": "11/16/2026",
    "pdf_hash": "a3ed373952854dbb",
    "pdf_lines": null
   },
   "500672": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 23,
+    "id": 24,
     "jobId": 655571,
     "rfqFile": null,
     "jacketNumber": "500672",
@@ -1850,7 +1850,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/15/2026",
+   "last_seen": "11/16/2026",
    "pdf_hash": "4c3e92b012d87973",
    "pdf_lines": null
   },
@@ -1873,7 +1873,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/15/2026",
+   "last_seen": "11/16/2026",
    "pdf_hash": "ed856e5a9b6051ba",
    "pdf_lines": null
   },
@@ -1896,14 +1896,14 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/15/2026",
+   "last_seen": "11/16/2026",
    "pdf_hash": "b9a2e22d07424e0a",
    "pdf_lines": null
   },
   "462249": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 24,
+    "id": 25,
     "jobId": 655466,
     "rfqFile": null,
     "jacketNumber": "462249",
@@ -1919,14 +1919,14 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/15/2026",
+   "last_seen": "11/16/2026",
    "pdf_hash": "b30877b2b6afc89f",
    "pdf_lines": null
   },
   "441380": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 26,
+    "id": 27,
     "jobId": 653598,
     "rfqFile": null,
     "jacketNumber": "441380",
@@ -1942,7 +1942,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/15/2026",
+   "last_seen": "11/16/2026",
    "pdf_hash": "0f26d4fe56247213",
    "pdf_lines": null
   },
@@ -1965,7 +1965,7 @@
     "isJacketStrapped": "true"
    },
    "open": true,
-   "last_seen": "11/15/2026",
+   "last_seen": "11/16/2026",
    "pdf_hash": "e795f373d60f6f83",
    "pdf_lines": null
   },
@@ -1988,8 +1988,31 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/15/2026",
+   "last_seen": "11/16/2026",
    "pdf_hash": "aca10b77d64f0e59",
+   "pdf_lines": null
+  },
+  "500682": {
+   "first_seen": "11/16/2026",
+   "fields": {
+    "id": 16,
+    "jobId": 655595,
+    "rfqFile": null,
+    "jacketNumber": "500682",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-16T13:00:00",
+    "datePosted": "2026-11-16T07:03:15",
+    "productType": "Pamphlets",
+    "title": "DOING BUSINESS WITH THE COAST GUARD ",
+    "totalQuantity": "1000",
+    "shipDeliveryDate": "2026-12-03T00:00:00",
+    "enterQuote": "500682",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/16/2026",
+   "pdf_hash": "ee1e653c9db477c4",
    "pdf_lines": null
   }
  },
