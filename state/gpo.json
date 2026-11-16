@@ -348,7 +348,7 @@
   "500573": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 16,
+    "id": 14,
     "jobId": 655458,
     "rfqFile": null,
     "jacketNumber": "500573",
@@ -1121,30 +1121,30 @@
   "500624": {
    "first_seen": "11/10/2026",
    "fields": {
-    "id": 9,
+    "id": 6,
     "jobId": 655517,
     "rfqFile": null,
     "jacketNumber": "500624",
     "officeName": "Government Publishing and Print Procurement",
-    "quoteDueDate": "2026-11-12T11:00:00",
-    "datePosted": "2026-11-10T15:47:35",
+    "quoteDueDate": "2026-11-17T11:00:00",
+    "datePosted": "2026-11-16T12:43:24",
     "productType": "Forms",
     "title": "My Visit Card - 2 side ",
     "totalQuantity": "150000",
     "shipDeliveryDate": "2026-12-09T00:00:00",
     "enterQuote": "500624",
-    "fRevised": "",
+    "fRevised": " R-1",
     "isJacketStrapped": "false"
    },
-   "open": false,
-   "last_seen": "11/12/2026",
-   "pdf_hash": "7e643ca563101d70",
+   "open": true,
+   "last_seen": "11/16/2026",
+   "pdf_hash": "15672b0cf00219d1",
    "pdf_lines": null
   },
   "500607": {
    "first_seen": "11/10/2026",
    "fields": {
-    "id": 9,
+    "id": 1,
     "jobId": 655500,
     "rfqFile": null,
     "jacketNumber": "500607",
@@ -1167,7 +1167,7 @@
   "500609": {
    "first_seen": "11/10/2026",
    "fields": {
-    "id": 10,
+    "id": 2,
     "jobId": 655502,
     "rfqFile": null,
     "jacketNumber": "500609",
@@ -1443,7 +1443,7 @@
   "500574": {
    "first_seen": "11/12/2026",
    "fields": {
-    "id": 20,
+    "id": 18,
     "jobId": 655459,
     "rfqFile": null,
     "jacketNumber": "500574",
@@ -1512,7 +1512,7 @@
   "500606": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 8,
+    "id": 0,
     "jobId": 655499,
     "rfqFile": null,
     "jacketNumber": "500606",
@@ -1535,7 +1535,7 @@
   "500679": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 11,
+    "id": 4,
     "jobId": 655579,
     "rfqFile": null,
     "jacketNumber": "500679",
@@ -1558,7 +1558,7 @@
   "500681": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 12,
+    "id": 5,
     "jobId": 655580,
     "rfqFile": null,
     "jacketNumber": "500681",
@@ -1650,7 +1650,7 @@
   "500675": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 17,
+    "id": 15,
     "jobId": 655575,
     "rfqFile": null,
     "jacketNumber": "500675",
@@ -1673,7 +1673,7 @@
   "500677": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 22,
+    "id": 20,
     "jobId": 655577,
     "rfqFile": null,
     "jacketNumber": "500677",
@@ -1711,7 +1711,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/16/2026",
    "pdf_hash": "514feb815a3156d3",
    "pdf_lines": null
@@ -1757,7 +1757,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/16/2026",
    "pdf_hash": "2c55c02c52a0d4d0",
    "pdf_lines": null
@@ -1780,7 +1780,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/16/2026",
    "pdf_hash": "ae09970e0f26dd93",
    "pdf_lines": null
@@ -1803,7 +1803,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/16/2026",
    "pdf_hash": "e388dbc0af52509f",
    "pdf_lines": null
@@ -1826,7 +1826,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/16/2026",
    "pdf_hash": "a3ed373952854dbb",
    "pdf_lines": null
@@ -1834,7 +1834,7 @@
   "500672": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 13,
+    "id": 7,
     "jobId": 655571,
     "rfqFile": null,
     "jacketNumber": "500672",
@@ -1872,7 +1872,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/16/2026",
    "pdf_hash": "ed856e5a9b6051ba",
    "pdf_lines": null
@@ -1895,7 +1895,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/16/2026",
    "pdf_hash": "b9a2e22d07424e0a",
    "pdf_lines": null
@@ -1903,7 +1903,7 @@
   "462249": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 19,
+    "id": 17,
     "jobId": 655466,
     "rfqFile": null,
     "jacketNumber": "462249",
@@ -1926,7 +1926,7 @@
   "441380": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 21,
+    "id": 19,
     "jobId": 653598,
     "rfqFile": null,
     "jacketNumber": "441380",
@@ -2010,7 +2010,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/16/2026",
    "pdf_hash": "ee1e653c9db477c4",
    "pdf_lines": null
@@ -2018,7 +2018,7 @@
   "500705": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 14,
+    "id": 8,
     "jobId": 655605,
     "rfqFile": null,
     "jacketNumber": "500705",
@@ -2041,7 +2041,7 @@
   "500706": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 15,
+    "id": 9,
     "jobId": 655607,
     "rfqFile": null,
     "jacketNumber": "500706",
@@ -2064,7 +2064,7 @@
   "500707": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 18,
+    "id": 16,
     "jobId": 655608,
     "rfqFile": null,
     "jacketNumber": "500707",
@@ -2082,6 +2082,121 @@
    "open": true,
    "last_seen": "11/16/2026",
    "pdf_hash": "0f702e91c6cae8f5",
+   "pdf_lines": null
+  },
+  "500643": {
+   "first_seen": "11/16/2026",
+   "fields": {
+    "id": 3,
+    "jobId": 655544,
+    "rfqFile": null,
+    "jacketNumber": "500643",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-17T10:00:00",
+    "datePosted": "2026-11-16T12:29:33",
+    "productType": "Kit Folders",
+    "title": "Folder, Document Record, Manilla, 11-3/4 in., 50 per PACK (CID 551634) ",
+    "totalQuantity": "20000",
+    "shipDeliveryDate": "2026-12-11T00:00:00",
+    "enterQuote": "500643",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/16/2026",
+   "pdf_hash": "b24c9a37238067c0",
+   "pdf_lines": null
+  },
+  "500714": {
+   "first_seen": "11/16/2026",
+   "fields": {
+    "id": 10,
+    "jobId": 655615,
+    "rfqFile": null,
+    "jacketNumber": "500714",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-17T11:00:00",
+    "datePosted": "2026-11-16T13:10:17",
+    "productType": "Posters",
+    "title": "7-541 IPTEI Classroom Poster- Huntsville ",
+    "totalQuantity": "3",
+    "shipDeliveryDate": "2026-11-30T00:00:00",
+    "enterQuote": "500714",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/16/2026",
+   "pdf_hash": "94533d1c169cc190",
+   "pdf_lines": null
+  },
+  "500425": {
+   "first_seen": "11/16/2026",
+   "fields": {
+    "id": 11,
+    "jobId": 655298,
+    "rfqFile": null,
+    "jacketNumber": "500425",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-17T12:00:00",
+    "datePosted": "2026-11-16T13:54:39",
+    "productType": "Books",
+    "title": "2026 USAID OIG Awards Ceremony Booklet ",
+    "totalQuantity": "120",
+    "shipDeliveryDate": "2026-11-27T00:00:00",
+    "enterQuote": "500425",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/16/2026",
+   "pdf_hash": "905bc840920a0c9d",
+   "pdf_lines": null
+  },
+  "500426": {
+   "first_seen": "11/16/2026",
+   "fields": {
+    "id": 12,
+    "jobId": 655299,
+    "rfqFile": null,
+    "jacketNumber": "500426",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-17T12:00:00",
+    "datePosted": "2026-11-16T13:56:11",
+    "productType": "Other",
+    "title": "USAID OIG Certificate Folders",
+    "totalQuantity": "215",
+    "shipDeliveryDate": "2026-11-27T00:00:00",
+    "enterQuote": "500426",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/16/2026",
+   "pdf_hash": "6c4b8577b8e64d19",
+   "pdf_lines": null
+  },
+  "500427": {
+   "first_seen": "11/16/2026",
+   "fields": {
+    "id": 13,
+    "jobId": 655304,
+    "rfqFile": null,
+    "jacketNumber": "500427",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-17T12:00:00",
+    "datePosted": "2026-11-16T13:57:52",
+    "productType": "Forms",
+    "title": "2025-2026 OIG & CIGIE Award Certificates ",
+    "totalQuantity": "215",
+    "shipDeliveryDate": "2026-11-27T00:00:00",
+    "enterQuote": "500427",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/16/2026",
+   "pdf_hash": "292edaa99daa4115",
    "pdf_lines": null
   }
  },
