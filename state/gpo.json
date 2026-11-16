@@ -1673,7 +1673,7 @@
   "500677": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 20,
+    "id": 22,
     "jobId": 655577,
     "rfqFile": null,
     "jacketNumber": "500677",
@@ -1926,7 +1926,7 @@
   "441380": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 19,
+    "id": 20,
     "jobId": 653598,
     "rfqFile": null,
     "jacketNumber": "441380",
@@ -2197,6 +2197,75 @@
    "open": true,
    "last_seen": "11/16/2026",
    "pdf_hash": "292edaa99daa4115",
+   "pdf_lines": null
+  },
+  "500726": {
+   "first_seen": "11/16/2026",
+   "fields": {
+    "id": 19,
+    "jobId": 655628,
+    "rfqFile": null,
+    "jacketNumber": "500726",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-17T13:00:00",
+    "datePosted": "2026-11-16T14:25:28",
+    "productType": "Books",
+    "title": "PTSD Item #PTSD54 \"Understanding PTSD and Aging\" ",
+    "totalQuantity": "20000",
+    "shipDeliveryDate": "2026-12-11T00:00:00",
+    "enterQuote": "500726",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/16/2026",
+   "pdf_hash": "a31f65754b91a86e",
+   "pdf_lines": null
+  },
+  "500534": {
+   "first_seen": "11/16/2026",
+   "fields": {
+    "id": 21,
+    "jobId": 655418,
+    "rfqFile": null,
+    "jacketNumber": "500534",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-18T10:00:00",
+    "datePosted": "2026-11-16T14:35:20",
+    "productType": "Pamphlets",
+    "title": "2027 Lead-Based Paint Program Planners",
+    "totalQuantity": "1",
+    "shipDeliveryDate": "2026-12-10T00:00:00",
+    "enterQuote": "500534",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/16/2026",
+   "pdf_hash": "7b642ea9dd6da5c4",
+   "pdf_lines": null
+  },
+  "500730": {
+   "first_seen": "11/16/2026",
+   "fields": {
+    "id": 23,
+    "jobId": 655631,
+    "rfqFile": null,
+    "jacketNumber": "500730",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-18T10:00:00",
+    "datePosted": "2026-11-16T15:09:55",
+    "productType": "Signs",
+    "title": "Outdoor Signs MIA (G20-C) ",
+    "totalQuantity": "26",
+    "shipDeliveryDate": "2026-12-07T00:00:00",
+    "enterQuote": "500730",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/16/2026",
+   "pdf_hash": "2c180a99e2442c0b",
    "pdf_lines": null
   }
  },
