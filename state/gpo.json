@@ -363,7 +363,7 @@
     "fRevised": " R-1",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/17/2026",
    "pdf_hash": "cdc6f0b9136b8706",
    "pdf_lines": null
@@ -440,24 +440,24 @@
   "500351": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 1,
+    "id": 14,
     "jobId": 655221,
     "rfqFile": null,
     "jacketNumber": "500351",
     "officeName": "Government Publishing and Print Procurement",
-    "quoteDueDate": "2026-11-10T10:00:00",
-    "datePosted": "2026-11-05T15:47:13",
+    "quoteDueDate": "2026-11-18T13:00:00",
+    "datePosted": "2026-11-17T11:59:19",
     "productType": "Other",
     "title": "26-011 HIGH SCHOOL INITIATIVE ENGAGEMENT KIT - Air Force CLIPBOARDS + BANNER ",
     "totalQuantity": "818",
     "shipDeliveryDate": "2027-02-03T00:00:00",
     "enterQuote": "500351",
-    "fRevised": "",
+    "fRevised": " R-1",
     "isJacketStrapped": "false"
    },
-   "open": false,
-   "last_seen": "11/10/2026",
-   "pdf_hash": "df61737ade8dc932",
+   "open": true,
+   "last_seen": "11/17/2026",
+   "pdf_hash": "4b0eba09f68d4a6f",
    "pdf_lines": null
   },
   "500524": {
@@ -1443,7 +1443,7 @@
   "500574": {
    "first_seen": "11/12/2026",
    "fields": {
-    "id": 7,
+    "id": 1,
     "jobId": 655459,
     "rfqFile": null,
     "jacketNumber": "500574",
@@ -1665,7 +1665,7 @@
     "fRevised": " R-1",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/17/2026",
    "pdf_hash": "b2def1afc751a7a7",
    "pdf_lines": null
@@ -1673,7 +1673,7 @@
   "500677": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 15,
+    "id": 9,
     "jobId": 655577,
     "rfqFile": null,
     "jacketNumber": "500677",
@@ -1903,7 +1903,7 @@
   "462249": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 6,
+    "id": 0,
     "jobId": 655466,
     "rfqFile": null,
     "jacketNumber": "462249",
@@ -1926,7 +1926,7 @@
   "441380": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 12,
+    "id": 6,
     "jobId": 653598,
     "rfqFile": null,
     "jacketNumber": "441380",
@@ -2079,7 +2079,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/17/2026",
    "pdf_hash": "0f702e91c6cae8f5",
    "pdf_lines": null
@@ -2148,7 +2148,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/17/2026",
    "pdf_hash": "905bc840920a0c9d",
    "pdf_lines": null
@@ -2171,7 +2171,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/17/2026",
    "pdf_hash": "6c4b8577b8e64d19",
    "pdf_lines": null
@@ -2194,7 +2194,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/17/2026",
    "pdf_hash": "292edaa99daa4115",
    "pdf_lines": null
@@ -2202,7 +2202,7 @@
   "500726": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 11,
+    "id": 5,
     "jobId": 655628,
     "rfqFile": null,
     "jacketNumber": "500726",
@@ -2225,7 +2225,7 @@
   "500534": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 13,
+    "id": 7,
     "jobId": 655418,
     "rfqFile": null,
     "jacketNumber": "500534",
@@ -2248,7 +2248,7 @@
   "500730": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 16,
+    "id": 10,
     "jobId": 655631,
     "rfqFile": null,
     "jacketNumber": "500730",
@@ -2294,7 +2294,7 @@
   "500709": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 8,
+    "id": 2,
     "jobId": 655609,
     "rfqFile": null,
     "jacketNumber": "500709",
@@ -2317,7 +2317,7 @@
   "500712": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 9,
+    "id": 3,
     "jobId": 655613,
     "rfqFile": null,
     "jacketNumber": "500712",
@@ -2340,7 +2340,7 @@
   "500723": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 10,
+    "id": 4,
     "jobId": 655622,
     "rfqFile": null,
     "jacketNumber": "500723",
@@ -2363,7 +2363,7 @@
   "500555": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 14,
+    "id": 8,
     "jobId": 655436,
     "rfqFile": null,
     "jacketNumber": "500555",
@@ -2386,7 +2386,7 @@
   "500704": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 18,
+    "id": 12,
     "jobId": 655604,
     "rfqFile": null,
     "jacketNumber": "500704",
@@ -2409,7 +2409,7 @@
   "500737": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 19,
+    "id": 13,
     "jobId": 655638,
     "rfqFile": null,
     "jacketNumber": "500737",
@@ -2432,7 +2432,7 @@
   "500733": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 17,
+    "id": 11,
     "jobId": 655634,
     "rfqFile": null,
     "jacketNumber": "500733",
@@ -2455,7 +2455,7 @@
   "500691": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 20,
+    "id": 16,
     "jobId": 655587,
     "rfqFile": null,
     "jacketNumber": "500691",
@@ -2473,6 +2473,29 @@
    "open": true,
    "last_seen": "11/17/2026",
    "pdf_hash": "042c353358ac2ba6",
+   "pdf_lines": null
+  },
+  "500727": {
+   "first_seen": "11/17/2026",
+   "fields": {
+    "id": 15,
+    "jobId": 655627,
+    "rfqFile": null,
+    "jacketNumber": "500727",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-19T10:00:00",
+    "datePosted": "2026-11-17T12:05:04",
+    "productType": "File Folders Jackets",
+    "title": "FD-245.1 File fronts/backs-FBI Field Office (Brown) ",
+    "totalQuantity": "40002",
+    "shipDeliveryDate": "2026-12-30T00:00:00",
+    "enterQuote": "500727",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/17/2026",
+   "pdf_hash": "082bdd2315872ca1",
    "pdf_lines": null
   }
  },
