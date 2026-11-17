@@ -348,7 +348,7 @@
   "500573": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 15,
+    "id": 9,
     "jobId": 655458,
     "rfqFile": null,
     "jacketNumber": "500573",
@@ -1121,7 +1121,7 @@
   "500624": {
    "first_seen": "11/10/2026",
    "fields": {
-    "id": 6,
+    "id": 0,
     "jobId": 655517,
     "rfqFile": null,
     "jacketNumber": "500624",
@@ -1159,7 +1159,7 @@
     "fRevised": " R-1",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/17/2026",
    "pdf_hash": "b43a4f460262bc9f",
    "pdf_lines": null
@@ -1182,7 +1182,7 @@
     "fRevised": " R-1",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/17/2026",
    "pdf_hash": "eb7bf3b82953b373",
    "pdf_lines": null
@@ -1443,7 +1443,7 @@
   "500574": {
    "first_seen": "11/12/2026",
    "fields": {
-    "id": 19,
+    "id": 13,
     "jobId": 655459,
     "rfqFile": null,
     "jacketNumber": "500574",
@@ -1527,7 +1527,7 @@
     "fRevised": " R-1",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/17/2026",
    "pdf_hash": "68e2c73530f1139c",
    "pdf_lines": null
@@ -1550,7 +1550,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/17/2026",
    "pdf_hash": "8d65c9b767d560e7",
    "pdf_lines": null
@@ -1573,7 +1573,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/17/2026",
    "pdf_hash": "acab0aca2de5aa75",
    "pdf_lines": null
@@ -1650,7 +1650,7 @@
   "500675": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 16,
+    "id": 10,
     "jobId": 655575,
     "rfqFile": null,
     "jacketNumber": "500675",
@@ -1673,7 +1673,7 @@
   "500677": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 27,
+    "id": 21,
     "jobId": 655577,
     "rfqFile": null,
     "jacketNumber": "500677",
@@ -1834,7 +1834,7 @@
   "500672": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 8,
+    "id": 2,
     "jobId": 655571,
     "rfqFile": null,
     "jacketNumber": "500672",
@@ -1903,7 +1903,7 @@
   "462249": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 18,
+    "id": 12,
     "jobId": 655466,
     "rfqFile": null,
     "jacketNumber": "462249",
@@ -1926,7 +1926,7 @@
   "441380": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 24,
+    "id": 18,
     "jobId": 653598,
     "rfqFile": null,
     "jacketNumber": "441380",
@@ -2018,7 +2018,7 @@
   "500705": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 9,
+    "id": 3,
     "jobId": 655605,
     "rfqFile": null,
     "jacketNumber": "500705",
@@ -2041,7 +2041,7 @@
   "500706": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 10,
+    "id": 4,
     "jobId": 655607,
     "rfqFile": null,
     "jacketNumber": "500706",
@@ -2064,7 +2064,7 @@
   "500707": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 17,
+    "id": 11,
     "jobId": 655608,
     "rfqFile": null,
     "jacketNumber": "500707",
@@ -2102,7 +2102,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/17/2026",
    "pdf_hash": "b24c9a37238067c0",
    "pdf_lines": null
@@ -2110,7 +2110,7 @@
   "500714": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 11,
+    "id": 5,
     "jobId": 655615,
     "rfqFile": null,
     "jacketNumber": "500714",
@@ -2133,7 +2133,7 @@
   "500425": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 12,
+    "id": 6,
     "jobId": 655298,
     "rfqFile": null,
     "jacketNumber": "500425",
@@ -2156,7 +2156,7 @@
   "500426": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 13,
+    "id": 7,
     "jobId": 655299,
     "rfqFile": null,
     "jacketNumber": "500426",
@@ -2179,7 +2179,7 @@
   "500427": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 14,
+    "id": 8,
     "jobId": 655304,
     "rfqFile": null,
     "jacketNumber": "500427",
@@ -2202,7 +2202,7 @@
   "500726": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 23,
+    "id": 17,
     "jobId": 655628,
     "rfqFile": null,
     "jacketNumber": "500726",
@@ -2225,7 +2225,7 @@
   "500534": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 25,
+    "id": 19,
     "jobId": 655418,
     "rfqFile": null,
     "jacketNumber": "500534",
@@ -2248,7 +2248,7 @@
   "500730": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 28,
+    "id": 22,
     "jobId": 655631,
     "rfqFile": null,
     "jacketNumber": "500730",
@@ -2271,7 +2271,7 @@
   "500659": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 7,
+    "id": 1,
     "jobId": 655558,
     "rfqFile": null,
     "jacketNumber": "500659",
@@ -2294,7 +2294,7 @@
   "500709": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 20,
+    "id": 14,
     "jobId": 655609,
     "rfqFile": null,
     "jacketNumber": "500709",
@@ -2317,7 +2317,7 @@
   "500712": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 21,
+    "id": 15,
     "jobId": 655613,
     "rfqFile": null,
     "jacketNumber": "500712",
@@ -2340,7 +2340,7 @@
   "500723": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 22,
+    "id": 16,
     "jobId": 655622,
     "rfqFile": null,
     "jacketNumber": "500723",
@@ -2363,7 +2363,7 @@
   "500555": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 26,
+    "id": 20,
     "jobId": 655436,
     "rfqFile": null,
     "jacketNumber": "500555",
@@ -2386,7 +2386,7 @@
   "500704": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 29,
+    "id": 23,
     "jobId": 655604,
     "rfqFile": null,
     "jacketNumber": "500704",
@@ -2404,6 +2404,29 @@
    "open": true,
    "last_seen": "11/17/2026",
    "pdf_hash": "0a5e5a45e090c9e4",
+   "pdf_lines": null
+  },
+  "500737": {
+   "first_seen": "11/17/2026",
+   "fields": {
+    "id": 24,
+    "jobId": 655638,
+    "rfqFile": null,
+    "jacketNumber": "500737",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-18T11:00:00",
+    "datePosted": "2026-11-17T09:37:09",
+    "productType": "Forms",
+    "title": "Junior Ranger Books South Florida NPs FY27 ",
+    "totalQuantity": "20000",
+    "shipDeliveryDate": "2026-12-18T00:00:00",
+    "enterQuote": "500737",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/17/2026",
+   "pdf_hash": "a1b7203493051581",
    "pdf_lines": null
   }
  },
