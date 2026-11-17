@@ -2382,6 +2382,29 @@
    "last_seen": "11/17/2026",
    "pdf_hash": "7565419e40163395",
    "pdf_lines": null
+  },
+  "500704": {
+   "first_seen": "11/17/2026",
+   "fields": {
+    "id": 29,
+    "jobId": 655604,
+    "rfqFile": null,
+    "jacketNumber": "500704",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-18T11:00:00",
+    "datePosted": "2026-11-17T07:46:22",
+    "productType": "Forms",
+    "title": "R1 NRTC S420 Training Materials ",
+    "totalQuantity": "464",
+    "shipDeliveryDate": "2027-01-15T00:00:00",
+    "enterQuote": "500704",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/17/2026",
+   "pdf_hash": "0a5e5a45e090c9e4",
+   "pdf_lines": null
   }
  },
  "tracked": {
