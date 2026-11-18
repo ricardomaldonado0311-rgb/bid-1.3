@@ -2455,7 +2455,7 @@
   "500691": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 6,
+    "id": 5,
     "jobId": 655587,
     "rfqFile": null,
     "jacketNumber": "500691",
@@ -2478,7 +2478,7 @@
   "500727": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 2,
+    "id": 1,
     "jobId": 655627,
     "rfqFile": null,
     "jacketNumber": "500727",
@@ -2539,7 +2539,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/18/2026",
    "pdf_hash": "0799c8d1f2b4ec2f",
    "pdf_lines": null
@@ -2547,7 +2547,7 @@
   "500690": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 5,
+    "id": 4,
     "jobId": 655586,
     "rfqFile": null,
     "jacketNumber": "500690",
@@ -2616,7 +2616,7 @@
   "500743": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 8,
+    "id": 7,
     "jobId": 655645,
     "rfqFile": null,
     "jacketNumber": "500743",
@@ -2662,7 +2662,7 @@
   "452130": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 11,
+    "id": 12,
     "jobId": 653606,
     "rfqFile": null,
     "jacketNumber": "452130",
@@ -2685,7 +2685,7 @@
   "441245": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 1,
+    "id": 0,
     "jobId": 650758,
     "rfqFile": null,
     "jacketNumber": "441245",
@@ -2708,7 +2708,7 @@
   "500640": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 4,
+    "id": 3,
     "jobId": 655533,
     "rfqFile": null,
     "jacketNumber": "500640",
@@ -2731,7 +2731,7 @@
   "500699": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 7,
+    "id": 6,
     "jobId": 655596,
     "rfqFile": null,
     "jacketNumber": "500699",
@@ -2754,7 +2754,7 @@
   "500750": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 3,
+    "id": 2,
     "jobId": 655652,
     "rfqFile": null,
     "jacketNumber": "500750",
@@ -2777,7 +2777,7 @@
   "500768": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 9,
+    "id": 8,
     "jobId": 655670,
     "rfqFile": null,
     "jacketNumber": "500768",
@@ -2800,7 +2800,7 @@
   "500686": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 12,
+    "id": 13,
     "jobId": 655606,
     "rfqFile": null,
     "jacketNumber": "500686",
@@ -2823,7 +2823,7 @@
   "500713": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 15,
+    "id": 16,
     "jobId": 655614,
     "rfqFile": null,
     "jacketNumber": "500713",
@@ -2846,7 +2846,7 @@
   "500696": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 13,
+    "id": 14,
     "jobId": 655592,
     "rfqFile": null,
     "jacketNumber": "500696",
@@ -2869,7 +2869,7 @@
   "500717": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 14,
+    "id": 15,
     "jobId": 655618,
     "rfqFile": null,
     "jacketNumber": "500717",
@@ -2887,6 +2887,52 @@
    "open": true,
    "last_seen": "11/18/2026",
    "pdf_hash": "324d9b0d258698ba",
+   "pdf_lines": null
+  },
+  "500786": {
+   "first_seen": "11/18/2026",
+   "fields": {
+    "id": 9,
+    "jobId": 655689,
+    "rfqFile": null,
+    "jacketNumber": "500786",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-19T11:00:00",
+    "datePosted": "2026-11-18T13:49:00",
+    "productType": "Other",
+    "title": "Graduation Diploma Holder (Black/Padded)",
+    "totalQuantity": "1",
+    "shipDeliveryDate": "2026-12-18T00:00:00",
+    "enterQuote": "500786",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/18/2026",
+   "pdf_hash": "4a3ed0c4e3acdda9",
+   "pdf_lines": null
+  },
+  "500759": {
+   "first_seen": "11/18/2026",
+   "fields": {
+    "id": 11,
+    "jobId": 655661,
+    "rfqFile": null,
+    "jacketNumber": "500759",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-20T10:00:00",
+    "datePosted": "2026-11-18T13:30:35",
+    "productType": "Other",
+    "title": "DESKTOP CALENDARS (JULY 2027-JUNE 2028) ",
+    "totalQuantity": "1",
+    "shipDeliveryDate": "2026-12-17T00:00:00",
+    "enterQuote": "500759",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/18/2026",
+   "pdf_hash": "beb947ef970f0d3f",
    "pdf_lines": null
   }
  },
