@@ -233,7 +233,7 @@
   "500564": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 7,
+    "id": 3,
     "jobId": 655449,
     "rfqFile": null,
     "jacketNumber": "500564",
@@ -440,7 +440,7 @@
   "500351": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 6,
+    "id": 2,
     "jobId": 655221,
     "rfqFile": null,
     "jacketNumber": "500351",
@@ -845,7 +845,7 @@
   "500241": {
    "first_seen": "11/09/2026",
    "fields": {
-    "id": 5,
+    "id": 1,
     "jobId": 654087,
     "rfqFile": null,
     "jacketNumber": "500241",
@@ -1136,7 +1136,7 @@
     "fRevised": " R-2",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/18/2026",
    "pdf_hash": "cdf371da6179d538",
    "pdf_lines": null
@@ -1734,7 +1734,7 @@
     "fRevised": " R-1",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/18/2026",
    "pdf_hash": "83ed5aff83819d2d",
    "pdf_lines": null
@@ -2401,7 +2401,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/18/2026",
    "pdf_hash": "0a5e5a45e090c9e4",
    "pdf_lines": null
@@ -2424,7 +2424,7 @@
     "fRevised": " R-2",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/18/2026",
    "pdf_hash": "70427e3c46c97ebd",
    "pdf_lines": null
@@ -2455,7 +2455,7 @@
   "500691": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 13,
+    "id": 10,
     "jobId": 655587,
     "rfqFile": null,
     "jacketNumber": "500691",
@@ -2478,7 +2478,7 @@
   "500727": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 10,
+    "id": 6,
     "jobId": 655627,
     "rfqFile": null,
     "jacketNumber": "500727",
@@ -2501,7 +2501,7 @@
   "500697": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 4,
+    "id": 0,
     "jobId": 655593,
     "rfqFile": null,
     "jacketNumber": "500697",
@@ -2524,7 +2524,7 @@
   "500751": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 8,
+    "id": 4,
     "jobId": 655653,
     "rfqFile": null,
     "jacketNumber": "500751",
@@ -2547,7 +2547,7 @@
   "500690": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 12,
+    "id": 9,
     "jobId": 655586,
     "rfqFile": null,
     "jacketNumber": "500690",
@@ -2616,7 +2616,7 @@
   "500743": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 15,
+    "id": 12,
     "jobId": 655645,
     "rfqFile": null,
     "jacketNumber": "500743",
@@ -2639,7 +2639,7 @@
   "500720": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 16,
+    "id": 14,
     "jobId": 655620,
     "rfqFile": null,
     "jacketNumber": "500720",
@@ -2662,7 +2662,7 @@
   "452130": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 17,
+    "id": 15,
     "jobId": 653606,
     "rfqFile": null,
     "jacketNumber": "452130",
@@ -2685,7 +2685,7 @@
   "441245": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 9,
+    "id": 5,
     "jobId": 650758,
     "rfqFile": null,
     "jacketNumber": "441245",
@@ -2708,7 +2708,7 @@
   "500640": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 11,
+    "id": 8,
     "jobId": 655533,
     "rfqFile": null,
     "jacketNumber": "500640",
@@ -2731,7 +2731,7 @@
   "500699": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 14,
+    "id": 11,
     "jobId": 655596,
     "rfqFile": null,
     "jacketNumber": "500699",
@@ -2749,6 +2749,98 @@
    "open": true,
    "last_seen": "11/18/2026",
    "pdf_hash": "03b8b1e8226339c1",
+   "pdf_lines": null
+  },
+  "500750": {
+   "first_seen": "11/18/2026",
+   "fields": {
+    "id": 7,
+    "jobId": 655652,
+    "rfqFile": null,
+    "jacketNumber": "500750",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-19T10:00:00",
+    "datePosted": "2026-11-18T10:27:30",
+    "productType": "Books",
+    "title": "2025 Incident Response Pocket Guide NFES 001077 ",
+    "totalQuantity": "70002",
+    "shipDeliveryDate": "2027-01-15T00:00:00",
+    "enterQuote": "500750",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/18/2026",
+   "pdf_hash": "305aaacd2f6e33b1",
+   "pdf_lines": null
+  },
+  "500768": {
+   "first_seen": "11/18/2026",
+   "fields": {
+    "id": 13,
+    "jobId": 655670,
+    "rfqFile": null,
+    "jacketNumber": "500768",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-19T11:00:00",
+    "datePosted": "2026-11-18T10:31:41",
+    "productType": "Forms",
+    "title": "VISN 5 Martinsburg and Baltimore Primer Cards ",
+    "totalQuantity": "7000",
+    "shipDeliveryDate": "2026-12-16T00:00:00",
+    "enterQuote": "500768",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/18/2026",
+   "pdf_hash": "5a7d83baa8117f4e",
+   "pdf_lines": null
+  },
+  "500686": {
+   "first_seen": "11/18/2026",
+   "fields": {
+    "id": 16,
+    "jobId": 655606,
+    "rfqFile": null,
+    "jacketNumber": "500686",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-20T11:00:00",
+    "datePosted": "2026-11-18T11:00:24",
+    "productType": "Other",
+    "title": "OCC Item# OCC-025 Virtual Health Resource Center (VHRC) Branded Stylus Pen ",
+    "totalQuantity": "15000",
+    "shipDeliveryDate": "2026-12-23T00:00:00",
+    "enterQuote": "500686",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/18/2026",
+   "pdf_hash": "43c31bec5067007b",
+   "pdf_lines": null
+  },
+  "500713": {
+   "first_seen": "11/18/2026",
+   "fields": {
+    "id": 17,
+    "jobId": 655614,
+    "rfqFile": null,
+    "jacketNumber": "500713",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-20T13:00:00",
+    "datePosted": "2026-11-18T11:10:30",
+    "productType": "Other",
+    "title": "VA-OCC Item OCC-005 OCC Roslin Incline Stylus Pen ",
+    "totalQuantity": "15000",
+    "shipDeliveryDate": "2026-12-23T00:00:00",
+    "enterQuote": "500713",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/18/2026",
+   "pdf_hash": "1f965266eea5a9bf",
    "pdf_lines": null
   }
  },
