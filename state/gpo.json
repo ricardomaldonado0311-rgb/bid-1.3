@@ -1098,24 +1098,24 @@
   "462227": {
    "first_seen": "11/10/2026",
    "fields": {
-    "id": 1,
+    "id": 14,
     "jobId": 653746,
     "rfqFile": null,
     "jacketNumber": "462227",
     "officeName": "Government Publishing and Print Procurement",
-    "quoteDueDate": "2026-11-12T11:00:00",
-    "datePosted": "2026-11-10T15:17:56",
+    "quoteDueDate": "2026-11-20T11:00:00",
+    "datePosted": "2026-11-18T15:01:51",
     "productType": "Other",
     "title": "Scanning 25 boxes of documents for MAR-612 ",
     "totalQuantity": "62500",
-    "shipDeliveryDate": "2027-02-12T00:00:00",
+    "shipDeliveryDate": "2027-02-19T00:00:00",
     "enterQuote": "462227",
-    "fRevised": "",
+    "fRevised": " R-1",
     "isJacketStrapped": "false"
    },
-   "open": false,
-   "last_seen": "11/12/2026",
-   "pdf_hash": "fc4667d9df8a3f26",
+   "open": true,
+   "last_seen": "11/18/2026",
+   "pdf_hash": "237c2da6f14b6152",
    "pdf_lines": null
   },
   "500624": {
@@ -2662,7 +2662,7 @@
   "452130": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 12,
+    "id": 13,
     "jobId": 653606,
     "rfqFile": null,
     "jacketNumber": "452130",
@@ -2800,7 +2800,7 @@
   "500686": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 13,
+    "id": 15,
     "jobId": 655606,
     "rfqFile": null,
     "jacketNumber": "500686",
@@ -2823,7 +2823,7 @@
   "500713": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 16,
+    "id": 18,
     "jobId": 655614,
     "rfqFile": null,
     "jacketNumber": "500713",
@@ -2846,7 +2846,7 @@
   "500696": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 14,
+    "id": 16,
     "jobId": 655592,
     "rfqFile": null,
     "jacketNumber": "500696",
@@ -2869,7 +2869,7 @@
   "500717": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 15,
+    "id": 17,
     "jobId": 655618,
     "rfqFile": null,
     "jacketNumber": "500717",
@@ -2933,6 +2933,29 @@
    "open": true,
    "last_seen": "11/18/2026",
    "pdf_hash": "beb947ef970f0d3f",
+   "pdf_lines": null
+  },
+  "500796": {
+   "first_seen": "11/18/2026",
+   "fields": {
+    "id": 12,
+    "jobId": 655703,
+    "rfqFile": null,
+    "jacketNumber": "500796",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-20T10:00:00",
+    "datePosted": "2026-11-18T15:09:37",
+    "productType": "Labels/Stickers",
+    "title": "Lake Use Pass Boat Decal Stickers ",
+    "totalQuantity": "2000",
+    "shipDeliveryDate": "2026-12-21T00:00:00",
+    "enterQuote": "500796",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/18/2026",
+   "pdf_hash": "3fe88ad88639e5c9",
    "pdf_lines": null
   }
  },
