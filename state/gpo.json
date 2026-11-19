@@ -440,7 +440,7 @@
   "500351": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 24,
+    "id": 26,
     "jobId": 655221,
     "rfqFile": null,
     "jacketNumber": "500351",
@@ -1098,7 +1098,7 @@
   "462227": {
    "first_seen": "11/10/2026",
    "fields": {
-    "id": 5,
+    "id": 4,
     "jobId": 653746,
     "rfqFile": null,
     "jacketNumber": "462227",
@@ -2079,7 +2079,7 @@
     "fRevised": " R-1",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/19/2026",
    "pdf_hash": "036583d0f22ee944",
    "pdf_lines": null
@@ -2202,7 +2202,7 @@
   "500726": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 1,
+    "id": 0,
     "jobId": 655628,
     "rfqFile": null,
     "jacketNumber": "500726",
@@ -2662,7 +2662,7 @@
   "452130": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 4,
+    "id": 3,
     "jobId": 653606,
     "rfqFile": null,
     "jacketNumber": "452130",
@@ -2800,7 +2800,7 @@
   "500686": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 6,
+    "id": 5,
     "jobId": 655606,
     "rfqFile": null,
     "jacketNumber": "500686",
@@ -2846,7 +2846,7 @@
   "500696": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 7,
+    "id": 6,
     "jobId": 655592,
     "rfqFile": null,
     "jacketNumber": "500696",
@@ -2869,7 +2869,7 @@
   "500717": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 8,
+    "id": 7,
     "jobId": 655618,
     "rfqFile": null,
     "jacketNumber": "500717",
@@ -2915,7 +2915,7 @@
   "500759": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 2,
+    "id": 1,
     "jobId": 655661,
     "rfqFile": null,
     "jacketNumber": "500759",
@@ -2938,7 +2938,7 @@
   "500796": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 3,
+    "id": 2,
     "jobId": 655703,
     "rfqFile": null,
     "jacketNumber": "500796",
@@ -3168,7 +3168,7 @@
   "500741": {
    "first_seen": "11/19/2026",
    "fields": {
-    "id": 22,
+    "id": 23,
     "jobId": 655643,
     "rfqFile": null,
     "jacketNumber": "500741",
@@ -3283,7 +3283,7 @@
   "500787": {
    "first_seen": "11/19/2026",
    "fields": {
-    "id": 23,
+    "id": 24,
     "jobId": 655690,
     "rfqFile": null,
     "jacketNumber": "500787",
@@ -3301,6 +3301,75 @@
    "open": true,
    "last_seen": "11/19/2026",
    "pdf_hash": "5f8b9f7aca721c66",
+   "pdf_lines": null
+  },
+  "472083": {
+   "first_seen": "11/19/2026",
+   "fields": {
+    "id": 8,
+    "jobId": 651175,
+    "rfqFile": null,
+    "jacketNumber": "472083",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-20T12:00:00",
+    "datePosted": "2026-11-19T13:54:16",
+    "productType": "Other",
+    "title": "GMUG LAND USE PERMIT SCANNING ",
+    "totalQuantity": "200000",
+    "shipDeliveryDate": "2027-01-29T00:00:00",
+    "enterQuote": "472083",
+    "fRevised": " R-2",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/19/2026",
+   "pdf_hash": "a1826203cfaa7582",
+   "pdf_lines": null
+  },
+  "500500": {
+   "first_seen": "11/19/2026",
+   "fields": {
+    "id": 22,
+    "jobId": 655378,
+    "rfqFile": null,
+    "jacketNumber": "500500",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-23T11:00:00",
+    "datePosted": "2026-11-19T14:10:32",
+    "productType": "Envelopes",
+    "title": "MEDIUM MANILA ENVELOPES 9.5\" X 6\" ",
+    "totalQuantity": "4000",
+    "shipDeliveryDate": "2026-12-17T00:00:00",
+    "enterQuote": "500500",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/19/2026",
+   "pdf_hash": "6ffa15dd4f0108ae",
+   "pdf_lines": null
+  },
+  "500753": {
+   "first_seen": "11/19/2026",
+   "fields": {
+    "id": 25,
+    "jobId": 655655,
+    "rfqFile": null,
+    "jacketNumber": "500753",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-24T11:00:00",
+    "datePosted": "2026-11-19T14:03:17",
+    "productType": "Binders, Looseleaf",
+    "title": "U.S. v Flynn et al. Trial Binders and Redweld copies ",
+    "totalQuantity": "10",
+    "shipDeliveryDate": "2026-12-10T00:00:00",
+    "enterQuote": "500753",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/19/2026",
+   "pdf_hash": "81344ef5cd52f27e",
    "pdf_lines": null
   }
  },
