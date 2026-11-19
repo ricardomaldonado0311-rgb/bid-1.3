@@ -1098,7 +1098,7 @@
   "462227": {
    "first_seen": "11/10/2026",
    "fields": {
-    "id": 17,
+    "id": 14,
     "jobId": 653746,
     "rfqFile": null,
     "jacketNumber": "462227",
@@ -1765,7 +1765,7 @@
   "500664": {
    "first_seen": "11/13/2026",
    "fields": {
-    "id": 10,
+    "id": 7,
     "jobId": 655563,
     "rfqFile": null,
     "jacketNumber": "500664",
@@ -2064,7 +2064,7 @@
   "500707": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 12,
+    "id": 9,
     "jobId": 655608,
     "rfqFile": null,
     "jacketNumber": "500707",
@@ -2202,7 +2202,7 @@
   "500726": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 13,
+    "id": 10,
     "jobId": 655628,
     "rfqFile": null,
     "jacketNumber": "500726",
@@ -2455,7 +2455,7 @@
   "500691": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 24,
+    "id": 23,
     "jobId": 655587,
     "rfqFile": null,
     "jacketNumber": "500691",
@@ -2493,7 +2493,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/19/2026",
    "pdf_hash": "082bdd2315872ca1",
    "pdf_lines": null
@@ -2547,7 +2547,7 @@
   "500690": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 4,
+    "id": 1,
     "jobId": 655586,
     "rfqFile": null,
     "jacketNumber": "500690",
@@ -2616,7 +2616,7 @@
   "500743": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 9,
+    "id": 6,
     "jobId": 655645,
     "rfqFile": null,
     "jacketNumber": "500743",
@@ -2639,7 +2639,7 @@
   "500720": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 11,
+    "id": 8,
     "jobId": 655620,
     "rfqFile": null,
     "jacketNumber": "500720",
@@ -2662,7 +2662,7 @@
   "452130": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 16,
+    "id": 13,
     "jobId": 653606,
     "rfqFile": null,
     "jacketNumber": "452130",
@@ -2700,7 +2700,7 @@
     "fRevised": " R-2",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/19/2026",
    "pdf_hash": "f53341857ce7fafe",
    "pdf_lines": null
@@ -2708,7 +2708,7 @@
   "500640": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 3,
+    "id": 0,
     "jobId": 655533,
     "rfqFile": null,
     "jacketNumber": "500640",
@@ -2731,7 +2731,7 @@
   "500699": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 5,
+    "id": 2,
     "jobId": 655596,
     "rfqFile": null,
     "jacketNumber": "500699",
@@ -2769,7 +2769,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/19/2026",
    "pdf_hash": "305aaacd2f6e33b1",
    "pdf_lines": null
@@ -2777,7 +2777,7 @@
   "500768": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 7,
+    "id": 4,
     "jobId": 655670,
     "rfqFile": null,
     "jacketNumber": "500768",
@@ -2800,7 +2800,7 @@
   "500686": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 18,
+    "id": 15,
     "jobId": 655606,
     "rfqFile": null,
     "jacketNumber": "500686",
@@ -2823,7 +2823,7 @@
   "500713": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 21,
+    "id": 18,
     "jobId": 655614,
     "rfqFile": null,
     "jacketNumber": "500713",
@@ -2846,7 +2846,7 @@
   "500696": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 19,
+    "id": 16,
     "jobId": 655592,
     "rfqFile": null,
     "jacketNumber": "500696",
@@ -2869,7 +2869,7 @@
   "500717": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 20,
+    "id": 17,
     "jobId": 655618,
     "rfqFile": null,
     "jacketNumber": "500717",
@@ -2892,7 +2892,7 @@
   "500786": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 8,
+    "id": 5,
     "jobId": 655689,
     "rfqFile": null,
     "jacketNumber": "500786",
@@ -2915,7 +2915,7 @@
   "500759": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 14,
+    "id": 11,
     "jobId": 655661,
     "rfqFile": null,
     "jacketNumber": "500759",
@@ -2938,7 +2938,7 @@
   "500796": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 15,
+    "id": 12,
     "jobId": 655703,
     "rfqFile": null,
     "jacketNumber": "500796",
@@ -2961,7 +2961,7 @@
   "500763": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 6,
+    "id": 3,
     "jobId": 655665,
     "rfqFile": null,
     "jacketNumber": "500763",
@@ -2984,7 +2984,7 @@
   "500779": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 25,
+    "id": 24,
     "jobId": 655680,
     "rfqFile": null,
     "jacketNumber": "500779",
@@ -3007,7 +3007,7 @@
   "500399": {
    "first_seen": "11/19/2026",
    "fields": {
-    "id": 22,
+    "id": 21,
     "jobId": 655272,
     "rfqFile": null,
     "jacketNumber": "500399",
@@ -3030,7 +3030,7 @@
   "500605": {
    "first_seen": "11/19/2026",
    "fields": {
-    "id": 23,
+    "id": 22,
     "jobId": 655498,
     "rfqFile": null,
     "jacketNumber": "500605",
@@ -3048,6 +3048,52 @@
    "open": true,
    "last_seen": "11/19/2026",
    "pdf_hash": "96383f2cb3e732aa",
+   "pdf_lines": null
+  },
+  "500772": {
+   "first_seen": "11/19/2026",
+   "fields": {
+    "id": 19,
+    "jobId": 656709,
+    "rfqFile": null,
+    "jacketNumber": "500772",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-20T13:00:00",
+    "datePosted": "2026-11-19T09:12:20",
+    "productType": "Forms",
+    "title": "Busy Season Folded map 11/17/2026, English only (Copy) ",
+    "totalQuantity": "1",
+    "shipDeliveryDate": "2026-12-18T00:00:00",
+    "enterQuote": "500772",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/19/2026",
+   "pdf_hash": "b0bafa181348c090",
+   "pdf_lines": null
+  },
+  "500792": {
+   "first_seen": "11/19/2026",
+   "fields": {
+    "id": 20,
+    "jobId": 655697,
+    "rfqFile": null,
+    "jacketNumber": "500792",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-20T13:00:00",
+    "datePosted": "2026-11-19T09:23:55",
+    "productType": "Other",
+    "title": "Headwaters River Preserve Jr Booklet ",
+    "totalQuantity": "1052",
+    "shipDeliveryDate": "2027-01-13T00:00:00",
+    "enterQuote": "500792",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/19/2026",
+   "pdf_hash": "2f2de021002782db",
    "pdf_lines": null
   }
  },
