@@ -440,24 +440,24 @@
   "500351": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 2,
+    "id": 24,
     "jobId": 655221,
     "rfqFile": null,
     "jacketNumber": "500351",
     "officeName": "Government Publishing and Print Procurement",
-    "quoteDueDate": "2026-11-18T13:00:00",
-    "datePosted": "2026-11-17T11:59:19",
+    "quoteDueDate": "2026-11-27T16:00:00",
+    "datePosted": "2026-11-19T12:08:26",
     "productType": "Other",
     "title": "26-011 HIGH SCHOOL INITIATIVE ENGAGEMENT KIT - Air Force CLIPBOARDS + BANNER ",
     "totalQuantity": "818",
     "shipDeliveryDate": "2027-02-03T00:00:00",
     "enterQuote": "500351",
-    "fRevised": " R-1",
+    "fRevised": " R-2",
     "isJacketStrapped": "false"
    },
-   "open": false,
-   "last_seen": "11/18/2026",
-   "pdf_hash": "4b0eba09f68d4a6f",
+   "open": true,
+   "last_seen": "11/19/2026",
+   "pdf_hash": "82019fda7a94963f",
    "pdf_lines": null
   },
   "500524": {
@@ -1098,7 +1098,7 @@
   "462227": {
    "first_seen": "11/10/2026",
    "fields": {
-    "id": 8,
+    "id": 5,
     "jobId": 653746,
     "rfqFile": null,
     "jacketNumber": "462227",
@@ -1780,7 +1780,7 @@
     "fRevised": " R-1",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/19/2026",
    "pdf_hash": "623404e9a98cacce",
    "pdf_lines": null
@@ -2064,7 +2064,7 @@
   "500707": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 3,
+    "id": 0,
     "jobId": 655608,
     "rfqFile": null,
     "jacketNumber": "500707",
@@ -2202,24 +2202,24 @@
   "500726": {
    "first_seen": "11/16/2026",
    "fields": {
-    "id": 4,
+    "id": 1,
     "jobId": 655628,
     "rfqFile": null,
     "jacketNumber": "500726",
     "officeName": "Government Publishing and Print Procurement",
     "quoteDueDate": "2026-11-20T09:00:00",
-    "datePosted": "2026-11-19T07:46:30",
+    "datePosted": "2026-11-19T13:02:52",
     "productType": "Books",
     "title": "PTSD Item #PTSD54 \"Understanding PTSD and Aging\" ",
     "totalQuantity": "10002",
     "shipDeliveryDate": "2026-12-11T00:00:00",
     "enterQuote": "500726",
-    "fRevised": " R-1",
+    "fRevised": " R-2",
     "isJacketStrapped": "false"
    },
    "open": true,
    "last_seen": "11/19/2026",
-   "pdf_hash": "5ef5d580a778c82c",
+   "pdf_hash": "ee8b14e1f7cd74d0",
    "pdf_lines": null
   },
   "500534": {
@@ -2455,7 +2455,7 @@
   "500691": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 17,
+    "id": 15,
     "jobId": 655587,
     "rfqFile": null,
     "jacketNumber": "500691",
@@ -2631,7 +2631,7 @@
     "fRevised": " R-1",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/19/2026",
    "pdf_hash": "06be648bf05bcaf8",
    "pdf_lines": null
@@ -2654,7 +2654,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/19/2026",
    "pdf_hash": "615fe12ee65dbbde",
    "pdf_lines": null
@@ -2662,7 +2662,7 @@
   "452130": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 7,
+    "id": 4,
     "jobId": 653606,
     "rfqFile": null,
     "jacketNumber": "452130",
@@ -2800,7 +2800,7 @@
   "500686": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 9,
+    "id": 6,
     "jobId": 655606,
     "rfqFile": null,
     "jacketNumber": "500686",
@@ -2823,7 +2823,7 @@
   "500713": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 13,
+    "id": 11,
     "jobId": 655614,
     "rfqFile": null,
     "jacketNumber": "500713",
@@ -2846,7 +2846,7 @@
   "500696": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 10,
+    "id": 7,
     "jobId": 655592,
     "rfqFile": null,
     "jacketNumber": "500696",
@@ -2869,7 +2869,7 @@
   "500717": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 11,
+    "id": 8,
     "jobId": 655618,
     "rfqFile": null,
     "jacketNumber": "500717",
@@ -2915,7 +2915,7 @@
   "500759": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 5,
+    "id": 2,
     "jobId": 655661,
     "rfqFile": null,
     "jacketNumber": "500759",
@@ -2938,7 +2938,7 @@
   "500796": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 6,
+    "id": 3,
     "jobId": 655703,
     "rfqFile": null,
     "jacketNumber": "500796",
@@ -2984,7 +2984,7 @@
   "500779": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 19,
+    "id": 18,
     "jobId": 655680,
     "rfqFile": null,
     "jacketNumber": "500779",
@@ -3007,7 +3007,7 @@
   "500399": {
    "first_seen": "11/19/2026",
    "fields": {
-    "id": 16,
+    "id": 14,
     "jobId": 655272,
     "rfqFile": null,
     "jacketNumber": "500399",
@@ -3053,7 +3053,7 @@
   "500772": {
    "first_seen": "11/19/2026",
    "fields": {
-    "id": 14,
+    "id": 12,
     "jobId": 656709,
     "rfqFile": null,
     "jacketNumber": "500772",
@@ -3076,7 +3076,7 @@
   "500792": {
    "first_seen": "11/19/2026",
    "fields": {
-    "id": 15,
+    "id": 13,
     "jobId": 655697,
     "rfqFile": null,
     "jacketNumber": "500792",
@@ -3099,7 +3099,7 @@
   "500662": {
    "first_seen": "11/19/2026",
    "fields": {
-    "id": 12,
+    "id": 10,
     "jobId": 655561,
     "rfqFile": null,
     "jacketNumber": "500662",
@@ -3122,7 +3122,7 @@
   "500732": {
    "first_seen": "11/19/2026",
    "fields": {
-    "id": 18,
+    "id": 16,
     "jobId": 655633,
     "rfqFile": null,
     "jacketNumber": "500732",
@@ -3145,7 +3145,7 @@
   "500781": {
    "first_seen": "11/19/2026",
    "fields": {
-    "id": 20,
+    "id": 19,
     "jobId": 655682,
     "rfqFile": null,
     "jacketNumber": "500781",
@@ -3168,7 +3168,7 @@
   "500741": {
    "first_seen": "11/19/2026",
    "fields": {
-    "id": 21,
+    "id": 22,
     "jobId": 655643,
     "rfqFile": null,
     "jacketNumber": "500741",
@@ -3186,6 +3186,121 @@
    "open": true,
    "last_seen": "11/19/2026",
    "pdf_hash": "543d044ad94d0424",
+   "pdf_lines": null
+  },
+  "500811": {
+   "first_seen": "11/19/2026",
+   "fields": {
+    "id": 9,
+    "jobId": 656720,
+    "rfqFile": null,
+    "jacketNumber": "500811",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-20T12:00:00",
+    "datePosted": "2026-11-19T12:48:30",
+    "productType": "Pamphlets",
+    "title": "27-542 Project Shield America Tri-Fold Brochure ",
+    "totalQuantity": "1000",
+    "shipDeliveryDate": "2026-12-11T00:00:00",
+    "enterQuote": "500811",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/19/2026",
+   "pdf_hash": "d03dcc6f7b9a84ba",
+   "pdf_lines": null
+  },
+  "500767": {
+   "first_seen": "11/19/2026",
+   "fields": {
+    "id": 17,
+    "jobId": 655669,
+    "rfqFile": null,
+    "jacketNumber": "500767",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-23T10:00:00",
+    "datePosted": "2026-11-19T12:27:05",
+    "productType": "Labels/Stickers",
+    "title": "VISN Fit Kit Reminder Sticker/Label",
+    "totalQuantity": "7000",
+    "shipDeliveryDate": "2026-12-16T00:00:00",
+    "enterQuote": "500767",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/19/2026",
+   "pdf_hash": "83747380406aec43",
+   "pdf_lines": null
+  },
+  "500794": {
+   "first_seen": "11/19/2026",
+   "fields": {
+    "id": 20,
+    "jobId": 655702,
+    "rfqFile": null,
+    "jacketNumber": "500794",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-23T10:00:00",
+    "datePosted": "2026-11-19T11:28:37",
+    "productType": "Decals",
+    "title": "LCES DECAL  NFES 002397",
+    "totalQuantity": "50000",
+    "shipDeliveryDate": "2026-12-14T00:00:00",
+    "enterQuote": "500794",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/19/2026",
+   "pdf_hash": "d119cb27401e67c3",
+   "pdf_lines": null
+  },
+  "500795": {
+   "first_seen": "11/19/2026",
+   "fields": {
+    "id": 21,
+    "jobId": 655705,
+    "rfqFile": null,
+    "jacketNumber": "500795",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-23T10:00:00",
+    "datePosted": "2026-11-19T12:04:40",
+    "productType": "Labels/Stickers",
+    "title": "STANDARD FIREFIGHTING ORDERS DECAL ",
+    "totalQuantity": "40000",
+    "shipDeliveryDate": "2026-12-14T00:00:00",
+    "enterQuote": "500795",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/19/2026",
+   "pdf_hash": "f3e90ac6370e632c",
+   "pdf_lines": null
+  },
+  "500787": {
+   "first_seen": "11/19/2026",
+   "fields": {
+    "id": 23,
+    "jobId": 655690,
+    "rfqFile": null,
+    "jacketNumber": "500787",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-23T11:00:00",
+    "datePosted": "2026-11-19T11:30:56",
+    "productType": "Other",
+    "title": "Custom Branded Reaction Game ",
+    "totalQuantity": "10",
+    "shipDeliveryDate": "2027-01-15T00:00:00",
+    "enterQuote": "500787",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/19/2026",
+   "pdf_hash": "5f8b9f7aca721c66",
    "pdf_lines": null
   }
  },
