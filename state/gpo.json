@@ -440,7 +440,7 @@
   "500351": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 24,
+    "id": 30,
     "jobId": 655221,
     "rfqFile": null,
     "jacketNumber": "500351",
@@ -3030,7 +3030,7 @@
   "500605": {
    "first_seen": "11/19/2026",
    "fields": {
-    "id": 22,
+    "id": 28,
     "jobId": 655498,
     "rfqFile": null,
     "jacketNumber": "500605",
@@ -3168,7 +3168,7 @@
   "500741": {
    "first_seen": "11/19/2026",
    "fields": {
-    "id": 14,
+    "id": 15,
     "jobId": 655643,
     "rfqFile": null,
     "jacketNumber": "500741",
@@ -3283,7 +3283,7 @@
   "500787": {
    "first_seen": "11/19/2026",
    "fields": {
-    "id": 16,
+    "id": 17,
     "jobId": 655690,
     "rfqFile": null,
     "jacketNumber": "500787",
@@ -3329,7 +3329,7 @@
   "500500": {
    "first_seen": "11/19/2026",
    "fields": {
-    "id": 13,
+    "id": 14,
     "jobId": 655378,
     "rfqFile": null,
     "jacketNumber": "500500",
@@ -3352,7 +3352,7 @@
   "500753": {
    "first_seen": "11/19/2026",
    "fields": {
-    "id": 23,
+    "id": 29,
     "jobId": 655655,
     "rfqFile": null,
     "jacketNumber": "500753",
@@ -3398,7 +3398,7 @@
   "500782": {
    "first_seen": "11/19/2026",
    "fields": {
-    "id": 15,
+    "id": 16,
     "jobId": 655683,
     "rfqFile": null,
     "jacketNumber": "500782",
@@ -3513,7 +3513,7 @@
   "500803": {
    "first_seen": "11/20/2026",
    "fields": {
-    "id": 17,
+    "id": 18,
     "jobId": 655714,
     "rfqFile": null,
     "jacketNumber": "500803",
@@ -3536,7 +3536,7 @@
   "500804": {
    "first_seen": "11/20/2026",
    "fields": {
-    "id": 18,
+    "id": 19,
     "jobId": 656736,
     "rfqFile": null,
     "jacketNumber": "500804",
@@ -3559,7 +3559,7 @@
   "500805": {
    "first_seen": "11/20/2026",
    "fields": {
-    "id": 19,
+    "id": 20,
     "jobId": 655715,
     "rfqFile": null,
     "jacketNumber": "500805",
@@ -3582,7 +3582,7 @@
   "500823": {
    "first_seen": "11/20/2026",
    "fields": {
-    "id": 21,
+    "id": 27,
     "jobId": 656734,
     "rfqFile": null,
     "jacketNumber": "500823",
@@ -3605,7 +3605,7 @@
   "500711": {
    "first_seen": "11/20/2026",
    "fields": {
-    "id": 20,
+    "id": 25,
     "jobId": 655612,
     "rfqFile": null,
     "jacketNumber": "500711",
@@ -3646,6 +3646,144 @@
    "open": true,
    "last_seen": "11/20/2026",
    "pdf_hash": "642affe5202ee770",
+   "pdf_lines": null
+  },
+  "461932": {
+   "first_seen": "11/20/2026",
+   "fields": {
+    "id": 13,
+    "jobId": 650856,
+    "rfqFile": null,
+    "jacketNumber": "461932",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-23T11:00:00",
+    "datePosted": "2026-11-20T14:38:27",
+    "productType": "Forms",
+    "title": "COMMERCIAL FISHING VESSEL SAFTY EXAM (CG-5587) 7530-01-GF9-0001 ",
+    "totalQuantity": "1500",
+    "shipDeliveryDate": "2026-12-28T00:00:00",
+    "enterQuote": "461932",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/20/2026",
+   "pdf_hash": "319968d06335b108",
+   "pdf_lines": null
+  },
+  "500834": {
+   "first_seen": "11/20/2026",
+   "fields": {
+    "id": 21,
+    "jobId": 656759,
+    "rfqFile": null,
+    "jacketNumber": "500834",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-23T11:00:00",
+    "datePosted": "2026-11-20T15:04:13",
+    "productType": "Other",
+    "title": "Team Lead Course Student Guides",
+    "totalQuantity": "530",
+    "shipDeliveryDate": "2026-11-30T00:00:00",
+    "enterQuote": "500834",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/20/2026",
+   "pdf_hash": "10aa06e60c4b52d2",
+   "pdf_lines": null
+  },
+  "500839": {
+   "first_seen": "11/20/2026",
+   "fields": {
+    "id": 22,
+    "jobId": 656769,
+    "rfqFile": null,
+    "jacketNumber": "500839",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-23T11:00:00",
+    "datePosted": "2026-11-20T15:35:12",
+    "productType": "Forms",
+    "title": "Pub.11968 (ICN 909328) & 11968-S (ICN 909329) R-9-26 5 Ways to Make the Most of ",
+    "totalQuantity": "16006",
+    "shipDeliveryDate": "2026-12-18T00:00:00",
+    "enterQuote": "500839",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/20/2026",
+   "pdf_hash": "461fee377139fd8f",
+   "pdf_lines": null
+  },
+  "500844": {
+   "first_seen": "11/20/2026",
+   "fields": {
+    "id": 23,
+    "jobId": 656774,
+    "rfqFile": null,
+    "jacketNumber": "500844",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-23T11:00:00",
+    "datePosted": "2026-11-20T15:44:31",
+    "productType": "Forms",
+    "title": "Pub. 909505 (ICN 909505) & 909505-S (ICN 909543) R-10-26 My Health Care Coverag ",
+    "totalQuantity": "15004",
+    "shipDeliveryDate": "2026-12-18T00:00:00",
+    "enterQuote": "500844",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/20/2026",
+   "pdf_hash": "8efc7135310fd81d",
+   "pdf_lines": null
+  },
+  "500708": {
+   "first_seen": "11/20/2026",
+   "fields": {
+    "id": 24,
+    "jobId": 655610,
+    "rfqFile": null,
+    "jacketNumber": "500708",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-23T12:00:00",
+    "datePosted": "2026-11-20T14:53:09",
+    "productType": "Other",
+    "title": "OCC Item OCC-024 Virtual Health Resource Center (VHRC) Branded Breakaway Lanyard",
+    "totalQuantity": "10000",
+    "shipDeliveryDate": "2026-12-11T00:00:00",
+    "enterQuote": "500708",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/20/2026",
+   "pdf_hash": "5dfaa6505d8a9e96",
+   "pdf_lines": null
+  },
+  "500721": {
+   "first_seen": "11/20/2026",
+   "fields": {
+    "id": 26,
+    "jobId": 655626,
+    "rfqFile": null,
+    "jacketNumber": "500721",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-23T12:00:00",
+    "datePosted": "2026-11-20T15:13:36",
+    "productType": "Books",
+    "title": "PTSD Item #PTSD5 \"Understanding PTSD Booklet\" ",
+    "totalQuantity": "30002",
+    "shipDeliveryDate": "2026-12-18T00:00:00",
+    "enterQuote": "500721",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/20/2026",
+   "pdf_hash": "842dbe92b9b6f7e1",
    "pdf_lines": null
   }
  },
