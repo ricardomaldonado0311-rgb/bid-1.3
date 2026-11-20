@@ -440,7 +440,7 @@
   "500351": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 30,
+    "id": 32,
     "jobId": 655221,
     "rfqFile": null,
     "jacketNumber": "500351",
@@ -456,7 +456,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "82019fda7a94963f",
    "pdf_lines": null
   },
@@ -1114,7 +1114,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "237c2da6f14b6152",
    "pdf_lines": null
   },
@@ -2218,7 +2218,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "ee8b14e1f7cd74d0",
    "pdf_lines": null
   },
@@ -2471,7 +2471,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "5b6240b61d53a3bb",
    "pdf_lines": null
   },
@@ -2678,7 +2678,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "21e99fee5b96f9ca",
    "pdf_lines": null
   },
@@ -2816,7 +2816,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "43c31bec5067007b",
    "pdf_lines": null
   },
@@ -2839,7 +2839,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "1f965266eea5a9bf",
    "pdf_lines": null
   },
@@ -2862,7 +2862,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "fb388fdf59297175",
    "pdf_lines": null
   },
@@ -2885,7 +2885,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "324d9b0d258698ba",
    "pdf_lines": null
   },
@@ -2908,7 +2908,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "e1bc7abc63975112",
    "pdf_lines": null
   },
@@ -2931,7 +2931,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "beb947ef970f0d3f",
    "pdf_lines": null
   },
@@ -2954,7 +2954,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "3fe88ad88639e5c9",
    "pdf_lines": null
   },
@@ -3000,7 +3000,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "84c8b49551ac0bf6",
    "pdf_lines": null
   },
@@ -3023,7 +3023,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "8433a2b3219f87e2",
    "pdf_lines": null
   },
@@ -3069,7 +3069,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "b0bafa181348c090",
    "pdf_lines": null
   },
@@ -3092,7 +3092,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "2f2de021002782db",
    "pdf_lines": null
   },
@@ -3115,7 +3115,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "189c0466cb78fe5f",
    "pdf_lines": null
   },
@@ -3138,7 +3138,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "6cfb473e37f2a1ba",
    "pdf_lines": null
   },
@@ -3161,14 +3161,14 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "dbb09f8b95257627",
    "pdf_lines": null
   },
   "500741": {
    "first_seen": "11/19/2026",
    "fields": {
-    "id": 26,
+    "id": 28,
     "jobId": 655643,
     "rfqFile": null,
     "jacketNumber": "500741",
@@ -3184,7 +3184,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "543d044ad94d0424",
    "pdf_lines": null
   },
@@ -3207,7 +3207,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "d03dcc6f7b9a84ba",
    "pdf_lines": null
   },
@@ -3230,7 +3230,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "83747380406aec43",
    "pdf_lines": null
   },
@@ -3253,7 +3253,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "d119cb27401e67c3",
    "pdf_lines": null
   },
@@ -3276,14 +3276,14 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "f3e90ac6370e632c",
    "pdf_lines": null
   },
   "500787": {
    "first_seen": "11/19/2026",
    "fields": {
-    "id": 28,
+    "id": 30,
     "jobId": 655690,
     "rfqFile": null,
     "jacketNumber": "500787",
@@ -3299,7 +3299,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "5f8b9f7aca721c66",
    "pdf_lines": null
   },
@@ -3322,14 +3322,14 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "a1826203cfaa7582",
    "pdf_lines": null
   },
   "500500": {
    "first_seen": "11/19/2026",
    "fields": {
-    "id": 25,
+    "id": 27,
     "jobId": 655378,
     "rfqFile": null,
     "jacketNumber": "500500",
@@ -3345,14 +3345,14 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "6ffa15dd4f0108ae",
    "pdf_lines": null
   },
   "500753": {
    "first_seen": "11/19/2026",
    "fields": {
-    "id": 29,
+    "id": 31,
     "jobId": 655655,
     "rfqFile": null,
     "jacketNumber": "500753",
@@ -3368,7 +3368,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "81344ef5cd52f27e",
    "pdf_lines": null
   },
@@ -3391,14 +3391,14 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "d919f4d589792021",
    "pdf_lines": null
   },
   "500782": {
    "first_seen": "11/19/2026",
    "fields": {
-    "id": 27,
+    "id": 29,
     "jobId": 655683,
     "rfqFile": null,
     "jacketNumber": "500782",
@@ -3414,7 +3414,7 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "db59d093fc1e16f8",
    "pdf_lines": null
   },
@@ -3437,8 +3437,54 @@
     "isJacketStrapped": "false"
    },
    "open": true,
-   "last_seen": "11/19/2026",
+   "last_seen": "11/20/2026",
    "pdf_hash": "f616f161192842f2",
+   "pdf_lines": null
+  },
+  "500800": {
+   "first_seen": "11/20/2026",
+   "fields": {
+    "id": 25,
+    "jobId": 655711,
+    "rfqFile": null,
+    "jacketNumber": "500800",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-23T10:00:00",
+    "datePosted": "2026-11-20T06:58:19",
+    "productType": "Forms",
+    "title": "Appointment Cards for Recruiters ",
+    "totalQuantity": "2750",
+    "shipDeliveryDate": "2026-12-18T00:00:00",
+    "enterQuote": "500800",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/20/2026",
+   "pdf_hash": "89fa72928d59a52e",
+   "pdf_lines": null
+  },
+  "500801": {
+   "first_seen": "11/20/2026",
+   "fields": {
+    "id": 26,
+    "jobId": 655712,
+    "rfqFile": null,
+    "jacketNumber": "500801",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-23T10:00:00",
+    "datePosted": "2026-11-20T07:09:12",
+    "productType": "Plastics",
+    "title": "Plastic Cards for Recruiters ",
+    "totalQuantity": "100",
+    "shipDeliveryDate": "2026-12-18T00:00:00",
+    "enterQuote": "500801",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/20/2026",
+   "pdf_hash": "c04de428a509218d",
    "pdf_lines": null
   }
  },
