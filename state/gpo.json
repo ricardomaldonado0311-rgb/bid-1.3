@@ -440,7 +440,7 @@
   "500351": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 21,
+    "id": 10,
     "jobId": 655221,
     "rfqFile": null,
     "jacketNumber": "500351",
@@ -2455,24 +2455,24 @@
   "500691": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 1,
+    "id": 8,
     "jobId": 655587,
     "rfqFile": null,
     "jacketNumber": "500691",
     "officeName": "Government Publishing and Print Procurement",
-    "quoteDueDate": "2026-11-20T17:00:00",
+    "quoteDueDate": "2026-11-24T17:00:00",
     "datePosted": "2026-11-17T11:08:55",
     "productType": "Other",
     "title": "Trucker Cap ",
     "totalQuantity": "1",
     "shipDeliveryDate": "2027-02-12T00:00:00",
     "enterQuote": "500691",
-    "fRevised": " R-1",
+    "fRevised": " R-2",
     "isJacketStrapped": "false"
    },
-   "open": false,
-   "last_seen": "11/20/2026",
-   "pdf_hash": "5b6240b61d53a3bb",
+   "open": true,
+   "last_seen": "11/23/2026",
+   "pdf_hash": "544a64ad3b612b9f",
    "pdf_lines": null
   },
   "500727": {
@@ -3030,7 +3030,7 @@
   "500605": {
    "first_seen": "11/19/2026",
    "fields": {
-    "id": 15,
+    "id": 0,
     "jobId": 655498,
     "rfqFile": null,
     "jacketNumber": "500605",
@@ -3183,7 +3183,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/23/2026",
    "pdf_hash": "543d044ad94d0424",
    "pdf_lines": null
@@ -3298,7 +3298,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/23/2026",
    "pdf_hash": "5f8b9f7aca721c66",
    "pdf_lines": null
@@ -3344,7 +3344,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/23/2026",
    "pdf_hash": "6ffa15dd4f0108ae",
    "pdf_lines": null
@@ -3352,7 +3352,7 @@
   "500753": {
    "first_seen": "11/19/2026",
    "fields": {
-    "id": 18,
+    "id": 3,
     "jobId": 655655,
     "rfqFile": null,
     "jacketNumber": "500753",
@@ -3413,7 +3413,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/23/2026",
    "pdf_hash": "db59d093fc1e16f8",
    "pdf_lines": null
@@ -3528,7 +3528,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/23/2026",
    "pdf_hash": "6a3f06ee27aa241e",
    "pdf_lines": null
@@ -3551,7 +3551,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/23/2026",
    "pdf_hash": "5a199c7524c3dfee",
    "pdf_lines": null
@@ -3574,7 +3574,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/23/2026",
    "pdf_hash": "0f8422f58058da5d",
    "pdf_lines": null
@@ -3597,7 +3597,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/23/2026",
    "pdf_hash": "c8be86c8a7123f28",
    "pdf_lines": null
@@ -3620,7 +3620,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/23/2026",
    "pdf_hash": "62eb66a01a769fb8",
    "pdf_lines": null
@@ -3666,7 +3666,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/23/2026",
    "pdf_hash": "319968d06335b108",
    "pdf_lines": null
@@ -3689,7 +3689,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/23/2026",
    "pdf_hash": "10aa06e60c4b52d2",
    "pdf_lines": null
@@ -3712,7 +3712,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/23/2026",
    "pdf_hash": "461fee377139fd8f",
    "pdf_lines": null
@@ -3735,7 +3735,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/23/2026",
    "pdf_hash": "8efc7135310fd81d",
    "pdf_lines": null
@@ -3758,7 +3758,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/23/2026",
    "pdf_hash": "5dfaa6505d8a9e96",
    "pdf_lines": null
@@ -3781,7 +3781,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/23/2026",
    "pdf_hash": "842dbe92b9b6f7e1",
    "pdf_lines": null
@@ -3789,7 +3789,7 @@
   "472208": {
    "first_seen": "11/20/2026",
    "fields": {
-    "id": 20,
+    "id": 6,
     "jobId": 656760,
     "rfqFile": null,
     "jacketNumber": "472208",
@@ -3812,7 +3812,7 @@
   "500835": {
    "first_seen": "11/23/2026",
    "fields": {
-    "id": 16,
+    "id": 1,
     "jobId": 656765,
     "rfqFile": null,
     "jacketNumber": "500835",
@@ -3835,7 +3835,7 @@
   "500837": {
    "first_seen": "11/23/2026",
    "fields": {
-    "id": 19,
+    "id": 4,
     "jobId": 656767,
     "rfqFile": null,
     "jacketNumber": "500837",
@@ -3858,7 +3858,7 @@
   "500683": {
    "first_seen": "11/23/2026",
    "fields": {
-    "id": 17,
+    "id": 2,
     "jobId": 655599,
     "rfqFile": null,
     "jacketNumber": "500683",
@@ -3876,6 +3876,75 @@
    "open": true,
    "last_seen": "11/23/2026",
    "pdf_hash": "cd98d3ae17f43f0c",
+   "pdf_lines": null
+  },
+  "472171": {
+   "first_seen": "11/23/2026",
+   "fields": {
+    "id": 5,
+    "jobId": 653583,
+    "rfqFile": null,
+    "jacketNumber": "472171",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-24T12:00:00",
+    "datePosted": "2026-11-23T10:43:43",
+    "productType": "Other",
+    "title": "DOCUMENT PREPARATION AND SCANNING OF NON-CONTRACTED MATERIALS ",
+    "totalQuantity": "1",
+    "shipDeliveryDate": "2027-01-29T00:00:00",
+    "enterQuote": "472171",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/23/2026",
+   "pdf_hash": "9d73a02dd3dcfaa6",
+   "pdf_lines": null
+  },
+  "500799": {
+   "first_seen": "11/23/2026",
+   "fields": {
+    "id": 7,
+    "jobId": 655708,
+    "rfqFile": null,
+    "jacketNumber": "500799",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-24T14:00:00",
+    "datePosted": "2026-11-23T11:04:25",
+    "productType": "Envelopes",
+    "title": "#10 Left-Window Bus. Env. with BIA Print BIA Pueblo Ret. Address & G-26 Permit ",
+    "totalQuantity": "20000",
+    "shipDeliveryDate": "2026-12-21T00:00:00",
+    "enterQuote": "500799",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/23/2026",
+   "pdf_hash": "8cd9262f0b4c0fa0",
+   "pdf_lines": null
+  },
+  "500821": {
+   "first_seen": "11/23/2026",
+   "fields": {
+    "id": 9,
+    "jobId": 656733,
+    "rfqFile": null,
+    "jacketNumber": "500821",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-25T10:00:00",
+    "datePosted": "2026-11-23T10:41:32",
+    "productType": "Forms",
+    "title": "Form 13044 (Rev. 7-2021) (Catalog No. 31702B) Letterhead Stationery - TE/GE Sta ",
+    "totalQuantity": "21130",
+    "shipDeliveryDate": "2026-12-18T00:00:00",
+    "enterQuote": "500821",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/23/2026",
+   "pdf_hash": "adc1a0d8fd42cac7",
    "pdf_lines": null
   }
  },
