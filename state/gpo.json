@@ -440,7 +440,7 @@
   "500351": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 28,
+    "id": 30,
     "jobId": 655221,
     "rfqFile": null,
     "jacketNumber": "500351",
@@ -3352,7 +3352,7 @@
   "500753": {
    "first_seen": "11/19/2026",
    "fields": {
-    "id": 26,
+    "id": 27,
     "jobId": 655655,
     "rfqFile": null,
     "jacketNumber": "500753",
@@ -3789,7 +3789,7 @@
   "472208": {
    "first_seen": "11/20/2026",
    "fields": {
-    "id": 27,
+    "id": 29,
     "jobId": 656760,
     "rfqFile": null,
     "jacketNumber": "472208",
@@ -3807,6 +3807,52 @@
    "open": true,
    "last_seen": "11/23/2026",
    "pdf_hash": "937f69c2cdc09d58",
+   "pdf_lines": null
+  },
+  "500835": {
+   "first_seen": "11/23/2026",
+   "fields": {
+    "id": 26,
+    "jobId": 656765,
+    "rfqFile": null,
+    "jacketNumber": "500835",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-24T10:00:00",
+    "datePosted": "2026-11-23T07:28:29",
+    "productType": "Tags",
+    "title": "FY27-563, 7-00028 ICE 12-I-77 Baggage Check- DC ",
+    "totalQuantity": "500000",
+    "shipDeliveryDate": "2026-12-18T00:00:00",
+    "enterQuote": "500835",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/23/2026",
+   "pdf_hash": "ec93e2449c6b633f",
+   "pdf_lines": null
+  },
+  "500837": {
+   "first_seen": "11/23/2026",
+   "fields": {
+    "id": 28,
+    "jobId": 656767,
+    "rfqFile": null,
+    "jacketNumber": "500837",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-24T11:00:00",
+    "datePosted": "2026-11-23T08:19:36",
+    "productType": "Maps",
+    "title": "Pubs. 11813 R-9-26 Roadmap to Getting Health Care ",
+    "totalQuantity": "35004",
+    "shipDeliveryDate": "2026-12-18T00:00:00",
+    "enterQuote": "500837",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/23/2026",
+   "pdf_hash": "53c458ea16859e7a",
    "pdf_lines": null
   }
  },
