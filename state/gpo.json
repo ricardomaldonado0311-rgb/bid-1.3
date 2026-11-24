@@ -440,7 +440,7 @@
   "500351": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 11,
+    "id": 10,
     "jobId": 655221,
     "rfqFile": null,
     "jacketNumber": "500351",
@@ -2455,7 +2455,7 @@
   "500691": {
    "first_seen": "11/17/2026",
    "fields": {
-    "id": 1,
+    "id": 0,
     "jobId": 655587,
     "rfqFile": null,
     "jacketNumber": "500691",
@@ -2984,24 +2984,24 @@
   "500779": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 3,
+    "id": 11,
     "jobId": 655680,
     "rfqFile": null,
     "jacketNumber": "500779",
     "officeName": "Government Publishing and Print Procurement",
-    "quoteDueDate": "2026-11-23T10:00:00",
-    "datePosted": "2026-11-18T16:42:12",
+    "quoteDueDate": "2026-11-30T10:00:00",
+    "datePosted": "2026-11-24T12:38:41",
     "productType": "Tags",
     "title": "SEX BREED TAGS A  ",
     "totalQuantity": "150000",
     "shipDeliveryDate": "2026-12-23T00:00:00",
     "enterQuote": "500779",
-    "fRevised": "",
+    "fRevised": " R-1",
     "isJacketStrapped": "false"
    },
-   "open": false,
-   "last_seen": "11/23/2026",
-   "pdf_hash": "84c8b49551ac0bf6",
+   "open": true,
+   "last_seen": "11/24/2026",
+   "pdf_hash": "cec3ab2d371f04cb",
    "pdf_lines": null
   },
   "500399": {
@@ -3858,7 +3858,7 @@
   "500683": {
    "first_seen": "11/23/2026",
    "fields": {
-    "id": 4,
+    "id": 3,
     "jobId": 655599,
     "rfqFile": null,
     "jacketNumber": "500683",
@@ -3919,7 +3919,7 @@
     "fRevised": " R-1",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/24/2026",
    "pdf_hash": "72c99d4f934ed859",
    "pdf_lines": null
@@ -3927,7 +3927,7 @@
   "500821": {
    "first_seen": "11/23/2026",
    "fields": {
-    "id": 3,
+    "id": 2,
     "jobId": 656733,
     "rfqFile": null,
     "jacketNumber": "500821",
@@ -3950,7 +3950,7 @@
   "500774": {
    "first_seen": "11/23/2026",
    "fields": {
-    "id": 6,
+    "id": 5,
     "jobId": 655692,
     "rfqFile": null,
     "jacketNumber": "500774",
@@ -3973,7 +3973,7 @@
   "500827": {
    "first_seen": "11/23/2026",
    "fields": {
-    "id": 9,
+    "id": 8,
     "jobId": 656739,
     "rfqFile": null,
     "jacketNumber": "500827",
@@ -4042,7 +4042,7 @@
   "500529": {
    "first_seen": "11/23/2026",
    "fields": {
-    "id": 2,
+    "id": 1,
     "jobId": 655431,
     "rfqFile": null,
     "jacketNumber": "500529",
@@ -4065,7 +4065,7 @@
   "500773": {
    "first_seen": "11/23/2026",
    "fields": {
-    "id": 5,
+    "id": 4,
     "jobId": 655675,
     "rfqFile": null,
     "jacketNumber": "500773",
@@ -4117,7 +4117,7 @@
     "jacketNumber": "500815",
     "officeName": "Government Publishing and Print Procurement",
     "quoteDueDate": "2026-11-30T11:00:00",
-    "datePosted": "2026-11-24T10:15:50",
+    "datePosted": "2026-11-24T12:37:31",
     "productType": "Forms",
     "title": "KSU-KARH Clinical Promotional Items ",
     "totalQuantity": "59350",
@@ -4134,7 +4134,7 @@
   "500825": {
    "first_seen": "11/24/2026",
    "fields": {
-    "id": 7,
+    "id": 6,
     "jobId": 656737,
     "rfqFile": null,
     "jacketNumber": "500825",
@@ -4157,7 +4157,7 @@
   "500826": {
    "first_seen": "11/24/2026",
    "fields": {
-    "id": 8,
+    "id": 7,
     "jobId": 656738,
     "rfqFile": null,
     "jacketNumber": "500826",
@@ -4180,7 +4180,7 @@
   "500853": {
    "first_seen": "11/24/2026",
    "fields": {
-    "id": 10,
+    "id": 9,
     "jobId": 656784,
     "rfqFile": null,
     "jacketNumber": "500853",
