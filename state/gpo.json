@@ -440,7 +440,7 @@
   "500351": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 9,
+    "id": 1,
     "jobId": 655221,
     "rfqFile": null,
     "jacketNumber": "500351",
@@ -2984,7 +2984,7 @@
   "500779": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 10,
+    "id": 2,
     "jobId": 655680,
     "rfqFile": null,
     "jacketNumber": "500779",
@@ -3873,7 +3873,7 @@
     "fRevised": " R-1",
     "isJacketStrapped": "true"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/25/2026",
    "pdf_hash": "94e902c4136e393c",
    "pdf_lines": null
@@ -3942,7 +3942,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/25/2026",
    "pdf_hash": "adc1a0d8fd42cac7",
    "pdf_lines": null
@@ -3965,7 +3965,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/25/2026",
    "pdf_hash": "fcd6734bf89a9d0d",
    "pdf_lines": null
@@ -3988,7 +3988,7 @@
     "fRevised": "",
     "isJacketStrapped": "true"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/25/2026",
    "pdf_hash": "7154455621f91d13",
    "pdf_lines": null
@@ -4057,7 +4057,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/25/2026",
    "pdf_hash": "ce105170932394d2",
    "pdf_lines": null
@@ -4080,7 +4080,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/25/2026",
    "pdf_hash": "4e49bbd78bcc95ca",
    "pdf_lines": null
@@ -4111,7 +4111,7 @@
   "500815": {
    "first_seen": "11/24/2026",
    "fields": {
-    "id": 13,
+    "id": 6,
     "jobId": 656725,
     "rfqFile": null,
     "jacketNumber": "500815",
@@ -4149,7 +4149,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/25/2026",
    "pdf_hash": "e2ed8d8136bce27e",
    "pdf_lines": null
@@ -4172,7 +4172,7 @@
     "fRevised": "",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/25/2026",
    "pdf_hash": "1ce5d718d780b09b",
    "pdf_lines": null
@@ -4180,7 +4180,7 @@
   "500853": {
    "first_seen": "11/24/2026",
    "fields": {
-    "id": 8,
+    "id": 0,
     "jobId": 656784,
     "rfqFile": null,
     "jacketNumber": "500853",
@@ -4203,7 +4203,7 @@
   "500836": {
    "first_seen": "11/24/2026",
    "fields": {
-    "id": 11,
+    "id": 3,
     "jobId": 656766,
     "rfqFile": null,
     "jacketNumber": "500836",
@@ -4226,7 +4226,7 @@
   "500791": {
    "first_seen": "11/25/2026",
    "fields": {
-    "id": 12,
+    "id": 5,
     "jobId": 655698,
     "rfqFile": null,
     "jacketNumber": "500791",
@@ -4244,6 +4244,75 @@
    "open": true,
    "last_seen": "11/25/2026",
    "pdf_hash": "1c5557ca43448d23",
+   "pdf_lines": null
+  },
+  "500909": {
+   "first_seen": "11/25/2026",
+   "fields": {
+    "id": 4,
+    "jobId": 656850,
+    "rfqFile": null,
+    "jacketNumber": "500909",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-30T10:00:00",
+    "datePosted": "2026-11-25T10:12:56",
+    "productType": "Other",
+    "title": "DHS-SQT TARGET (Artesia Outdoor) - PRINTED ON CARDBOARD",
+    "totalQuantity": "30605",
+    "shipDeliveryDate": "2026-12-15T00:00:00",
+    "enterQuote": "500909",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/25/2026",
+   "pdf_hash": "f7950a272c0bbdb4",
+   "pdf_lines": null
+  },
+  "500401": {
+   "first_seen": "11/25/2026",
+   "fields": {
+    "id": 7,
+    "jobId": 655274,
+    "rfqFile": null,
+    "jacketNumber": "500401",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-30T12:00:00",
+    "datePosted": "2026-11-25T09:45:50",
+    "productType": "Forms",
+    "title": "WAPA F  420.1 Station Log Book - Resubmission FY27 ",
+    "totalQuantity": "36",
+    "shipDeliveryDate": "2026-12-31T00:00:00",
+    "enterQuote": "500401",
+    "fRevised": " R-1",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/25/2026",
+   "pdf_hash": "c070cb50ad18eb2f",
+   "pdf_lines": null
+  },
+  "500848": {
+   "first_seen": "11/25/2026",
+   "fields": {
+    "id": 8,
+    "jobId": 656778,
+    "rfqFile": null,
+    "jacketNumber": "500848",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-30T12:00:00",
+    "datePosted": "2026-11-25T11:12:35",
+    "productType": "Pamphlets",
+    "title": "Interim Junior Ranger Booklets",
+    "totalQuantity": "1000",
+    "shipDeliveryDate": "2026-12-18T00:00:00",
+    "enterQuote": "500848",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/25/2026",
+   "pdf_hash": "eabc172cd2ab75f5",
    "pdf_lines": null
   }
  },
