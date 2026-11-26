@@ -1,6 +1,6 @@
 # Mis bids de GPO — estado
 
-Actualizado por el bot: 11/26/2026 07:17 AM ET. Para añadir o quitar bids, edita `mis_bids.txt`.
+Actualizado por el bot: 11/26/2026 09:30 AM ET. Para añadir o quitar bids, edita `mis_bids.txt`.
 
 | Jacket | Título | Revisión | Cotizar antes de (ET) | Estado | Último cambio | Nota |
 |---|---|---|---|---|---|---|
