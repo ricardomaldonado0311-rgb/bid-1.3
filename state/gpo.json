@@ -4433,7 +4433,7 @@
   "500869": {
    "first_seen": "11/25/2026",
    "fields": {
-    "id": 16,
+    "id": 17,
     "jobId": 656799,
     "rfqFile": null,
     "jacketNumber": "500869",
@@ -4456,7 +4456,7 @@
   "500687": {
    "first_seen": "11/25/2026",
    "fields": {
-    "id": 17,
+    "id": 18,
     "jobId": 655582,
     "rfqFile": null,
     "jacketNumber": "500687",
@@ -4543,6 +4543,29 @@
    "open": true,
    "last_seen": "11/27/2026",
    "pdf_hash": "5f0420fe755845c3",
+   "pdf_lines": null
+  },
+  "500905": {
+   "first_seen": "11/27/2026",
+   "fields": {
+    "id": 16,
+    "jobId": 656842,
+    "rfqFile": null,
+    "jacketNumber": "500905",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-12-01T11:00:00",
+    "datePosted": "2026-11-27T10:05:53",
+    "productType": "Envelopes",
+    "title": "#10 Envelope, White, Left Window",
+    "totalQuantity": "30000",
+    "shipDeliveryDate": "2026-12-15T00:00:00",
+    "enterQuote": "500905",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/27/2026",
+   "pdf_hash": "052e8d47fe6e7794",
    "pdf_lines": null
   }
  },
