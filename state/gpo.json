@@ -455,7 +455,7 @@
     "fRevised": " R-2",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/27/2026",
    "pdf_hash": "82019fda7a94963f",
    "pdf_lines": null
@@ -2984,7 +2984,7 @@
   "500779": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 1,
+    "id": 0,
     "jobId": 655680,
     "rfqFile": null,
     "jacketNumber": "500779",
@@ -4111,7 +4111,7 @@
   "500815": {
    "first_seen": "11/24/2026",
    "fields": {
-    "id": 7,
+    "id": 6,
     "jobId": 656725,
     "rfqFile": null,
     "jacketNumber": "500815",
@@ -4203,7 +4203,7 @@
   "500836": {
    "first_seen": "11/24/2026",
    "fields": {
-    "id": 2,
+    "id": 1,
     "jobId": 656766,
     "rfqFile": null,
     "jacketNumber": "500836",
@@ -4226,7 +4226,7 @@
   "500791": {
    "first_seen": "11/25/2026",
    "fields": {
-    "id": 6,
+    "id": 5,
     "jobId": 655698,
     "rfqFile": null,
     "jacketNumber": "500791",
@@ -4249,7 +4249,7 @@
   "500909": {
    "first_seen": "11/25/2026",
    "fields": {
-    "id": 4,
+    "id": 3,
     "jobId": 656850,
     "rfqFile": null,
     "jacketNumber": "500909",
@@ -4272,7 +4272,7 @@
   "500401": {
    "first_seen": "11/25/2026",
    "fields": {
-    "id": 8,
+    "id": 7,
     "jobId": 655274,
     "rfqFile": null,
     "jacketNumber": "500401",
@@ -4295,7 +4295,7 @@
   "500848": {
    "first_seen": "11/25/2026",
    "fields": {
-    "id": 9,
+    "id": 8,
     "jobId": 656778,
     "rfqFile": null,
     "jacketNumber": "500848",
@@ -4318,7 +4318,7 @@
   "500876": {
    "first_seen": "11/25/2026",
    "fields": {
-    "id": 3,
+    "id": 2,
     "jobId": 656805,
     "rfqFile": null,
     "jacketNumber": "500876",
@@ -4341,7 +4341,7 @@
   "500761": {
    "first_seen": "11/25/2026",
    "fields": {
-    "id": 5,
+    "id": 4,
     "jobId": 655663,
     "rfqFile": null,
     "jacketNumber": "500761",
@@ -4364,7 +4364,7 @@
   "500820": {
    "first_seen": "11/25/2026",
    "fields": {
-    "id": 13,
+    "id": 14,
     "jobId": 656732,
     "rfqFile": null,
     "jacketNumber": "500820",
@@ -4387,7 +4387,7 @@
   "500833": {
    "first_seen": "11/25/2026",
    "fields": {
-    "id": 14,
+    "id": 15,
     "jobId": 656758,
     "rfqFile": null,
     "jacketNumber": "500833",
@@ -4410,7 +4410,7 @@
   "500887": {
    "first_seen": "11/25/2026",
    "fields": {
-    "id": 15,
+    "id": 16,
     "jobId": 656817,
     "rfqFile": null,
     "jacketNumber": "500887",
@@ -4433,7 +4433,7 @@
   "500869": {
    "first_seen": "11/25/2026",
    "fields": {
-    "id": 17,
+    "id": 18,
     "jobId": 656799,
     "rfqFile": null,
     "jacketNumber": "500869",
@@ -4456,7 +4456,7 @@
   "500687": {
    "first_seen": "11/25/2026",
    "fields": {
-    "id": 18,
+    "id": 19,
     "jobId": 655582,
     "rfqFile": null,
     "jacketNumber": "500687",
@@ -4479,7 +4479,7 @@
   "500854": {
    "first_seen": "11/25/2026",
    "fields": {
-    "id": 10,
+    "id": 9,
     "jobId": 656781,
     "rfqFile": null,
     "jacketNumber": "500854",
@@ -4502,7 +4502,7 @@
   "500886": {
    "first_seen": "11/25/2026",
    "fields": {
-    "id": 12,
+    "id": 13,
     "jobId": 656815,
     "rfqFile": null,
     "jacketNumber": "500886",
@@ -4548,7 +4548,7 @@
   "500905": {
    "first_seen": "11/27/2026",
    "fields": {
-    "id": 16,
+    "id": 17,
     "jobId": 656842,
     "rfqFile": null,
     "jacketNumber": "500905",
@@ -4571,7 +4571,7 @@
   "500879": {
    "first_seen": "11/27/2026",
    "fields": {
-    "id": 11,
+    "id": 12,
     "jobId": 656808,
     "rfqFile": null,
     "jacketNumber": "500879",
@@ -4589,6 +4589,52 @@
    "open": true,
    "last_seen": "11/27/2026",
    "pdf_hash": "96db08cb3081e8b3",
+   "pdf_lines": null
+  },
+  "500678": {
+   "first_seen": "11/27/2026",
+   "fields": {
+    "id": 10,
+    "jobId": 655578,
+    "rfqFile": null,
+    "jacketNumber": "500678",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-30T13:00:00",
+    "datePosted": "2026-11-27T15:17:26",
+    "productType": "Other",
+    "title": "VA OCC Item #OCC-002- VA Virtual Care Tools Script Pads ",
+    "totalQuantity": "150000",
+    "shipDeliveryDate": "2026-12-18T00:00:00",
+    "enterQuote": "500678",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/27/2026",
+   "pdf_hash": "afbfe8e1346a88d8",
+   "pdf_lines": null
+  },
+  "500685": {
+   "first_seen": "11/27/2026",
+   "fields": {
+    "id": 11,
+    "jobId": 655601,
+    "rfqFile": null,
+    "jacketNumber": "500685",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-11-30T13:00:00",
+    "datePosted": "2026-11-27T15:20:52",
+    "productType": "Pamphlets",
+    "title": "PTSD Item #PTSD6 \"Entendiendo el TEPT y el tratamiento para el TEPT\" ",
+    "totalQuantity": "5000",
+    "shipDeliveryDate": "2026-12-18T00:00:00",
+    "enterQuote": "500685",
+    "fRevised": "",
+    "isJacketStrapped": "false"
+   },
+   "open": true,
+   "last_seen": "11/27/2026",
+   "pdf_hash": "08afed686792b53c",
    "pdf_lines": null
   }
  },
