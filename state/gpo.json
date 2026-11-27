@@ -440,7 +440,7 @@
   "500351": {
    "first_seen": "11/06/2026",
    "fields": {
-    "id": 1,
+    "id": 0,
     "jobId": 655221,
     "rfqFile": null,
     "jacketNumber": "500351",
@@ -2984,7 +2984,7 @@
   "500779": {
    "first_seen": "11/18/2026",
    "fields": {
-    "id": 2,
+    "id": 1,
     "jobId": 655680,
     "rfqFile": null,
     "jacketNumber": "500779",
@@ -4111,7 +4111,7 @@
   "500815": {
    "first_seen": "11/24/2026",
    "fields": {
-    "id": 8,
+    "id": 7,
     "jobId": 656725,
     "rfqFile": null,
     "jacketNumber": "500815",
@@ -4203,7 +4203,7 @@
   "500836": {
    "first_seen": "11/24/2026",
    "fields": {
-    "id": 3,
+    "id": 2,
     "jobId": 656766,
     "rfqFile": null,
     "jacketNumber": "500836",
@@ -4226,7 +4226,7 @@
   "500791": {
    "first_seen": "11/25/2026",
    "fields": {
-    "id": 7,
+    "id": 6,
     "jobId": 655698,
     "rfqFile": null,
     "jacketNumber": "500791",
@@ -4249,7 +4249,7 @@
   "500909": {
    "first_seen": "11/25/2026",
    "fields": {
-    "id": 5,
+    "id": 4,
     "jobId": 656850,
     "rfqFile": null,
     "jacketNumber": "500909",
@@ -4272,7 +4272,7 @@
   "500401": {
    "first_seen": "11/25/2026",
    "fields": {
-    "id": 9,
+    "id": 8,
     "jobId": 655274,
     "rfqFile": null,
     "jacketNumber": "500401",
@@ -4295,7 +4295,7 @@
   "500848": {
    "first_seen": "11/25/2026",
    "fields": {
-    "id": 10,
+    "id": 9,
     "jobId": 656778,
     "rfqFile": null,
     "jacketNumber": "500848",
@@ -4318,7 +4318,7 @@
   "500876": {
    "first_seen": "11/25/2026",
    "fields": {
-    "id": 4,
+    "id": 3,
     "jobId": 656805,
     "rfqFile": null,
     "jacketNumber": "500876",
@@ -4341,7 +4341,7 @@
   "500761": {
    "first_seen": "11/25/2026",
    "fields": {
-    "id": 6,
+    "id": 5,
     "jobId": 655663,
     "rfqFile": null,
     "jacketNumber": "500761",
@@ -4479,7 +4479,7 @@
   "500854": {
    "first_seen": "11/25/2026",
    "fields": {
-    "id": 11,
+    "id": 10,
     "jobId": 656781,
     "rfqFile": null,
     "jacketNumber": "500854",
@@ -4540,7 +4540,7 @@
     "fRevised": " R-1",
     "isJacketStrapped": "false"
    },
-   "open": true,
+   "open": false,
    "last_seen": "11/27/2026",
    "pdf_hash": "5f0420fe755845c3",
    "pdf_lines": null
@@ -4566,6 +4566,29 @@
    "open": true,
    "last_seen": "11/27/2026",
    "pdf_hash": "052e8d47fe6e7794",
+   "pdf_lines": null
+  },
+  "500879": {
+   "first_seen": "11/27/2026",
+   "fields": {
+    "id": 11,
+    "jobId": 656808,
+    "rfqFile": null,
+    "jacketNumber": "500879",
+    "officeName": "Government Publishing and Print Procurement",
+    "quoteDueDate": "2026-12-01T10:00:00",
+    "datePosted": "2026-11-27T11:56:25",
+    "productType": "Forms",
+    "title": "How to use your FIT kit ",
+    "totalQuantity": "6000",
+    "shipDeliveryDate": "2027-01-15T00:00:00",
+    "enterQuote": "500879",
+    "fRevised": "",
+    "isJacketStrapped": "true"
+   },
+   "open": true,
+   "last_seen": "11/27/2026",
+   "pdf_hash": "96db08cb3081e8b3",
    "pdf_lines": null
   }
  },
