@@ -4530,19 +4530,19 @@
     "rfqFile": null,
     "jacketNumber": "500851",
     "officeName": "Government Publishing and Print Procurement",
-    "quoteDueDate": "2026-11-27T10:00:00",
+    "quoteDueDate": "2026-11-27T13:00:00",
     "datePosted": "2026-11-25T15:57:02",
     "productType": "Maps",
     "title": "Grand Canyon South Rim Pocket Map ",
     "totalQuantity": "600000",
     "shipDeliveryDate": "2026-12-15T00:00:00",
     "enterQuote": "500851",
-    "fRevised": "",
+    "fRevised": " R-1",
     "isJacketStrapped": "false"
    },
    "open": true,
    "last_seen": "11/27/2026",
-   "pdf_hash": "96685d5c2dbbc1e1",
+   "pdf_hash": "5f0420fe755845c3",
    "pdf_lines": null
   }
  },
